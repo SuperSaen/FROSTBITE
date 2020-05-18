@@ -27,18 +27,6 @@ Content/Frostbite/Ballistics/PhysMats
 Content/Frostbite/Ballistics/SFX
 Content/Frostbite/Ballistics
 
-
-Content/Frostbite/Char/FootstepSound
-Content/Frostbite/Char/FPSMovSys
-Content/Frostbite/Char/Grapple
-Content/Frostbite/Char/InventorySystem
-Content/Frostbite/Char/MovSys
-Content/Frostbite/Char/PistolBlend
-Content/Frostbite/Char/UE4_Mannequin
-Content/Frostbite/Char/OnlineStatsSystem
-Content/Frostbite/Char/Outliner
-Content/Frostbite/Char
-
 Content/Frostbite/ConeSurvival
 
 Content/Frostbite/CSC/Animations
@@ -89,34 +77,8 @@ Content/Frostbite/UI/WeaponHUDSys
 Content/Frostbite/UI
 
 Content/Frostbite/ProcWeapSys
-Content/Frostbite
 
-Content/Environments/AbandondedFactory
-Content/Environments/Arctic
-Content/Environments/b40
-Content/Environments/Builder
-Content/Environments/Clouds
-Content/Environments/DarkForest
-Content/Environments/Destructible_Glass
-Content/Environments/Environment
-Content/Environments/Environment_Set
-Content/Environments/FogGradients
-Content/Environments/FoliageSys
-Content/Environments/Forerunner
-Content/Environments/InteractiveLights
-Content/Environments/Landscapes
-Content/Environments/LandscapeStamps
-Content/Environments/LoadingScreen
-Content/Environments/MapEditor
-Content/Environments/Modular_building
-Content/Environments/OceanFloor
-Content/Environments/Poplar_Forest
-Content/Environments/RainSys
-Content/Environments/SandDunes
-Content/Environments/Skyboxes
-Content/Environments/Skys
-Content/Environments/Threshold
-Content/Environments/WaterFoam
+
 
 
 Binaries
