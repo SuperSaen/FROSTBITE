@@ -1,0 +1,8 @@
+{
+	"BuildId": "4212847",
+	"Modules": 
+	{
+		"AdvKitEditor": "UE4Editor-AdvKitEditor.dylib",
+		"AdvKitRuntime": "UE4Editor-AdvKitRuntime.dylib"
+	}
+}

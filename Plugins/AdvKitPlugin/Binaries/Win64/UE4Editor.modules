@@ -1,0 +1,8 @@
+{
+	"BuildId": "10570792",
+	"Modules": 
+	{
+		"AdvKitEditor": "UE4Editor-AdvKitEditor-0029.dll",
+		"AdvKitRuntime": "UE4Editor-AdvKitRuntime-0029.dll"
+	}
+}

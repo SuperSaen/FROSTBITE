@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-AdvKitEditor-0024.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\Documents\Unreal Projects\FROSTBITE\Intermediate\Build\Win64\FROSTBITEEditor\Development\UnrealEd\SharedPCH.UnrealEd.h.obj"
+"E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Development\AdvKitEditor\Module.AdvKitEditor.cpp.obj"
+"E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Development\AdvKitEditor\Default.rc2.res"
+/OUT:"E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Development\AdvKitEditor\UE4Editor-AdvKitEditor-0024.lib"
+/INCLUDE:IMPLEMENT_MODULE_AdvKitEditor

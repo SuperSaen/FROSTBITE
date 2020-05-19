@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EventFolder" id="{ffd2b759-1a78-4436-9e98-f3b53631cba5}">
+		<property name="name">
+			<value>Sentinels</value>
+		</property>
+		<relationship name="folder">
+			<destination>{0c5b4a4f-d1de-4095-8f6a-cfe55a2fefc1}</destination>
+		</relationship>
+	</object>
+</objects>

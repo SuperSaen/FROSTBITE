@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{dd3a343d-0441-4005-818c-58567d3dae55}">
+		<property name="assetPath">
+			<value>medium_glass_2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.3326303854875283</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{43f8857e-5c4b-4189-9d86-2da658823ab8}</destination>
+		</relationship>
+	</object>
+</objects>

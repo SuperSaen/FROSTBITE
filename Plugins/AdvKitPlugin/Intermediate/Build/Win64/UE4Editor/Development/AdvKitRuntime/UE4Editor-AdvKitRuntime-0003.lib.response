@@ -1,0 +1,18 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-AdvKitRuntime-0003.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\Documents\Unreal Projects\FROSTBITE\Intermediate\Build\Win64\FROSTBITEEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Development\AdvKitRuntime\Module.AdvKitRuntime.cpp.obj"
+"E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Development\AdvKitRuntime\Module.AdvKitRuntime.gen.1_of_5.cpp.obj"
+"E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Development\AdvKitRuntime\Module.AdvKitRuntime.gen.2_of_5.cpp.obj"
+"E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Development\AdvKitRuntime\Module.AdvKitRuntime.gen.3_of_5.cpp.obj"
+"E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Development\AdvKitRuntime\Module.AdvKitRuntime.gen.4_of_5.cpp.obj"
+"E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Development\AdvKitRuntime\Module.AdvKitRuntime.gen.5_of_5.cpp.obj"
+"E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Development\AdvKitRuntime\Default.rc2.res"
+/OUT:"E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Development\AdvKitRuntime\UE4Editor-AdvKitRuntime-0003.lib"
+/INCLUDE:IMPLEMENT_MODULE_AdvKitRuntime

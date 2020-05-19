@@ -1,0 +1,10 @@
+{
+	"OutputFiles": [
+		"Module.AdvKitRuntime.cpp.obj",
+		"Module.AdvKitRuntime.gen.1_of_5.cpp.obj",
+		"Module.AdvKitRuntime.gen.2_of_5.cpp.obj",
+		"Module.AdvKitRuntime.gen.3_of_5.cpp.obj",
+		"Module.AdvKitRuntime.gen.4_of_5.cpp.obj",
+		"Module.AdvKitRuntime.gen.5_of_5.cpp.obj"
+	]
+}
