@@ -7,6 +7,7 @@
 *.suo
 *.xcodeproj
 *.xcworkspace
-/Binaries/
-/Intermediate/
-/Saved/
+Binaries/
+Intermediate/
+Saved/
+Content/VTMP/
