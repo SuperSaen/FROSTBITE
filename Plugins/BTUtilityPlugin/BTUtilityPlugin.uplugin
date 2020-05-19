@@ -1,0 +1,25 @@
+{
+	"FileVersion" : 3,
+	"Version" : 2,
+	"VersionName" : "UE4.24",
+	"FriendlyName" : "BT Utility",
+	"Description" : "Adds nodes for extending behavior tree with utility-based selection.",
+	"EnabledByDefault" : true,
+	"CanContainContent" : false,
+	"IsBetaVersion" : false,
+	"Installed" : false,
+	"RequiresBuildPlatform" : false,
+	"Modules" :
+	[
+		{
+			"Name" : "BTUtilityPlugin",
+			"Type" : "Runtime",
+			"LoadingPhase" : "Default",
+			"WhitelistPlatforms" :
+			[
+				"Win64",
+				"Android"
+			]
+		}
+	]
+}

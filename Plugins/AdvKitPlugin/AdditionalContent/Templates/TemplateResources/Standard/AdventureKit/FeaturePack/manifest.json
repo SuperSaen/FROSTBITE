@@ -1,0 +1,45 @@
+{
+	"Version": 1,
+	"Name":
+	[
+		{
+			"Language": "en",
+			"Text": "AdventureKit Shared Resource Standard"
+		}
+	],
+	"Description":
+	[
+		{
+			"Language": "en",
+			"Text": "Shared Resource Pack for all AdventureKit examples"
+		}
+	],
+	"AssetTypes":
+	[
+		{
+			"Language": "en",
+			"Text": ""
+		}
+	],
+	"SearchTags":
+	[
+		{
+			"Language": "en",
+			"Text": ""
+		}
+	],	
+	"ClassTypes": " ",
+	"Category": "SharedPack",
+	"Thumbnail": "Thumbnail.png",
+	"Screenshots":[],
+	"Ident": "AdventureKitStandard",
+	"AdditionalFiles":
+	{
+		"DestinationFilesFolder": "AdventureKit",
+		"AdditionalFilesList":
+		[
+			"Templates/TemplateResources/Standard/AdventureKit/Content/*.*"
+		]
+	}
+}
+

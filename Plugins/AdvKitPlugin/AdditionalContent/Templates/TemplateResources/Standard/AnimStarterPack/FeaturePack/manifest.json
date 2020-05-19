@@ -1,0 +1,45 @@
+{
+	"Version": 1,
+	"Name":
+	[
+		{
+			"Language": "en",
+			"Text": "AnimStarterPack Shared Resource Standard"
+		}
+	],
+	"Description":
+	[
+		{
+			"Language": "en",
+			"Text": ""
+		}
+	],
+	"AssetTypes":
+	[
+		{
+			"Language": "en",
+			"Text": ""
+		}
+	],
+	"SearchTags":
+	[
+		{
+			"Language": "en",
+			"Text": ""
+		}
+	],	
+	"ClassTypes": " ",
+	"Category": "SharedPack",
+	"Thumbnail": "Thumbnail.png",
+	"Screenshots":[],
+	"Ident": "AnimStarterPackStandard",
+	"AdditionalFiles":
+	{
+		"DestinationFilesFolder": "AnimStarterPack",
+		"AdditionalFilesList":
+		[
+			"Templates/TemplateResources/Standard/AnimStarterPack/Content/*.*"
+		]
+	}
+}
+
