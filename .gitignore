@@ -2,6 +2,7 @@ Binaries/
 Intermediate/
 Content/VTMP/
 Saved/
+Plugins/VTMP/
 *.vscode
 *.vs
 *.VC.db
@@ -11,4 +12,3 @@ Saved/
 *.suo
 *.xcodeproj
 *.xcworkspace
-Plugins/VTMP/
