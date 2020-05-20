@@ -1832,3 +1832,141 @@ Make sure 'Spartan_FP_BP' has been compiled for  Fire
 [2020.05.20-17.39.00:654][311]LogUObjectHash: Compacting FUObjectHashTables data took   2.80ms
 [2020.05.20-17.39.00:725][311]LogUObjectHash: Compacting FUObjectHashTables data took   2.79ms
 [2020.05.20-17.39.00:783][311]LogUObjectHash: Compacting FUObjectHashTables data took   3.04ms
+[2020.05.20-17.39.37:059][226]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/Frostbite/UI/BP_ODSTHUD.BP_ODSTHUD
+[2020.05.20-17.39.57:712][226]LogLinker: Warning: While loading 'E:/Documents/Unreal Projects/FROSTBITE/Content/Environments/LoadingScreenSystem/Blueprints/BP_LSS_Actor.uasset' failed to load '/Game/LSS_LoadingScreenSystem/Blueprints/Data/LoadingProgress/DT_LSS_LoadingProgress_PackageSizes': Can't find file.
+[2020.05.20-17.39.57:712][226]LogLinker: Warning: While loading 'E:/Documents/Unreal Projects/FROSTBITE/Content/Environments/LoadingScreenSystem/Blueprints/BP_LSS_Actor.uasset' failed to load '/Game/LSS_LoadingScreenSystem/Blueprints/Data/LoadingProgress/DT_LSS_LoadingProgress_PackageSizes': Can't find file.
+[2020.05.20-17.39.57:712][226]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/LSS_LoadingScreenSystem/Blueprints/Data/LoadingProgress/DT_LSS_LoadingProgress_PackageSizes.DT_LSS_LoadingProgress_PackageSizes'
+[2020.05.20-17.39.58:196][226]LogBlueprint: Warning: [Compiler BP_LSS_ThirdPersonCharacter] Input Axis Event references unknown Axis 'LookUpRate' for  InputAxis LookUpRate
+[2020.05.20-17.39.58:196][226]LogBlueprint: Warning: [Compiler BP_LSS_ThirdPersonCharacter] Input Axis Event references unknown Axis 'TurnRate' for  InputAxis TurnRate
+[2020.05.20-17.39.58:197][226]LogBlueprint: Warning: [Compiler BP_LSS_ThirdPersonCharacter] Input Axis Event references unknown Axis 'MoveRight' for  InputAxis MoveRight
+[2020.05.20-17.39.58:197][226]LogBlueprint: Warning: [Compiler BP_LSS_ThirdPersonCharacter] Input Axis Event references unknown Axis 'MoveForward' for  InputAxis MoveForward
+[2020.05.20-17.39.58:197][226]LogBlueprint: Warning: [Compiler BP_LSS_ThirdPersonCharacter] Input Axis Event references unknown Axis 'Turn' for  InputAxis Turn
+[2020.05.20-17.39.58:198][226]LogBlueprint: Warning: [Compiler BP_LSS_ThirdPersonCharacter] Input Axis Event references unknown Axis 'LookUp' for  InputAxis LookUp
+[2020.05.20-17.40.01:618][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::ROund' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:618][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::SquareL' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:618][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::RoomL' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:618][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::DescriptionOnly' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:618][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::BP_DemoDisplay_MAX' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:618][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::ROund' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:618][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::SquareL' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:618][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::RoomL' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:618][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::DescriptionOnly' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:634][226]LogEnum: Warning: Enum name collision: 'BP_DemoRoom_Enum::Standard' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoRoom_Enum.BP_DemoRoom_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/Blueprints/DemoRoom/BP_DemoRoom_Enum.BP_DemoRoom_Enum'
+[2020.05.20-17.40.01:634][226]LogEnum: Warning: Enum name collision: 'BP_DemoRoom_Enum::RoofwithHole' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoRoom_Enum.BP_DemoRoom_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/Blueprints/DemoRoom/BP_DemoRoom_Enum.BP_DemoRoom_Enum'
+[2020.05.20-17.40.01:634][226]LogEnum: Warning: Enum name collision: 'BP_DemoRoom_Enum::RoofOpen' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoRoom_Enum.BP_DemoRoom_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/Blueprints/DemoRoom/BP_DemoRoom_Enum.BP_DemoRoom_Enum'
+[2020.05.20-17.40.01:634][226]LogEnum: Warning: Enum name collision: 'BP_DemoRoom_Enum::BP_DemoRoom_MAX' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoRoom_Enum.BP_DemoRoom_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/Blueprints/DemoRoom/BP_DemoRoom_Enum.BP_DemoRoom_Enum'
+[2020.05.20-17.40.01:634][226]LogEnum: Warning: Enum name collision: 'BP_DemoRoom_Enum::Standard' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoRoom_Enum.BP_DemoRoom_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/Blueprints/DemoRoom/BP_DemoRoom_Enum.BP_DemoRoom_Enum'
+[2020.05.20-17.40.01:634][226]LogEnum: Warning: Enum name collision: 'BP_DemoRoom_Enum::RoofwithHole' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoRoom_Enum.BP_DemoRoom_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/Blueprints/DemoRoom/BP_DemoRoom_Enum.BP_DemoRoom_Enum'
+[2020.05.20-17.40.01:634][226]LogEnum: Warning: Enum name collision: 'BP_DemoRoom_Enum::RoofOpen' is in both '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoRoom_Enum.BP_DemoRoom_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/Blueprints/DemoRoom/BP_DemoRoom_Enum.BP_DemoRoom_Enum'
+[2020.05.20-17.40.01:738][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::ROund' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:738][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::SquareL' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:738][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::RoomL' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:738][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::DescriptionOnly' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:738][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::NewEnumerator0' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:738][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::BP_DemoDisplay_MAX' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:738][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::ROund' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:738][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::SquareL' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:738][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::RoomL' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:738][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::DescriptionOnly' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/SpaceshooterMinigame/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:738][226]LogEnum: Warning: Enum name collision: 'BP_DemoDisplay_Enum::NewEnumerator0' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum' and '/Game/Frostbite/Ballistics/DemoMap/Blueprints/BP_DemoDisplay_Enum.BP_DemoDisplay_Enum'
+[2020.05.20-17.40.01:879][226]LogEnum: Warning: Enum name collision: 'BP_DemoRoom_Enum::Standard' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoRoom_Enum.BP_DemoRoom_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/Blueprints/DemoRoom/BP_DemoRoom_Enum.BP_DemoRoom_Enum'
+[2020.05.20-17.40.01:879][226]LogEnum: Warning: Enum name collision: 'BP_DemoRoom_Enum::RoofwithHole' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoRoom_Enum.BP_DemoRoom_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/Blueprints/DemoRoom/BP_DemoRoom_Enum.BP_DemoRoom_Enum'
+[2020.05.20-17.40.01:879][226]LogEnum: Warning: Enum name collision: 'BP_DemoRoom_Enum::RoofOpen' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoRoom_Enum.BP_DemoRoom_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/Blueprints/DemoRoom/BP_DemoRoom_Enum.BP_DemoRoom_Enum'
+[2020.05.20-17.40.01:879][226]LogEnum: Warning: Enum name collision: 'BP_DemoRoom_Enum::BP_DemoRoom_MAX' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoRoom_Enum.BP_DemoRoom_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/Blueprints/DemoRoom/BP_DemoRoom_Enum.BP_DemoRoom_Enum'
+[2020.05.20-17.40.01:879][226]LogEnum: Warning: Enum name collision: 'BP_DemoRoom_Enum::Standard' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoRoom_Enum.BP_DemoRoom_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/Blueprints/DemoRoom/BP_DemoRoom_Enum.BP_DemoRoom_Enum'
+[2020.05.20-17.40.01:879][226]LogEnum: Warning: Enum name collision: 'BP_DemoRoom_Enum::RoofwithHole' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoRoom_Enum.BP_DemoRoom_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/Blueprints/DemoRoom/BP_DemoRoom_Enum.BP_DemoRoom_Enum'
+[2020.05.20-17.40.01:879][226]LogEnum: Warning: Enum name collision: 'BP_DemoRoom_Enum::RoofOpen' is in both '/Game/Frostbite/Explosions/DemoRoom/BluePrints/BP_DemoRoom_Enum.BP_DemoRoom_Enum' and '/Game/Environments/LoadingScreenSystem/DemoContent/Blueprints/DemoRoom/BP_DemoRoom_Enum.BP_DemoRoom_Enum'
+[2020.05.20-17.40.02:237][226]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0033 seconds. Added 121 classes and 0 folders.
+[2020.05.20-17.40.07:643][226]LogSlate: Took 0.008919 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2020.05.20-17.40.11:532][430]LogSlate: Window 'BP_ODSTHUD' being destroyed
+[2020.05.20-17.40.39:150][196]LogSlate: Took 0.020365 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansFallback.ttf' (3848K)
+[2020.05.20-17.44.15:122][192]LogSlate: Slate: Had to block on waiting for a draw buffer
+[2020.05.20-17.44.15:282][201]LogSlate: Slate: Had to block on waiting for a draw buffer
+[2020.05.20-17.44.15:402][208]LogSlate: Slate: Had to block on waiting for a draw buffer
+[2020.05.20-17.44.15:523][215]LogSlate: Slate: Had to block on waiting for a draw buffer
+[2020.05.20-17.44.16:312][260]LogSlate: Slate: Had to block on waiting for a draw buffer
+[2020.05.20-17.44.16:628][278]LogSlate: Slate: Had to block on waiting for a draw buffer
+[2020.05.20-17.44.17:471][327]LogSlate: Slate: Had to block on waiting for a draw buffer
+[2020.05.20-17.44.17:576][333]LogSlate: Slate: Had to block on waiting for a draw buffer
+[2020.05.20-17.44.17:730][342]LogSlate: Slate: Had to block on waiting for a draw buffer
+[2020.05.20-17.44.19:327][427]LogSlate: Slate: Had to block on waiting for a draw buffer
+[2020.05.20-17.44.19:377][430]LogSlate: Slate: Had to block on waiting for a draw buffer
+[2020.05.20-17.44.19:928][469]LogSlate: Slate: Had to block on waiting for a draw buffer
+[2020.05.20-17.44.21:562][569]LogSlate: Slate: Had to block on waiting for a draw buffer
+[2020.05.20-17.45.44:986][585]BlueprintLog: New page: Compile BP_ODSTHUD
+[2020.05.20-17.45.46:284][585]LogUObjectHash: Compacting FUObjectHashTables data took  27.23ms
+[2020.05.20-17.46.36:591][628]BlueprintLog: New page: Compile BP_ODSTHUD
+[2020.05.20-17.46.37:134][628]LogUObjectHash: Compacting FUObjectHashTables data took  18.17ms
+[2020.05.20-17.47.19:022][984]BlueprintLog: New page: Compile BP_ODSTHUD
+[2020.05.20-17.47.19:589][984]LogUObjectHash: Compacting FUObjectHashTables data took  19.73ms
+[2020.05.20-17.47.21:218][111]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Frostbite/UI/BP_ODSTHUD" FILE="E:/Documents/Unreal Projects/FROSTBITE/Content/Frostbite/UI/BP_ODSTHUD.uasset" SILENT=true
+[2020.05.20-17.47.21:981][111]LogSavePackage: Moving 'E:/Documents/Unreal Projects/FROSTBITE/Saved/BP_ODSTHUDC805FA294709B21B29FCEA96715F80AB.tmp' to 'E:/Documents/Unreal Projects/FROSTBITE/Content/Frostbite/UI/BP_ODSTHUD.uasset'
+[2020.05.20-17.47.22:030][111]AssetCheck: New page: Asset Save: BP_ODSTHUD
+[2020.05.20-17.47.22:030][111]LogContentValidation: Display: Validating WidgetBlueprint /Game/Frostbite/UI/BP_ODSTHUD.BP_ODSTHUD
+[2020.05.20-17.47.22:672][167]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2020.05.20-17.47.22:672][167]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.20-17.47.22:714][167]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2020.05.20-17.47.22:714][167]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.20-17.47.31:159][541]LogSlate: New Slate User Created.  User Index 8, Is Virtual User: 1
+[2020.05.20-17.47.31:159][541]LogSlate: Slate User Registered.  User Index 8, Is Virtual User: 1
+[2020.05.20-17.47.31:292][542]LogStaticMesh: Allocated 512x431x64 distance field atlas = 26.9Mb, with 203 objects containing 22.2Mb backing data
+[2020.05.20-17.47.31:776][542]LogLinker: Warning: Failed to load '/Game/FPSK/FirstPersonAssets/FirstPerson/Character/Mesh/SK_Soldier_NoArmor': Can't find file.
+[2020.05.20-17.47.31:776][542]LogLinker: Warning: Failed to load '/Game/FPSK/FirstPersonAssets/FirstPerson/Character/Mesh/SK_Soldier_NoArmor': Can't find file.
+[2020.05.20-17.47.31:776][542]LogUObjectGlobals: Warning: Failed to find object 'Object /Game/FPSK/FirstPersonAssets/FirstPerson/Character/Mesh/SK_Soldier_NoArmor.SK_Soldier_NoArmor'
+[2020.05.20-17.47.31:782][542]LogScript: Warning: Accessed None trying to read property MildorODST
+	MildorODST_AnimBP_C /Engine/Transient.World_5:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:ExecuteUbergraph_MildorODST_AnimBP:1A4D
+[2020.05.20-17.47.44:000][951]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Frostbite/Char/Mildor_ODST.Mildor_ODST
+[2020.05.20-17.47.48:438][951]LogStaticMesh: Allocated 512x431x64 distance field atlas = 26.9Mb, with 204 objects containing 22.4Mb backing data
+[2020.05.20-17.47.48:438][951]LogPhysics: Warning: Scale for /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.DynamicMap has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2020.05.20-17.47.48:438][951]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: Component: '/Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.DynamicMap' 
+[2020.05.20-17.47.48:447][951]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.48:796][952]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.48:814][952]LogSlate: Took 0.006601 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2020.05.20-17.47.48:850][953]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.48:876][954]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.48:903][955]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.48:998][956]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.49:038][957]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.49:072][958]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.49:124][959]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.49:150][960]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.49:174][961]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.49:205][962]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.49:240][963]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.49:273][964]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.49:324][965]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.49:346][966]LogScript: Warning: Accessed None trying to read property CallFunc_GetPlayerCameraManager_ReturnValue
+	MildorODST_AnimBP_C /Engine/Transient.World_6:PersistentLevel.Mildor_ODST_C_0.CharacterMesh0.MildorODST_AnimBP_C_0
+	Function /Game/Frostbite/Char/MildorODST_AnimBP.MildorODST_AnimBP_C:GetVariablesFromBaseCharacterBP:0082
+[2020.05.20-17.47.54:465][154]LogSlate: Window 'Mildor_ODST' being destroyed
