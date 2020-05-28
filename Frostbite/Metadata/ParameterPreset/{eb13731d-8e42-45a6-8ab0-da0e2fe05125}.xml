@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{eb13731d-8e42-45a6-8ab0-da0e2fe05125}">
+		<property name="name">
+			<value>Cymbals_Volume</value>
+		</property>
+		<relationship name="folder">
+			<destination>{191e32cc-ec70-42b7-9368-d9cf4548b8fc}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{1fe19ea7-2b1a-4651-ae6d-61b562b6df98}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{1fe19ea7-2b1a-4651-ae6d-61b562b6df98}">
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>

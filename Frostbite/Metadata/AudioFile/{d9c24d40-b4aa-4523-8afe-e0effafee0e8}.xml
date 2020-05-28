@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{d9c24d40-b4aa-4523-8afe-e0effafee0e8}">
+		<property name="assetPath">
+			<value>MJOLNIR_cello_2.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>172.28</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{43f8857e-5c4b-4189-9d86-2da658823ab8}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{96e01353-f3ef-4b60-8470-38ca23211cd4}">
+		<property name="name">
+			<value>Cello_Volume</value>
+		</property>
+		<relationship name="folder">
+			<destination>{191e32cc-ec70-42b7-9368-d9cf4548b8fc}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a41295f6-e27e-45e2-9e92-0011ddeef33a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a41295f6-e27e-45e2-9e92-0011ddeef33a}">
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>

@@ -10,7 +10,7 @@
 	"DocsURL": "https://github.com/FreetimeStudio/Adventure-Kit-Public/wiki",
 	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/51db442381cc45369a7cbf5144f9c44c",
 	"SupportURL": "https://github.com/FreetimeStudio/Adventure-Kit-Public/issues",
-	"EngineVersion": "4.24",
+	"EngineVersion": "4.25",
 	"CanContainContent": false,
 	"Installed": true,
 	"Modules": [

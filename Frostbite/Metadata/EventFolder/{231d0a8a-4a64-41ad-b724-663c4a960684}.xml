@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EventFolder" id="{231d0a8a-4a64-41ad-b724-663c4a960684}">
+		<property name="name">
+			<value>mjolnir-mix</value>
+		</property>
+		<relationship name="folder">
+			<destination>{909513f3-9a71-4524-9d0d-b24374090dc2}</destination>
+		</relationship>
+	</object>
+</objects>
