@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -32,195 +32,31 @@ template<> ADVKITRUNTIME_API UScriptStruct* StaticStruct<struct FCameraConfig>()
 	virtual bool ServerSetActiveConfig_Validate(int32 ); \
 	virtual void ServerSetActiveConfig_Implementation(int32 Index); \
  \
-	DECLARE_FUNCTION(execGetViewRotation) \
-	{ \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_OriginalRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FRotator*)Z_Param__Result=P_THIS->GetViewRotation_Implementation(Z_Param_Out_OriginalRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetViewLocation) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_OriginalLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetViewLocation_Implementation(Z_Param_Out_OriginalLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRestrictViewRotation) \
-	{ \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_DesiredRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RestrictViewRotation_Implementation(Z_Param_Out_DesiredRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetActiveCameraComponent) \
-	{ \
-		P_GET_OBJECT(UCameraComponent,Z_Param_NewCameraComponent); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->SetActiveCameraComponent_Implementation(Z_Param_NewCameraComponent); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetActiveConfigByName) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_NewConfigName); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetActiveConfigByName(Z_Param_NewConfigName); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRep_CurrentConfig) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_LastConfig); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_CurrentConfig(Z_Param_LastConfig); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execServerSetActiveConfig) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Index); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->ServerSetActiveConfig_Validate(Z_Param_Index)) \
-		{ \
-			RPC_ValidateFailed(TEXT("ServerSetActiveConfig_Validate")); \
-			return; \
-		} \
-		P_THIS->ServerSetActiveConfig_Implementation(Z_Param_Index); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetActiveConfig) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Index); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetActiveConfig(Z_Param_Index); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execPreviousCamera) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->PreviousCamera(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execNextCamera) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->NextCamera(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execGetViewRotation); \
+	DECLARE_FUNCTION(execGetViewLocation); \
+	DECLARE_FUNCTION(execRestrictViewRotation); \
+	DECLARE_FUNCTION(execSetActiveCameraComponent); \
+	DECLARE_FUNCTION(execSetActiveConfigByName); \
+	DECLARE_FUNCTION(execOnRep_CurrentConfig); \
+	DECLARE_FUNCTION(execServerSetActiveConfig); \
+	DECLARE_FUNCTION(execSetActiveConfig); \
+	DECLARE_FUNCTION(execPreviousCamera); \
+	DECLARE_FUNCTION(execNextCamera);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitCameraController_h_115_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual bool ServerSetActiveConfig_Validate(int32 ); \
  \
-	DECLARE_FUNCTION(execGetViewRotation) \
-	{ \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_OriginalRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FRotator*)Z_Param__Result=P_THIS->GetViewRotation_Implementation(Z_Param_Out_OriginalRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetViewLocation) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_OriginalLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetViewLocation_Implementation(Z_Param_Out_OriginalLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRestrictViewRotation) \
-	{ \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_DesiredRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RestrictViewRotation_Implementation(Z_Param_Out_DesiredRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetActiveCameraComponent) \
-	{ \
-		P_GET_OBJECT(UCameraComponent,Z_Param_NewCameraComponent); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->SetActiveCameraComponent_Implementation(Z_Param_NewCameraComponent); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetActiveConfigByName) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_NewConfigName); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetActiveConfigByName(Z_Param_NewConfigName); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRep_CurrentConfig) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_LastConfig); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_CurrentConfig(Z_Param_LastConfig); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execServerSetActiveConfig) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Index); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->ServerSetActiveConfig_Validate(Z_Param_Index)) \
-		{ \
-			RPC_ValidateFailed(TEXT("ServerSetActiveConfig_Validate")); \
-			return; \
-		} \
-		P_THIS->ServerSetActiveConfig_Implementation(Z_Param_Index); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetActiveConfig) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Index); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetActiveConfig(Z_Param_Index); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execPreviousCamera) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->PreviousCamera(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execNextCamera) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->NextCamera(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execGetViewRotation); \
+	DECLARE_FUNCTION(execGetViewLocation); \
+	DECLARE_FUNCTION(execRestrictViewRotation); \
+	DECLARE_FUNCTION(execSetActiveCameraComponent); \
+	DECLARE_FUNCTION(execSetActiveConfigByName); \
+	DECLARE_FUNCTION(execOnRep_CurrentConfig); \
+	DECLARE_FUNCTION(execServerSetActiveConfig); \
+	DECLARE_FUNCTION(execSetActiveConfig); \
+	DECLARE_FUNCTION(execPreviousCamera); \
+	DECLARE_FUNCTION(execNextCamera);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitCameraController_h_115_EVENT_PARMS \
@@ -275,7 +111,13 @@ private: \
 public: \
 	DECLARE_CLASS(UAdvKitCameraController, UActorComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/AdvKitRuntime"), NO_API) \
 	DECLARE_SERIALIZER(UAdvKitCameraController) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		CurrentConfig=NETFIELD_REP_START, \
+		NETFIELD_REP_END=CurrentConfig	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitCameraController_h_115_INCLASS \
@@ -285,7 +127,13 @@ private: \
 public: \
 	DECLARE_CLASS(UAdvKitCameraController, UActorComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/AdvKitRuntime"), NO_API) \
 	DECLARE_SERIALIZER(UAdvKitCameraController) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		CurrentConfig=NETFIELD_REP_START, \
+		NETFIELD_REP_END=CurrentConfig	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitCameraController_h_115_STANDARD_CONSTRUCTORS \

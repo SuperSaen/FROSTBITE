@@ -1,18 +1,19 @@
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Development\AdvKitEditor\Definitions.AdvKitEditor.h
 E:/Documents/Unreal Projects/FROSTBITE/Plugins/AdvKitPlugin/Source/AdvKitEditor/Private/AdvKitEditor.cpp
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Source\AdvKitEditor\Public\AdvKitEditor.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Editor\LevelEditor\Public\LevelEditor.h
-c:\program files\epic games\ue_4.24\engine\source\editor\leveleditor\public\ILevelEditor.h
-c:\program files\epic games\ue_4.24\engine\source\editor\leveleditor\public\ViewportTypeDefinition.h
+E:\Epic Games\UE_4.25\Engine\Source\Editor\LevelEditor\Public\LevelEditor.h
+e:\epic games\ue_4.25\engine\source\editor\leveleditor\public\ILevelEditor.h
+e:\epic games\ue_4.25\engine\source\editor\leveleditor\public\ViewportTypeDefinition.h
 e:\documents\unreal projects\frostbite\plugins\advkitplugin\source\advkiteditor\private\AdvKitTraceComponentVisualizer.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Editor\UnrealEd\Public\ComponentVisualizer.h
+E:\Epic Games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\ComponentVisualizer.h
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Source\AdvKitRuntime\Public\Player/AdvKitTraceUtilityComponent.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Engine/DeveloperSettings.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DeveloperSettings.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/DeveloperSettings.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DeveloperSettings.generated.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Inc\AdvKitRuntime\AdvKitTraceUtilityComponent.generated.h
 e:\documents\unreal projects\frostbite\plugins\advkitplugin\source\advkiteditor\private\AdvKitTransitionComponentPointVisualizer.h
 e:\documents\unreal projects\frostbite\plugins\advkitplugin\source\advkiteditor\private\AdvKitTransitionComponentVisualizer.h
@@ -31,62 +32,62 @@ E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\W
 e:\documents\unreal projects\frostbite\plugins\advkitplugin\source\advkiteditor\private\AdvKitTransitionComponentRectVisualizer.h
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Source\AdvKitRuntime\Public\Environment/Transitions/AdvKitTransitionComponentRect.h
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Inc\AdvKitRuntime\AdvKitTransitionComponentRect.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Editor\UnrealEd\Public\UnrealEdGlobals.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Editor\UnrealEd\Classes\Editor/UnrealEdEngine.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Editor\UnrealEd\Public\IPackageAutoSaver.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Developer\SourceControl\Public\ISourceControlProvider.h
-c:\program files\epic games\ue_4.24\engine\source\developer\sourcecontrol\public\ISourceControlOperation.h
-c:\program files\epic games\ue_4.24\engine\source\developer\sourcecontrol\public\ISourceControlState.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Editor\UnrealEd\Public\IDDCNotifications.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Editor\UnrealEd\Public\ComponentVisualizerManager.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd\UnrealEdEngine.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\UnrealEdGlobals.h
+E:\Epic Games\UE_4.25\Engine\Source\Editor\UnrealEd\Classes\Editor/UnrealEdEngine.h
+E:\Epic Games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\IPackageAutoSaver.h
+E:\Epic Games\UE_4.25\Engine\Source\Developer\SourceControl\Public\ISourceControlProvider.h
+e:\epic games\ue_4.25\engine\source\developer\sourcecontrol\public\ISourceControlOperation.h
+e:\epic games\ue_4.25\engine\source\developer\sourcecontrol\public\ISourceControlState.h
+E:\Epic Games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\IDDCNotifications.h
+E:\Epic Games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\ComponentVisualizerManager.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd\UnrealEdEngine.generated.h
 E:/Documents/Unreal Projects/FROSTBITE/Plugins/AdvKitPlugin/Source/AdvKitEditor/Private/AdvKitTraceComponentVisualizer.cpp
 E:/Documents/Unreal Projects/FROSTBITE/Plugins/AdvKitPlugin/Source/AdvKitEditor/Private/AdvKitTransitionComponentLineVisualizer.cpp
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Source\AdvKitRuntime\Public\Environment/AdvKitZone.h
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Source\AdvKitRuntime\Public\Player/AdvKitCharacterMovementComponent.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementComponent.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Animation/AnimMontage.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Public\AlphaBlend.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AlphaBlend.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Animation/AnimCompositeBase.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimCompositeBase.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Animation/TimeStretchCurve.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\TimeStretchCurve.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimMontage.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\AI/Navigation/NavigationAvoidanceTypes.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavigationAvoidanceTypes.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Public\AI/RVOAvoidanceInterface.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RVOAvoidanceInterface.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/PawnMovementComponent.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/NavMovementComponent.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\AI/Navigation/PathFollowingAgentInterface.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PathFollowingAgentInterface.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavMovementComponent.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PawnMovementComponent.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Interfaces/NetworkPredictionInterface.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NetworkPredictionInterface.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementComponent.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementComponent.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Animation/AnimMontage.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Public\AlphaBlend.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AlphaBlend.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Animation/AnimCompositeBase.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimCompositeBase.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Animation/TimeStretchCurve.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\TimeStretchCurve.generated.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimMontage.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\AI/Navigation/NavigationAvoidanceTypes.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavigationAvoidanceTypes.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Public\AI/RVOAvoidanceInterface.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RVOAvoidanceInterface.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/PawnMovementComponent.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/NavMovementComponent.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\AI/Navigation/PathFollowingAgentInterface.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PathFollowingAgentInterface.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavMovementComponent.generated.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PawnMovementComponent.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Interfaces/NetworkPredictionInterface.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NetworkPredictionInterface.generated.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementComponent.generated.h
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Inc\AdvKitRuntime\AdvKitCharacterMovementComponent.generated.h
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Inc\AdvKitRuntime\AdvKitZone.generated.h
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Source\AdvKitRuntime\Public\Player/AdvKitCharacter.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Source\AdvKitRuntime\Public\Actions/AnimNotifyState_TransitionCorrection.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Animation/AnimNotifies/AnimNotifyState.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimNotifyState.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Animation/AnimNotifies/AnimNotifyState.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimNotifyState.generated.h
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Inc\AdvKitRuntime\AnimNotifyState_TransitionCorrection.generated.h
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Inc\AdvKitRuntime\AdvKitCharacter.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Editor\ActorPickerMode\Public\ActorPickerMode.h
+E:\Epic Games\UE_4.25\Engine\Source\Editor\ActorPickerMode\Public\ActorPickerMode.h
 E:/Documents/Unreal Projects/FROSTBITE/Plugins/AdvKitPlugin/Source/AdvKitEditor/Private/AdvKitTransitionComponentPointVisualizer.cpp
 E:/Documents/Unreal Projects/FROSTBITE/Plugins/AdvKitPlugin/Source/AdvKitEditor/Private/AdvKitTransitionComponentRectVisualizer.cpp
 E:/Documents/Unreal Projects/FROSTBITE/Plugins/AdvKitPlugin/Source/AdvKitEditor/Private/AdvKitTransitionComponentSplineVisualizer.cpp
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Source\AdvKitRuntime\Public\Environment/Zones/AdvKitZoneSpline.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Components/SplineComponent.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SplineComponent.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/SplineComponent.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SplineComponent.generated.h
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Inc\AdvKitRuntime\AdvKitZoneSpline.generated.h
 E:/Documents/Unreal Projects/FROSTBITE/Plugins/AdvKitPlugin/Source/AdvKitEditor/Private/AdvKitTransitionComponentVisualizer.cpp
 E:/Documents/Unreal Projects/FROSTBITE/Plugins/AdvKitPlugin/Source/AdvKitEditor/Private/AdvKitZoneContextTool.cpp
@@ -96,16 +97,18 @@ E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Source\AdvKitRuntime
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Inc\AdvKitRuntime\AdvKitZoneRectangle.generated.h
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Source\AdvKitRuntime\Public\Environment/AdvKitTransitionBuilderModule.h
 E:\Documents\Unreal Projects\FROSTBITE\Plugins\AdvKitPlugin\Intermediate\Build\Win64\UE4Editor\Inc\AdvKitRuntime\AdvKitTransitionBuilderModule.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Public\EngineUtils.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ProfilingHelpers.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/WorldSettings.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/DamageType.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DamageType.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Info.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Info.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Sound/AudioVolume.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Volume.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Volume.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AudioVolume.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/ConstructorHelpers.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\WorldSettings.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Public\EngineUtils.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ProfilingHelpers.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/WorldSettings.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/DamageType.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DamageType.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/Info.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Info.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Sound/AudioVolume.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/Volume.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Volume.generated.h
+e:\epic games\ue_4.25\engine\source\runtime\engine\classes\sound\ReverbSettings.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ReverbSettings.generated.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AudioVolume.generated.h
+E:\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/ConstructorHelpers.h
+E:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\WorldSettings.generated.h

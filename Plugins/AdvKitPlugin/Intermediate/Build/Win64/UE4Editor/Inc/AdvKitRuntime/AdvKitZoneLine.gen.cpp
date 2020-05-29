@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,10 +17,19 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitZoneLine() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitZoneLine();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitZone();
 	UPackage* Z_Construct_UPackage__Script_AdvKitRuntime();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZoneLine_GetProjectedHalfExtent();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 // End Cross Module References
+	DEFINE_FUNCTION(AAdvKitZoneLine::execGetProjectedHalfExtent)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalDirection);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent);
+		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetProjectedHalfExtent(Z_Param_Out_LocalDirection,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation);
+		P_NATIVE_END;
+	}
 	void AAdvKitZoneLine::StaticRegisterNativesAAdvKitZoneLine()
 	{
 		UClass* Class = AAdvKitZoneLine::StaticClass();
@@ -229,7 +238,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitZoneLine() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAdvKitZoneLine, 3929538306);
+	IMPLEMENT_CLASS(AAdvKitZoneLine, 2781601639);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<AAdvKitZoneLine>()
 	{
 		return AAdvKitZoneLine::StaticClass();

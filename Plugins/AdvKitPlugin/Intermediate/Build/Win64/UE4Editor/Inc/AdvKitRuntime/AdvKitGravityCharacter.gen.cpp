@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,16 +17,52 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitGravityCharacter() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitGravityCharacter();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitCharacter();
 	UPackage* Z_Construct_UPackage__Script_AdvKitRuntime();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitGravityCharacter_CanWallWalkOn();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FFindFloorResult();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitGravityCharacter_GetAdvGravityMovementComponent();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitGravityCharacterMovementComponent_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitGravityCharacter_SetNewOrientation();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitGravityCharacter_SetNewOrientationServer();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitTraceUtilityComponent_NoRegister();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitOrientationComponent_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AAdvKitGravityCharacter::execGetAdvGravityMovementComponent)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UAdvKitGravityCharacterMovementComponent**)Z_Param__Result=P_THIS->GetAdvGravityMovementComponent();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitGravityCharacter::execSetNewOrientationServer)
+	{
+		P_GET_STRUCT(FVector,Z_Param_GravityUpVector);
+		P_GET_STRUCT(FVector,Z_Param_Origin);
+		P_GET_UBOOL(Z_Param_bForce);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->SetNewOrientationServer_Validate(Z_Param_GravityUpVector,Z_Param_Origin,Z_Param_bForce))
+		{
+			RPC_ValidateFailed(TEXT("SetNewOrientationServer_Validate"));
+			return;
+		}
+		P_THIS->SetNewOrientationServer_Implementation(Z_Param_GravityUpVector,Z_Param_Origin,Z_Param_bForce);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitGravityCharacter::execSetNewOrientation)
+	{
+		P_GET_STRUCT(FVector,Z_Param_GravityUpVector);
+		P_GET_STRUCT(FVector,Z_Param_Origin);
+		P_GET_UBOOL(Z_Param_bForce);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetNewOrientation(Z_Param_GravityUpVector,Z_Param_Origin,Z_Param_bForce);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitGravityCharacter::execCanWallWalkOn)
+	{
+		P_GET_STRUCT(FFindFloorResult,Z_Param_NewFloor);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CanWallWalkOn_Implementation(Z_Param_NewFloor);
+		P_NATIVE_END;
+	}
 	static FName NAME_AAdvKitGravityCharacter_CanWallWalkOn = FName(TEXT("CanWallWalkOn"));
 	bool AAdvKitGravityCharacter::CanWallWalkOn(FFindFloorResult NewFloor)
 	{
@@ -324,12 +360,22 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitGravityCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAdvKitGravityCharacter, 646950436);
+	IMPLEMENT_CLASS(AAdvKitGravityCharacter, 4289062414);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<AAdvKitGravityCharacter>()
 	{
 		return AAdvKitGravityCharacter::StaticClass();
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AAdvKitGravityCharacter(Z_Construct_UClass_AAdvKitGravityCharacter, &AAdvKitGravityCharacter::StaticClass, TEXT("/Script/AdvKitRuntime"), TEXT("AAdvKitGravityCharacter"), false, nullptr, nullptr, nullptr);
+
+	void AAdvKitGravityCharacter::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
+	{
+		static const FName Name_WorldOrientationComponent(TEXT("WorldOrientationComponent"));
+
+		const bool bIsValid = true
+			&& Name_WorldOrientationComponent == ClassReps[(int32)ENetFields_Private::WorldOrientationComponent].Property->GetFName();
+
+		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in AAdvKitGravityCharacter"));
+	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAdvKitGravityCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER

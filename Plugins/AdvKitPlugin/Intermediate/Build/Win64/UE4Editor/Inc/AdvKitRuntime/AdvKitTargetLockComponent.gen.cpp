@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -109,7 +109,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTargetLockComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAdvKitTargetLockComponent, 1386601589);
+	IMPLEMENT_CLASS(UAdvKitTargetLockComponent, 4291535390);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<UAdvKitTargetLockComponent>()
 	{
 		return UAdvKitTargetLockComponent::StaticClass();

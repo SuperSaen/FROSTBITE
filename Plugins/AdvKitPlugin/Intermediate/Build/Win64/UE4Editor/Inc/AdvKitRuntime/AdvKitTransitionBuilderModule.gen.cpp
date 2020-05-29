@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,31 +17,174 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTransitionBuilderModule() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitTransitionBuilderModule();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	UPackage* Z_Construct_UPackage__Script_AdvKitRuntime();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CanCreateTransitionsFor();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitZone_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitCharacter_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitionBetween();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitionLine();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitTransitionComponentLine_NoRegister();
 	ADVKITRUNTIME_API UEnum* Z_Construct_UEnum_AdvKitRuntime_EAdvKitMovementMode();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitionPoint();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitTransitionComponentPoint_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitionRect();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitTransitionComponentRect_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitions();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitionsFor();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitionSpline();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitTransitionComponentSpline_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GatherPotentialTargetZones();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GetCharacterHalfExtent();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GetCharacterMovementProperties_BP();
 	ADVKITRUNTIME_API UScriptStruct* Z_Construct_UScriptStruct_FAdvKitMovementProperties();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GetOuterZone();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionBuilderModule_OverlapForCloseZones();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitTransitionComponent_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(UAdvKitTransitionBuilderModule::execCreateTransitionRect)
+	{
+		P_GET_OBJECT(UAdvKitTransitionBuilderModule,Z_Param_ForModule);
+		P_GET_PROPERTY(FStrProperty,Z_Param_Id);
+		P_GET_OBJECT(AAdvKitZone,Z_Param_SourceZone);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldSourceLocation);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldTargetLocation);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldSourceLocation);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldTargetLocation);
+		P_GET_OBJECT(UClass,Z_Param_ForCharacter);
+		P_GET_ENUM(EAdvKitMovementMode,Z_Param_MovementMode);
+		P_GET_OBJECT(AAdvKitZone,Z_Param_TargetZone);
+		P_GET_PROPERTY(FByteProperty,Z_Param_CustomMovementMode);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UAdvKitTransitionComponentRect**)Z_Param__Result=UAdvKitTransitionBuilderModule::CreateTransitionRect(Z_Param_ForModule,Z_Param_Id,Z_Param_SourceZone,Z_Param_Out_MinWorldSourceLocation,Z_Param_Out_MinWorldTargetLocation,Z_Param_Out_MaxWorldSourceLocation,Z_Param_Out_MaxWorldTargetLocation,Z_Param_ForCharacter,EAdvKitMovementMode(Z_Param_MovementMode),Z_Param_TargetZone,Z_Param_CustomMovementMode);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTransitionBuilderModule::execCreateTransitionSpline)
+	{
+		P_GET_OBJECT(UAdvKitTransitionBuilderModule,Z_Param_ForModule);
+		P_GET_PROPERTY(FStrProperty,Z_Param_Id);
+		P_GET_OBJECT(AAdvKitZone,Z_Param_SourceZone);
+		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_MinSourceDistance);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldSourcePosition);
+		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_MinTargetDistance);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldTargetPosition);
+		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_MaxSourceDistance);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldSourcePosition);
+		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_MaxTargetDistance);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldTargetPosition);
+		P_GET_OBJECT(UClass,Z_Param_ForCharacter);
+		P_GET_ENUM(EAdvKitMovementMode,Z_Param_MovementMode);
+		P_GET_OBJECT(AAdvKitZone,Z_Param_TargetZone);
+		P_GET_PROPERTY(FByteProperty,Z_Param_CustomMovementMode);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UAdvKitTransitionComponentSpline**)Z_Param__Result=UAdvKitTransitionBuilderModule::CreateTransitionSpline(Z_Param_ForModule,Z_Param_Id,Z_Param_SourceZone,Z_Param_Out_MinSourceDistance,Z_Param_Out_MinWorldSourcePosition,Z_Param_Out_MinTargetDistance,Z_Param_Out_MinWorldTargetPosition,Z_Param_Out_MaxSourceDistance,Z_Param_Out_MaxWorldSourcePosition,Z_Param_Out_MaxTargetDistance,Z_Param_Out_MaxWorldTargetPosition,Z_Param_ForCharacter,EAdvKitMovementMode(Z_Param_MovementMode),Z_Param_TargetZone,Z_Param_CustomMovementMode);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTransitionBuilderModule::execCreateTransitionLine)
+	{
+		P_GET_OBJECT(UAdvKitTransitionBuilderModule,Z_Param_ForModule);
+		P_GET_PROPERTY(FStrProperty,Z_Param_Id);
+		P_GET_OBJECT(AAdvKitZone,Z_Param_SourceZone);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldSourceLocation);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldTargetLocation);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldSourceLocation);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldTargetLocation);
+		P_GET_OBJECT(UClass,Z_Param_ForCharacter);
+		P_GET_ENUM(EAdvKitMovementMode,Z_Param_MovementMode);
+		P_GET_OBJECT(AAdvKitZone,Z_Param_TargetZone);
+		P_GET_PROPERTY(FByteProperty,Z_Param_CustomMovementMode);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UAdvKitTransitionComponentLine**)Z_Param__Result=UAdvKitTransitionBuilderModule::CreateTransitionLine(Z_Param_ForModule,Z_Param_Id,Z_Param_SourceZone,Z_Param_Out_MinWorldSourceLocation,Z_Param_Out_MinWorldTargetLocation,Z_Param_Out_MaxWorldSourceLocation,Z_Param_Out_MaxWorldTargetLocation,Z_Param_ForCharacter,EAdvKitMovementMode(Z_Param_MovementMode),Z_Param_TargetZone,Z_Param_CustomMovementMode);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTransitionBuilderModule::execCreateTransitionPoint)
+	{
+		P_GET_OBJECT(UAdvKitTransitionBuilderModule,Z_Param_ForModule);
+		P_GET_PROPERTY(FStrProperty,Z_Param_Id);
+		P_GET_OBJECT(AAdvKitZone,Z_Param_SourceZone);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldSourceLocation);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldTargetLocation);
+		P_GET_OBJECT(UClass,Z_Param_ForCharacter);
+		P_GET_ENUM(EAdvKitMovementMode,Z_Param_MovementMode);
+		P_GET_OBJECT(AAdvKitZone,Z_Param_TargetZone);
+		P_GET_PROPERTY(FByteProperty,Z_Param_CustomMovementMode);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UAdvKitTransitionComponentPoint**)Z_Param__Result=UAdvKitTransitionBuilderModule::CreateTransitionPoint(Z_Param_ForModule,Z_Param_Id,Z_Param_SourceZone,Z_Param_Out_WorldSourceLocation,Z_Param_Out_WorldTargetLocation,Z_Param_ForCharacter,EAdvKitMovementMode(Z_Param_MovementMode),Z_Param_TargetZone,Z_Param_CustomMovementMode);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTransitionBuilderModule::execOverlapForCloseZones)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_ToZone);
+		P_GET_STRUCT(FVector,Z_Param_OverlapStart);
+		P_GET_STRUCT(FVector,Z_Param_OverlapEnd);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_OverlapRadius);
+		P_GET_TARRAY_REF(AAdvKitZone*,Z_Param_Out_OutOtherZones);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->OverlapForCloseZones(Z_Param_ToZone,Z_Param_OverlapStart,Z_Param_OverlapEnd,Z_Param_OverlapRadius,Z_Param_Out_OutOtherZones);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTransitionBuilderModule::execGetCharacterMovementProperties_BP)
+	{
+		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FAdvKitMovementProperties*)Z_Param__Result=P_THIS->GetCharacterMovementProperties_BP(Z_Param_ForCharacterClass);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTransitionBuilderModule::execGetCharacterHalfExtent)
+	{
+		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass);
+		P_GET_OBJECT(AAdvKitZone,Z_Param_ForZone);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetCharacterHalfExtent(Z_Param_ForCharacterClass,Z_Param_ForZone);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTransitionBuilderModule::execCreateTransitionBetween)
+	{
+		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass);
+		P_GET_OBJECT(AAdvKitZone,Z_Param_SourceZone);
+		P_GET_OBJECT(AAdvKitZone,Z_Param_TargetZone);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CreateTransitionBetween_Implementation(Z_Param_ForCharacterClass,Z_Param_SourceZone,Z_Param_TargetZone);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTransitionBuilderModule::execGatherPotentialTargetZones)
+	{
+		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass);
+		P_GET_OBJECT(AAdvKitZone,Z_Param_ForZone);
+		P_GET_TARRAY_REF(AAdvKitZone*,Z_Param_Out_OutZones);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->GatherPotentialTargetZones_Implementation(Z_Param_ForCharacterClass,Z_Param_ForZone,Z_Param_Out_OutZones);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTransitionBuilderModule::execCreateTransitionsFor)
+	{
+		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass);
+		P_GET_OBJECT(AAdvKitZone,Z_Param_ForZone);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->CreateTransitionsFor_Implementation(Z_Param_ForCharacterClass,Z_Param_ForZone);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTransitionBuilderModule::execCanCreateTransitionsFor)
+	{
+		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass);
+		P_GET_OBJECT(AAdvKitZone,Z_Param_ForZone);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CanCreateTransitionsFor_Implementation(Z_Param_ForCharacterClass,Z_Param_ForZone);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTransitionBuilderModule::execGetOuterZone)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(AAdvKitZone**)Z_Param__Result=P_THIS->GetOuterZone();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTransitionBuilderModule::execCreateTransitions)
+	{
+		P_GET_TARRAY_REF(AAdvKitZone*,Z_Param_Out_OutAffectedZones);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->CreateTransitions_Implementation(Z_Param_Out_OutAffectedZones);
+		P_NATIVE_END;
+	}
 	static FName NAME_UAdvKitTransitionBuilderModule_CanCreateTransitionsFor = FName(TEXT("CanCreateTransitionsFor"));
 	bool UAdvKitTransitionBuilderModule::CanCreateTransitionsFor(TSubclassOf<AAdvKitCharacter>  ForCharacterClass, AAdvKitZone* ForZone)
 	{
@@ -547,7 +690,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTransitionBuilderModule() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitions_Statics::NewProp_OutAffectedZones = { "OutAffectedZones", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTransitionBuilderModule_eventCreateTransitions_Parms, OutAffectedZones), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitions_Statics::NewProp_OutAffectedZones = { "OutAffectedZones", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTransitionBuilderModule_eventCreateTransitions_Parms, OutAffectedZones), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitions_Statics::NewProp_OutAffectedZones_Inner = { "OutAffectedZones", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AAdvKitZone_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitions_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitions_Statics::NewProp_OutAffectedZones,
@@ -794,7 +937,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTransitionBuilderModule() {}
 		((AdvKitTransitionBuilderModule_eventGatherPotentialTargetZones_Parms*)Obj)->ReturnValue = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GatherPotentialTargetZones_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AdvKitTransitionBuilderModule_eventGatherPotentialTargetZones_Parms), &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GatherPotentialTargetZones_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GatherPotentialTargetZones_Statics::NewProp_OutZones = { "OutZones", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTransitionBuilderModule_eventGatherPotentialTargetZones_Parms, OutZones), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GatherPotentialTargetZones_Statics::NewProp_OutZones = { "OutZones", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTransitionBuilderModule_eventGatherPotentialTargetZones_Parms, OutZones), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GatherPotentialTargetZones_Statics::NewProp_OutZones_Inner = { "OutZones", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AAdvKitZone_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GatherPotentialTargetZones_Statics::NewProp_ForZone = { "ForZone", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTransitionBuilderModule_eventGatherPotentialTargetZones_Parms, ForZone), Z_Construct_UClass_AAdvKitZone_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GatherPotentialTargetZones_Statics::NewProp_ForCharacterClass = { "ForCharacterClass", nullptr, (EPropertyFlags)0x0014000000000080, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTransitionBuilderModule_eventGatherPotentialTargetZones_Parms, ForCharacterClass), Z_Construct_UClass_AAdvKitCharacter_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
@@ -979,7 +1122,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTransitionBuilderModule() {}
 		((AdvKitTransitionBuilderModule_eventOverlapForCloseZones_Parms*)Obj)->ReturnValue = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UAdvKitTransitionBuilderModule_OverlapForCloseZones_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AdvKitTransitionBuilderModule_eventOverlapForCloseZones_Parms), &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_OverlapForCloseZones_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTransitionBuilderModule_OverlapForCloseZones_Statics::NewProp_OutOtherZones = { "OutOtherZones", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTransitionBuilderModule_eventOverlapForCloseZones_Parms, OutOtherZones), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTransitionBuilderModule_OverlapForCloseZones_Statics::NewProp_OutOtherZones = { "OutOtherZones", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTransitionBuilderModule_eventOverlapForCloseZones_Parms, OutOtherZones), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTransitionBuilderModule_OverlapForCloseZones_Statics::NewProp_OutOtherZones_Inner = { "OutOtherZones", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AAdvKitZone_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UAdvKitTransitionBuilderModule_OverlapForCloseZones_Statics::NewProp_OverlapRadius = { "OverlapRadius", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTransitionBuilderModule_eventOverlapForCloseZones_Parms, OverlapRadius), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UAdvKitTransitionBuilderModule_OverlapForCloseZones_Statics::NewProp_OverlapEnd = { "OverlapEnd", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTransitionBuilderModule_eventOverlapForCloseZones_Parms, OverlapEnd), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
@@ -1060,14 +1203,14 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTransitionBuilderModule() {}
 		{ &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitionLine, "CreateTransitionLine" }, // 2297647813
 		{ &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitionPoint, "CreateTransitionPoint" }, // 4030825508
 		{ &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitionRect, "CreateTransitionRect" }, // 1148004519
-		{ &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitions, "CreateTransitions" }, // 3853828062
+		{ &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitions, "CreateTransitions" }, // 2247435864
 		{ &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitionsFor, "CreateTransitionsFor" }, // 1734195345
 		{ &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_CreateTransitionSpline, "CreateTransitionSpline" }, // 1496204135
-		{ &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GatherPotentialTargetZones, "GatherPotentialTargetZones" }, // 1944203335
+		{ &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GatherPotentialTargetZones, "GatherPotentialTargetZones" }, // 826685712
 		{ &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GetCharacterHalfExtent, "GetCharacterHalfExtent" }, // 3415975619
 		{ &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GetCharacterMovementProperties_BP, "GetCharacterMovementProperties_BP" }, // 293971137
 		{ &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_GetOuterZone, "GetOuterZone" }, // 1122073573
-		{ &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_OverlapForCloseZones, "OverlapForCloseZones" }, // 328995497
+		{ &Z_Construct_UFunction_UAdvKitTransitionBuilderModule_OverlapForCloseZones, "OverlapForCloseZones" }, // 2675552633
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::Class_MetaDataParams[] = {
@@ -1088,7 +1231,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTransitionBuilderModule() {}
 		{ "ToolTip", "For which character classes this builder should create transitions." },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_DefaultCharacterClasses = { "DefaultCharacterClasses", nullptr, (EPropertyFlags)0x0014000000000005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UAdvKitTransitionBuilderModule, DefaultCharacterClasses), METADATA_PARAMS(Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_DefaultCharacterClasses_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_DefaultCharacterClasses_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_DefaultCharacterClasses = { "DefaultCharacterClasses", nullptr, (EPropertyFlags)0x0014000000000005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UAdvKitTransitionBuilderModule, DefaultCharacterClasses), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_DefaultCharacterClasses_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_DefaultCharacterClasses_MetaData)) };
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_DefaultCharacterClasses_Inner = { "DefaultCharacterClasses", nullptr, (EPropertyFlags)0x0004000000000000, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AAdvKitCharacter_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_CreatedOrUpdatedTransitions_MetaData[] = {
@@ -1099,7 +1242,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTransitionBuilderModule() {}
 		{ "ToolTip", "During the build process this is used to keep track transitions that where created or updated" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_CreatedOrUpdatedTransitions = { "CreatedOrUpdatedTransitions", nullptr, (EPropertyFlags)0x002008800000000c, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UAdvKitTransitionBuilderModule, CreatedOrUpdatedTransitions), METADATA_PARAMS(Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_CreatedOrUpdatedTransitions_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_CreatedOrUpdatedTransitions_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_CreatedOrUpdatedTransitions = { "CreatedOrUpdatedTransitions", nullptr, (EPropertyFlags)0x002008800000000c, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UAdvKitTransitionBuilderModule, CreatedOrUpdatedTransitions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_CreatedOrUpdatedTransitions_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_CreatedOrUpdatedTransitions_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_CreatedOrUpdatedTransitions_Inner = { "CreatedOrUpdatedTransitions", nullptr, (EPropertyFlags)0x0000000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UAdvKitTransitionComponent_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_AffectedZones_MetaData[] = {
@@ -1109,7 +1252,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTransitionBuilderModule() {}
 		{ "ToolTip", "During the build process this is used to keep track of zones that transitions where created to or removed from" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_AffectedZones = { "AffectedZones", nullptr, (EPropertyFlags)0x0020080000000004, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UAdvKitTransitionBuilderModule, AffectedZones), METADATA_PARAMS(Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_AffectedZones_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_AffectedZones_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_AffectedZones = { "AffectedZones", nullptr, (EPropertyFlags)0x0020080000000004, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UAdvKitTransitionBuilderModule, AffectedZones), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_AffectedZones_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_AffectedZones_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_AffectedZones_Inner = { "AffectedZones", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AAdvKitZone_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UAdvKitTransitionBuilderModule_Statics::NewProp_ErrorMarginDot_MetaData[] = {
@@ -1166,7 +1309,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTransitionBuilderModule() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAdvKitTransitionBuilderModule, 532969445);
+	IMPLEMENT_CLASS(UAdvKitTransitionBuilderModule, 3254461435);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<UAdvKitTransitionBuilderModule>()
 	{
 		return UAdvKitTransitionBuilderModule::StaticClass();

@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -93,7 +93,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitInventoryPickup() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAdvKitInventoryPickup, 2654060888);
+	IMPLEMENT_CLASS(AAdvKitInventoryPickup, 2090553777);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<AAdvKitInventoryPickup>()
 	{
 		return AAdvKitInventoryPickup::StaticClass();

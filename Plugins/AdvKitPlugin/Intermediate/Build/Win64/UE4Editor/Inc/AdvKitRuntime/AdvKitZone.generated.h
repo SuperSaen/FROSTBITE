@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -35,486 +35,60 @@ class UAdvKitTransitionComponent;
 	virtual FVector GetPositionInDirection_Implementation(FVector const& FromWorldPosition, FVector const& WorldDesiredDelta, bool bClamp, FVector const& HalfExtent, FRotator const& ExtentWorldRotation); \
 	virtual void GenerateTransitions_Implementation(bool bZoneMoved); \
  \
-	DECLARE_FUNCTION(execConstrainDirectionToZone) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldDirection); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_AtWorldLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->ConstrainDirectionToZone_Implementation(Z_Param_Out_WorldDirection,Z_Param_Out_AtWorldLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetClosestZoneLocationNew) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetClosestZoneLocationNew_Implementation(Z_Param_Out_WorldLocation,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetClosestZoneTransform) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FTransform*)Z_Param__Result=P_THIS->GetClosestZoneTransform(Z_Param_Out_ToWorldLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetClosestZoneUpVector) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetClosestZoneUpVector_Implementation(Z_Param_Out_ToWorldLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetClosestZoneRightVector) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetClosestZoneRightVector_Implementation(Z_Param_Out_ToWorldLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetClosestZoneForwardVector) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetClosestZoneForwardVector_Implementation(Z_Param_Out_ToWorldLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneUpVectorNew) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalZoneLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneUpVectorNew_Implementation(Z_Param_Out_LocalZoneLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneRightVectorNew) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalZoneLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneRightVectorNew_Implementation(Z_Param_Out_LocalZoneLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneForwardVectorNew) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalZoneLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneForwardVectorNew_Implementation(Z_Param_Out_LocalZoneLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneLocationLocal) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneLocationLocal(Z_Param_Out_WorldLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneLocationWorld) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalZoneLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneLocationWorld(Z_Param_Out_LocalZoneLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execMoveLocationInDirectionNew) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalZoneLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldDesiredDelta); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->MoveLocationInDirectionNew(Z_Param_Out_LocalZoneLocation,Z_Param_Out_WorldDesiredDelta,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execHasCustomPhysics) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_QueryPhysics); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->HasCustomPhysics(Z_Param_QueryPhysics); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execHasPhysics) \
-	{ \
-		P_GET_ENUM(EAdvKitMovementMode,Z_Param_QueryPhysics); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->HasPhysics(EAdvKitMovementMode(Z_Param_QueryPhysics)); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetCustomPhysics) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(uint8*)Z_Param__Result=P_THIS->GetCustomPhysics(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetPhysics) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(EAdvKitMovementMode*)Z_Param__Result=P_THIS->GetPhysics(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execConstrainPositionToZone) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldPosition); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->ConstrainPositionToZone_Implementation(Z_Param_Out_WorldPosition,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneUpVector) \
-	{ \
-		P_GET_OBJECT(UAdvKitZoneLocation,Z_Param_AtLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneUpVector(Z_Param_AtLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneRightVector) \
-	{ \
-		P_GET_OBJECT(UAdvKitZoneLocation,Z_Param_AtLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneRightVector(Z_Param_AtLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneForwardVector) \
-	{ \
-		P_GET_OBJECT(UAdvKitZoneLocation,Z_Param_AtLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneForwardVector(Z_Param_AtLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execMoveLocationInDirection) \
-	{ \
-		P_GET_OBJECT(UAdvKitZoneLocation,Z_Param_LocationToMove); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldDesiredDelta); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->MoveLocationInDirection(Z_Param_LocationToMove,Z_Param_Out_WorldDesiredDelta,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetPositionInDirection) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_FromWorldPosition); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldDesiredDelta); \
-		P_GET_UBOOL(Z_Param_bClamp); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetPositionInDirection_Implementation(Z_Param_Out_FromWorldPosition,Z_Param_Out_WorldDesiredDelta,Z_Param_bClamp,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveExistingTransitionsTo) \
-	{ \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_Other); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveExistingTransitionsTo(Z_Param_Other); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddTransition) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_For); \
-		P_GET_OBJECT(UAdvKitTransitionComponent,Z_Param_Transition); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AddTransition(Z_Param_For,Z_Param_Transition); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGenerateTransitions) \
-	{ \
-		P_GET_UBOOL(Z_Param_bZoneMoved); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->GenerateTransitions_Implementation(Z_Param_bZoneMoved); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execConstrainDirectionToZone); \
+	DECLARE_FUNCTION(execGetClosestZoneLocationNew); \
+	DECLARE_FUNCTION(execGetClosestZoneTransform); \
+	DECLARE_FUNCTION(execGetClosestZoneUpVector); \
+	DECLARE_FUNCTION(execGetClosestZoneRightVector); \
+	DECLARE_FUNCTION(execGetClosestZoneForwardVector); \
+	DECLARE_FUNCTION(execGetZoneUpVectorNew); \
+	DECLARE_FUNCTION(execGetZoneRightVectorNew); \
+	DECLARE_FUNCTION(execGetZoneForwardVectorNew); \
+	DECLARE_FUNCTION(execGetZoneLocationLocal); \
+	DECLARE_FUNCTION(execGetZoneLocationWorld); \
+	DECLARE_FUNCTION(execMoveLocationInDirectionNew); \
+	DECLARE_FUNCTION(execHasCustomPhysics); \
+	DECLARE_FUNCTION(execHasPhysics); \
+	DECLARE_FUNCTION(execGetCustomPhysics); \
+	DECLARE_FUNCTION(execGetPhysics); \
+	DECLARE_FUNCTION(execConstrainPositionToZone); \
+	DECLARE_FUNCTION(execGetZoneUpVector); \
+	DECLARE_FUNCTION(execGetZoneRightVector); \
+	DECLARE_FUNCTION(execGetZoneForwardVector); \
+	DECLARE_FUNCTION(execMoveLocationInDirection); \
+	DECLARE_FUNCTION(execGetPositionInDirection); \
+	DECLARE_FUNCTION(execRemoveExistingTransitionsTo); \
+	DECLARE_FUNCTION(execAddTransition); \
+	DECLARE_FUNCTION(execGenerateTransitions);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Environment_AdvKitZone_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execConstrainDirectionToZone) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldDirection); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_AtWorldLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->ConstrainDirectionToZone_Implementation(Z_Param_Out_WorldDirection,Z_Param_Out_AtWorldLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetClosestZoneLocationNew) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetClosestZoneLocationNew_Implementation(Z_Param_Out_WorldLocation,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetClosestZoneTransform) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FTransform*)Z_Param__Result=P_THIS->GetClosestZoneTransform(Z_Param_Out_ToWorldLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetClosestZoneUpVector) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetClosestZoneUpVector_Implementation(Z_Param_Out_ToWorldLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetClosestZoneRightVector) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetClosestZoneRightVector_Implementation(Z_Param_Out_ToWorldLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetClosestZoneForwardVector) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetClosestZoneForwardVector_Implementation(Z_Param_Out_ToWorldLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneUpVectorNew) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalZoneLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneUpVectorNew_Implementation(Z_Param_Out_LocalZoneLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneRightVectorNew) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalZoneLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneRightVectorNew_Implementation(Z_Param_Out_LocalZoneLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneForwardVectorNew) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalZoneLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneForwardVectorNew_Implementation(Z_Param_Out_LocalZoneLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneLocationLocal) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneLocationLocal(Z_Param_Out_WorldLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneLocationWorld) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalZoneLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneLocationWorld(Z_Param_Out_LocalZoneLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execMoveLocationInDirectionNew) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalZoneLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldDesiredDelta); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->MoveLocationInDirectionNew(Z_Param_Out_LocalZoneLocation,Z_Param_Out_WorldDesiredDelta,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execHasCustomPhysics) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_QueryPhysics); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->HasCustomPhysics(Z_Param_QueryPhysics); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execHasPhysics) \
-	{ \
-		P_GET_ENUM(EAdvKitMovementMode,Z_Param_QueryPhysics); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->HasPhysics(EAdvKitMovementMode(Z_Param_QueryPhysics)); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetCustomPhysics) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(uint8*)Z_Param__Result=P_THIS->GetCustomPhysics(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetPhysics) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(EAdvKitMovementMode*)Z_Param__Result=P_THIS->GetPhysics(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execConstrainPositionToZone) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldPosition); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->ConstrainPositionToZone_Implementation(Z_Param_Out_WorldPosition,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneUpVector) \
-	{ \
-		P_GET_OBJECT(UAdvKitZoneLocation,Z_Param_AtLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneUpVector(Z_Param_AtLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneRightVector) \
-	{ \
-		P_GET_OBJECT(UAdvKitZoneLocation,Z_Param_AtLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneRightVector(Z_Param_AtLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZoneForwardVector) \
-	{ \
-		P_GET_OBJECT(UAdvKitZoneLocation,Z_Param_AtLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetZoneForwardVector(Z_Param_AtLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execMoveLocationInDirection) \
-	{ \
-		P_GET_OBJECT(UAdvKitZoneLocation,Z_Param_LocationToMove); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldDesiredDelta); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->MoveLocationInDirection(Z_Param_LocationToMove,Z_Param_Out_WorldDesiredDelta,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetPositionInDirection) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_FromWorldPosition); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldDesiredDelta); \
-		P_GET_UBOOL(Z_Param_bClamp); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetPositionInDirection_Implementation(Z_Param_Out_FromWorldPosition,Z_Param_Out_WorldDesiredDelta,Z_Param_bClamp,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveExistingTransitionsTo) \
-	{ \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_Other); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveExistingTransitionsTo(Z_Param_Other); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddTransition) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_For); \
-		P_GET_OBJECT(UAdvKitTransitionComponent,Z_Param_Transition); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AddTransition(Z_Param_For,Z_Param_Transition); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGenerateTransitions) \
-	{ \
-		P_GET_UBOOL(Z_Param_bZoneMoved); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->GenerateTransitions_Implementation(Z_Param_bZoneMoved); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execConstrainDirectionToZone); \
+	DECLARE_FUNCTION(execGetClosestZoneLocationNew); \
+	DECLARE_FUNCTION(execGetClosestZoneTransform); \
+	DECLARE_FUNCTION(execGetClosestZoneUpVector); \
+	DECLARE_FUNCTION(execGetClosestZoneRightVector); \
+	DECLARE_FUNCTION(execGetClosestZoneForwardVector); \
+	DECLARE_FUNCTION(execGetZoneUpVectorNew); \
+	DECLARE_FUNCTION(execGetZoneRightVectorNew); \
+	DECLARE_FUNCTION(execGetZoneForwardVectorNew); \
+	DECLARE_FUNCTION(execGetZoneLocationLocal); \
+	DECLARE_FUNCTION(execGetZoneLocationWorld); \
+	DECLARE_FUNCTION(execMoveLocationInDirectionNew); \
+	DECLARE_FUNCTION(execHasCustomPhysics); \
+	DECLARE_FUNCTION(execHasPhysics); \
+	DECLARE_FUNCTION(execGetCustomPhysics); \
+	DECLARE_FUNCTION(execGetPhysics); \
+	DECLARE_FUNCTION(execConstrainPositionToZone); \
+	DECLARE_FUNCTION(execGetZoneUpVector); \
+	DECLARE_FUNCTION(execGetZoneRightVector); \
+	DECLARE_FUNCTION(execGetZoneForwardVector); \
+	DECLARE_FUNCTION(execMoveLocationInDirection); \
+	DECLARE_FUNCTION(execGetPositionInDirection); \
+	DECLARE_FUNCTION(execRemoveExistingTransitionsTo); \
+	DECLARE_FUNCTION(execAddTransition); \
+	DECLARE_FUNCTION(execGenerateTransitions);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Environment_AdvKitZone_h_25_EVENT_PARMS \

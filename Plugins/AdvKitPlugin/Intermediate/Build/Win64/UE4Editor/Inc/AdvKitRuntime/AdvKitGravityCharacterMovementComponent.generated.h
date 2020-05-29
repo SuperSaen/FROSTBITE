@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -18,48 +18,14 @@ struct FVector;
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitGravityCharacterMovementComponent_h_17_SPARSE_DATA
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitGravityCharacterMovementComponent_h_17_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execOnOrientationChanged) \
-	{ \
-		P_GET_STRUCT_REF(FTransform,Z_Param_Out_OldOrientation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnOrientationChanged(Z_Param_Out_OldOrientation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetGravityVector) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_GravityDirection); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_GravityOrigin); \
-		P_GET_UBOOL(Z_Param_bForce); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetGravityVector(Z_Param_Out_GravityDirection,Z_Param_Out_GravityOrigin,Z_Param_bForce); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnOrientationChanged); \
+	DECLARE_FUNCTION(execSetGravityVector);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitGravityCharacterMovementComponent_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execOnOrientationChanged) \
-	{ \
-		P_GET_STRUCT_REF(FTransform,Z_Param_Out_OldOrientation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnOrientationChanged(Z_Param_Out_OldOrientation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetGravityVector) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_GravityDirection); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_GravityOrigin); \
-		P_GET_UBOOL(Z_Param_bForce); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetGravityVector(Z_Param_Out_GravityDirection,Z_Param_Out_GravityOrigin,Z_Param_bForce); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnOrientationChanged); \
+	DECLARE_FUNCTION(execSetGravityVector);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitGravityCharacterMovementComponent_h_17_INCLASS_NO_PURE_DECLS \

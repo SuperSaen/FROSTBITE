@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,13 +17,27 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitProjectile() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitProjectile();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_AdvKitRuntime();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitProjectile_Init();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitProjectile_OnImpact();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AAdvKitProjectile::execInit)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_Direction);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Init(Z_Param_Out_Direction);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitProjectile::execOnImpact)
+	{
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_Impact);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnImpact_Implementation(Z_Param_Out_Impact);
+		P_NATIVE_END;
+	}
 	static FName NAME_AAdvKitProjectile_OnImpact = FName(TEXT("OnImpact"));
 	void AAdvKitProjectile::OnImpact(FHitResult const& Impact)
 	{
@@ -233,7 +247,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitProjectile() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAdvKitProjectile, 766778575);
+	IMPLEMENT_CLASS(AAdvKitProjectile, 811594021);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<AAdvKitProjectile>()
 	{
 		return AAdvKitProjectile::StaticClass();

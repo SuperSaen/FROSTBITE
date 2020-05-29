@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitGravityPlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAdvKitGravityPlayerController, 3102974314);
+	IMPLEMENT_CLASS(AAdvKitGravityPlayerController, 202722528);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<AAdvKitGravityPlayerController>()
 	{
 		return AAdvKitGravityPlayerController::StaticClass();

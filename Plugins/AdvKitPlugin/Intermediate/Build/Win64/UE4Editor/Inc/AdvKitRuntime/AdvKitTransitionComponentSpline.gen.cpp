@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -246,7 +246,7 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFSplineTransition
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAdvKitTransitionComponentSpline, 3462611123);
+	IMPLEMENT_CLASS(UAdvKitTransitionComponentSpline, 4087234488);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<UAdvKitTransitionComponentSpline>()
 	{
 		return UAdvKitTransitionComponentSpline::StaticClass();

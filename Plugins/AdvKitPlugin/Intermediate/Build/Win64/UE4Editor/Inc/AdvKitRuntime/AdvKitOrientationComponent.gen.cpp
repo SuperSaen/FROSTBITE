@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -19,15 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitOrientationComponent() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitOrientationComponent_NoRegister();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitOrientationComponent();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitOrientationComponent_SetOrientation();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitOrientationComponent_TransformDirectionL2W();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitOrientationComponent_TransformDirectionW2L();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitOrientationComponent_TransformPositionL2W();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitOrientationComponent_TransformPositionW2L();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitOrientationComponent_TransformRotationL2W();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitOrientationComponent_TransformRotationW2L();
 // End Cross Module References
 	struct Z_Construct_UDelegateFunction_AdvKitRuntime_OrientationChanged__DelegateSignature_Statics
 	{
@@ -68,6 +61,64 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitOrientationComponent() {}
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_AdvKitRuntime_OrientationChanged__DelegateSignature_Statics::FuncParams);
 		}
 		return ReturnFunction;
+	}
+	DEFINE_FUNCTION(UAdvKitOrientationComponent::execSetOrientation)
+	{
+		P_GET_STRUCT(FVector,Z_Param_Origin);
+		P_GET_STRUCT(FVector,Z_Param_UpNormal);
+		P_GET_UBOOL(Z_Param_bForce);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetOrientation(Z_Param_Origin,Z_Param_UpNormal,Z_Param_bForce);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitOrientationComponent::execTransformRotationL2W)
+	{
+		P_GET_STRUCT_REF(FRotator,Z_Param_Out_Rotation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FRotator*)Z_Param__Result=P_THIS->TransformRotationL2W(Z_Param_Out_Rotation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitOrientationComponent::execTransformRotationW2L)
+	{
+		P_GET_STRUCT_REF(FRotator,Z_Param_Out_Rotation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FRotator*)Z_Param__Result=P_THIS->TransformRotationW2L(Z_Param_Out_Rotation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitOrientationComponent::execTransformPositionL2W)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_Position);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->TransformPositionL2W(Z_Param_Out_Position);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitOrientationComponent::execTransformPositionW2L)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_Position);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->TransformPositionW2L(Z_Param_Out_Position);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitOrientationComponent::execTransformDirectionL2W)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_Direction);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->TransformDirectionL2W(Z_Param_Out_Direction);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitOrientationComponent::execTransformDirectionW2L)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_Direction);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->TransformDirectionW2L(Z_Param_Out_Direction);
+		P_NATIVE_END;
 	}
 	void UAdvKitOrientationComponent::StaticRegisterNativesUAdvKitOrientationComponent()
 	{
@@ -547,7 +598,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitOrientationComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAdvKitOrientationComponent, 2201637810);
+	IMPLEMENT_CLASS(UAdvKitOrientationComponent, 3174810991);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<UAdvKitOrientationComponent>()
 	{
 		return UAdvKitOrientationComponent::StaticClass();

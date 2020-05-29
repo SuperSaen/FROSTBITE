@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -269,12 +269,22 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitUsableSimpleSwitch() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAdvKitUsableSimpleSwitch, 975288440);
+	IMPLEMENT_CLASS(AAdvKitUsableSimpleSwitch, 3538398211);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<AAdvKitUsableSimpleSwitch>()
 	{
 		return AAdvKitUsableSimpleSwitch::StaticClass();
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AAdvKitUsableSimpleSwitch(Z_Construct_UClass_AAdvKitUsableSimpleSwitch, &AAdvKitUsableSimpleSwitch::StaticClass, TEXT("/Script/AdvKitRuntime"), TEXT("AAdvKitUsableSimpleSwitch"), false, nullptr, nullptr, nullptr);
+
+	void AAdvKitUsableSimpleSwitch::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
+	{
+		static const FName Name_bActive(TEXT("bActive"));
+
+		const bool bIsValid = true
+			&& Name_bActive == ClassReps[(int32)ENetFields_Private::bActive].Property->GetFName();
+
+		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in AAdvKitUsableSimpleSwitch"));
+	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAdvKitUsableSimpleSwitch);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER

@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -24,69 +24,20 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitCharacter() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitInventoryItem_NoRegister();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_AddConditionalMovementInput();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_BlockAnyDamage();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AController_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UDamageType_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_BlockDamage();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FDamageEvent();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_BlockPointDamage();
 	ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_BlockRadialDamage();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_CanTransition();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitZone_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_CanTransitionFromCurrentZone();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_CanTransitionTo();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitTransitionComponent_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_Died();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetAdjustedAimFor();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitWeapon_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetAdvMovementComponent();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitCharacterMovementComponent_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetAimOffsets();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetAllAvailableTargets();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitTargetPoint_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetDesiredOffsetFromZone();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetDesiredRotationInZone();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetDirectionToClosestLocation();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetDotToClosestLocation();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetHalfExtentForZone();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetMappedAnimMontage();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetMaxZoneSpeed();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetPossibleTransition();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetWeaponStartTraceLocation();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetZone();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetZoneAcceleration();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_GetZoneDotToLocation();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_IsAlive();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_IsDodging();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_JumpUpZone();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_LetGoOfZone();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_NextItem();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_OnRep_RepAnimMontage();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_PlayAnimMontageServer();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_PreviousItem();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_Reload();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_ServerUse();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitUsable_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_SetAnimRootMotionTranslationScaleBP();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_SetMouseCursorEnabled();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_SetTarget();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_SetZone();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_SetZoneServer();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_StartFire();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_StopAnimMontageServer();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_StopFire();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_TransitionTo();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_TransitionToServer();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_TryToTransition();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_TryToTransitionFromCurrentZone();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_Use();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitCharacter_UseClosestUseable();
 	ADVKITRUNTIME_API UScriptStruct* Z_Construct_UScriptStruct_FTransitionCorrectionData();
 	ADVKITRUNTIME_API UScriptStruct* Z_Construct_UScriptStruct_FPendingTransition();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitInventoryManager_NoRegister();
@@ -436,6 +387,462 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFAdvKitInventoryC
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FAdvKitInventoryConfig_Hash() { return 3681116058U; }
+	DEFINE_FUNCTION(AAdvKitCharacter::execSetAnimRootMotionTranslationScaleBP)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_InAnimRootMotionTranslationScale);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetAnimRootMotionTranslationScaleBP(Z_Param_InAnimRootMotionTranslationScale);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execStopAnimMontageServer)
+	{
+		P_GET_OBJECT(UAnimMontage,Z_Param_AnimMontage);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->StopAnimMontageServer_Validate(Z_Param_AnimMontage))
+		{
+			RPC_ValidateFailed(TEXT("StopAnimMontageServer_Validate"));
+			return;
+		}
+		P_THIS->StopAnimMontageServer_Implementation(Z_Param_AnimMontage);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execPlayAnimMontageServer)
+	{
+		P_GET_OBJECT(UAnimMontage,Z_Param_AnimMontage);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_InPlayRate);
+		P_GET_PROPERTY(FNameProperty,Z_Param_StartSectionName);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->PlayAnimMontageServer_Validate(Z_Param_AnimMontage,Z_Param_InPlayRate,Z_Param_StartSectionName))
+		{
+			RPC_ValidateFailed(TEXT("PlayAnimMontageServer_Validate"));
+			return;
+		}
+		P_THIS->PlayAnimMontageServer_Implementation(Z_Param_AnimMontage,Z_Param_InPlayRate,Z_Param_StartSectionName);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execOnRep_RepAnimMontage)
+	{
+		P_GET_STRUCT(FRepAdvKitAnimMontage,Z_Param_OldRepAnimMontage);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRep_RepAnimMontage(Z_Param_OldRepAnimMontage);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetMappedAnimMontage)
+	{
+		P_GET_OBJECT(UAnimMontage,Z_Param_AnimMontage);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UAnimMontage**)Z_Param__Result=P_THIS->GetMappedAnimMontage(Z_Param_AnimMontage);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execDied)
+	{
+		P_GET_OBJECT(AController,Z_Param_Killer);
+		P_GET_STRUCT_REF(FDamageEvent,Z_Param_Out_DamageEvent);
+		P_GET_STRUCT(FVector,Z_Param_HitLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Died_Implementation(Z_Param_Killer,Z_Param_Out_DamageEvent,Z_Param_HitLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execIsAlive)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsAlive_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execBlockPointDamage)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_DamageReceived);
+		P_GET_OBJECT(UDamageType,Z_Param_DamageType);
+		P_GET_STRUCT(FVector,Z_Param_HitLocation);
+		P_GET_STRUCT(FVector,Z_Param_HitNormal);
+		P_GET_OBJECT(UPrimitiveComponent,Z_Param_HitComponent);
+		P_GET_PROPERTY(FNameProperty,Z_Param_BoneName);
+		P_GET_STRUCT(FVector,Z_Param_ShotFromDirection);
+		P_GET_OBJECT(AController,Z_Param_InstigatedBy);
+		P_GET_OBJECT(AActor,Z_Param_DamageCauser);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->BlockPointDamage_Implementation(Z_Param_DamageReceived,Z_Param_DamageType,Z_Param_HitLocation,Z_Param_HitNormal,Z_Param_HitComponent,Z_Param_BoneName,Z_Param_ShotFromDirection,Z_Param_InstigatedBy,Z_Param_DamageCauser);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execBlockRadialDamage)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_DamageReceived);
+		P_GET_OBJECT(UDamageType,Z_Param_DamageType);
+		P_GET_STRUCT(FVector,Z_Param_Origin);
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_HitInfo);
+		P_GET_OBJECT(AController,Z_Param_InstigatedBy);
+		P_GET_OBJECT(AActor,Z_Param_DamageCauser);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->BlockRadialDamage_Implementation(Z_Param_DamageReceived,Z_Param_DamageType,Z_Param_Origin,Z_Param_Out_HitInfo,Z_Param_InstigatedBy,Z_Param_DamageCauser);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execBlockAnyDamage)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_DamageReceived);
+		P_GET_OBJECT(UDamageType,Z_Param_DamageType);
+		P_GET_OBJECT(AController,Z_Param_InstigatedBy);
+		P_GET_OBJECT(AActor,Z_Param_DamageCauser);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->BlockAnyDamage_Implementation(Z_Param_DamageReceived,Z_Param_DamageType,Z_Param_InstigatedBy,Z_Param_DamageCauser);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execBlockDamage)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Damage);
+		P_GET_STRUCT_REF(FDamageEvent,Z_Param_Out_DamageEvent);
+		P_GET_OBJECT(AController,Z_Param_EventInstigator);
+		P_GET_OBJECT(AActor,Z_Param_DamageCauser);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->BlockDamage(Z_Param_Damage,Z_Param_Out_DamageEvent,Z_Param_EventInstigator,Z_Param_DamageCauser);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execSetMouseCursorEnabled)
+	{
+		P_GET_UBOOL(Z_Param_bEnabled);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetMouseCursorEnabled(Z_Param_bEnabled);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execUseClosestUseable)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->UseClosestUseable();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execTransitionToServer)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_NewZone);
+		P_GET_OBJECT(UAdvKitTransitionComponent,Z_Param_NewTransition);
+		P_GET_UBOOL(Z_Param_bForce);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->TransitionToServer_Validate(Z_Param_NewZone,Z_Param_NewTransition,Z_Param_bForce))
+		{
+			RPC_ValidateFailed(TEXT("TransitionToServer_Validate"));
+			return;
+		}
+		P_THIS->TransitionToServer_Implementation(Z_Param_NewZone,Z_Param_NewTransition,Z_Param_bForce);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execTransitionTo)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_NewZone);
+		P_GET_OBJECT(UAdvKitTransitionComponent,Z_Param_NewTransition);
+		P_GET_UBOOL(Z_Param_bForce);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->TransitionTo_Implementation(Z_Param_NewZone,Z_Param_NewTransition,Z_Param_bForce);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execCanTransitionTo)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_Zone);
+		P_GET_OBJECT(UAdvKitTransitionComponent,Z_Param_NewTransition);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CanTransitionTo_Implementation(Z_Param_Zone,Z_Param_NewTransition);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetZoneDotToLocation)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_Zone);
+		P_GET_STRUCT(FVector,Z_Param_LocalZoneDirection);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetZoneDotToLocation(Z_Param_Zone,Z_Param_LocalZoneDirection);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetDirectionToClosestLocation)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_Zone);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetDirectionToClosestLocation(Z_Param_Zone);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetDotToClosestLocation)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_Zone);
+		P_GET_STRUCT(FVector,Z_Param_LocalCharacterDirection);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetDotToClosestLocation(Z_Param_Zone,Z_Param_LocalCharacterDirection);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetZone)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(AAdvKitZone**)Z_Param__Result=P_THIS->GetZone();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execSetZoneServer)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_NewZone);
+		P_GET_UBOOL(Z_Param_bSnap);
+		P_GET_UBOOL(Z_Param_bClearPendingTransition);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->SetZoneServer_Validate(Z_Param_NewZone,Z_Param_bSnap,Z_Param_bClearPendingTransition))
+		{
+			RPC_ValidateFailed(TEXT("SetZoneServer_Validate"));
+			return;
+		}
+		P_THIS->SetZoneServer_Implementation(Z_Param_NewZone,Z_Param_bSnap,Z_Param_bClearPendingTransition);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execSetZone)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_NewZone);
+		P_GET_UBOOL(Z_Param_bSnap);
+		P_GET_UBOOL(Z_Param_bClearPendingTransition);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetZone_Implementation(Z_Param_NewZone,Z_Param_bSnap,Z_Param_bClearPendingTransition);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetHalfExtentForZone)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_Zone);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetHalfExtentForZone_Implementation(Z_Param_Zone);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetDesiredOffsetFromZone)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_Zone);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_AtZoneLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetDesiredOffsetFromZone_Implementation(Z_Param_Zone,Z_Param_Out_AtZoneLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetDesiredRotationInZone)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_Zone);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_AtZoneLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FRotator*)Z_Param__Result=P_THIS->GetDesiredRotationInZone_Implementation(Z_Param_Zone,Z_Param_Out_AtZoneLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execCanTransition)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_ForZone);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_ForWorldPosition);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_InWorldDirection);
+		P_GET_UBOOL(Z_Param_bIsJump);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CanTransition_Implementation(Z_Param_ForZone,Z_Param_Out_ForWorldPosition,Z_Param_Out_InWorldDirection,Z_Param_bIsJump);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execCanTransitionFromCurrentZone)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_InWorldDirection);
+		P_GET_UBOOL(Z_Param_bIsJump);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CanTransitionFromCurrentZone_Implementation(Z_Param_Out_InWorldDirection,Z_Param_bIsJump);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetPossibleTransition)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_ForZone);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_ForWorldPosition);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_InWorldDirection);
+		P_GET_UBOOL(Z_Param_bIsJump);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UAdvKitTransitionComponent**)Z_Param__Result=P_THIS->GetPossibleTransition_Implementation(Z_Param_ForZone,Z_Param_Out_ForWorldPosition,Z_Param_Out_InWorldDirection,Z_Param_bIsJump);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execTryToTransition)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_ForZone);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_ForWorldPosition);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_InWorldDirection);
+		P_GET_UBOOL(Z_Param_bIsJump);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->TryToTransition_Implementation(Z_Param_ForZone,Z_Param_Out_ForWorldPosition,Z_Param_Out_InWorldDirection,Z_Param_bIsJump);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execTryToTransitionFromCurrentZone)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_InWorldDirection);
+		P_GET_UBOOL(Z_Param_bIsJump);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->TryToTransitionFromCurrentZone_Implementation(Z_Param_Out_InWorldDirection,Z_Param_bIsJump);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetMaxZoneSpeed)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetMaxZoneSpeed_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetZoneAcceleration)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetZoneAcceleration_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execJumpUpZone)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->JumpUpZone_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execLetGoOfZone)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->LetGoOfZone_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execIsDodging)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsDodging_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execStopFire)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StopFire();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execStartFire)
+	{
+		P_GET_PROPERTY(FByteProperty,Z_Param_FireMode);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StartFire(Z_Param_FireMode);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execReload)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Reload();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execServerUse)
+	{
+		P_GET_OBJECT(AAdvKitUsable,Z_Param_Useable);
+		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_WithItem);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->ServerUse_Validate(Z_Param_Useable,Z_Param_WithItem))
+		{
+			RPC_ValidateFailed(TEXT("ServerUse_Validate"));
+			return;
+		}
+		P_THIS->ServerUse_Implementation(Z_Param_Useable,Z_Param_WithItem);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execUse)
+	{
+		P_GET_OBJECT(AAdvKitUsable,Z_Param_Usable);
+		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_WithItem);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->Use_Implementation(Z_Param_Usable,Z_Param_WithItem);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execAddConditionalMovementInput)
+	{
+		P_GET_STRUCT(FVector,Z_Param_WorldDirection);
+		P_GET_STRUCT(FVector,Z_Param_LocalDirection);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_ScaleValue);
+		P_GET_UBOOL(Z_Param_bForce);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AddConditionalMovementInput(Z_Param_WorldDirection,Z_Param_LocalDirection,Z_Param_ScaleValue,Z_Param_bForce);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetAdvMovementComponent)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UAdvKitCharacterMovementComponent**)Z_Param__Result=P_THIS->GetAdvMovementComponent();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execSetTarget)
+	{
+		P_GET_OBJECT(AAdvKitTargetPoint,Z_Param_NewTarget);
+		P_GET_UBOOL(Z_Param_bLock);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetTarget(Z_Param_NewTarget,Z_Param_bLock);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetAllAvailableTargets)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(TArray<AAdvKitTargetPoint*>*)Z_Param__Result=P_THIS->GetAllAvailableTargets();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetWeaponStartTraceLocation)
+	{
+		P_GET_OBJECT(AAdvKitWeapon,Z_Param_Weapon);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetWeaponStartTraceLocation_Implementation(Z_Param_Weapon);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetAdjustedAimFor)
+	{
+		P_GET_OBJECT(AAdvKitWeapon,Z_Param_Weapon);
+		P_GET_STRUCT(FVector,Z_Param_FireLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FRotator*)Z_Param__Result=P_THIS->GetAdjustedAimFor_Implementation(Z_Param_Weapon,Z_Param_FireLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execGetAimOffsets)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FRotator*)Z_Param__Result=P_THIS->GetAimOffsets_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execPreviousItem)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->PreviousItem();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitCharacter::execNextItem)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->NextItem();
+		P_NATIVE_END;
+	}
 	static FName NAME_AAdvKitCharacter_BlockAnyDamage = FName(TEXT("BlockAnyDamage"));
 	float AAdvKitCharacter::BlockAnyDamage(float DamageReceived, const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser)
 	{
@@ -1415,7 +1822,7 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFAdvKitInventoryC
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_AAdvKitCharacter_GetAllAvailableTargets_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitCharacter_eventGetAllAvailableTargets_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_AAdvKitCharacter_GetAllAvailableTargets_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitCharacter_eventGetAllAvailableTargets_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AAdvKitCharacter_GetAllAvailableTargets_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AAdvKitTargetPoint_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAdvKitCharacter_GetAllAvailableTargets_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAdvKitCharacter_GetAllAvailableTargets_Statics::NewProp_ReturnValue,
@@ -3000,7 +3407,7 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFAdvKitInventoryC
 		{ &Z_Construct_UFunction_AAdvKitCharacter_GetAdjustedAimFor, "GetAdjustedAimFor" }, // 4084061117
 		{ &Z_Construct_UFunction_AAdvKitCharacter_GetAdvMovementComponent, "GetAdvMovementComponent" }, // 3772182859
 		{ &Z_Construct_UFunction_AAdvKitCharacter_GetAimOffsets, "GetAimOffsets" }, // 693476814
-		{ &Z_Construct_UFunction_AAdvKitCharacter_GetAllAvailableTargets, "GetAllAvailableTargets" }, // 1995529992
+		{ &Z_Construct_UFunction_AAdvKitCharacter_GetAllAvailableTargets, "GetAllAvailableTargets" }, // 3792595761
 		{ &Z_Construct_UFunction_AAdvKitCharacter_GetDesiredOffsetFromZone, "GetDesiredOffsetFromZone" }, // 4147623214
 		{ &Z_Construct_UFunction_AAdvKitCharacter_GetDesiredRotationInZone, "GetDesiredRotationInZone" }, // 3601037829
 		{ &Z_Construct_UFunction_AAdvKitCharacter_GetDirectionToClosestLocation, "GetDirectionToClosestLocation" }, // 1803049729
@@ -3066,7 +3473,7 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFAdvKitInventoryC
 		{ "ToolTip", "Maps Montages to redirect montages. If montages are played a redirected montage will be played instead." },
 	};
 #endif
-	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_MappedMontages = { "MappedMontages", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAdvKitCharacter, MappedMontages), METADATA_PARAMS(Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_MappedMontages_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_MappedMontages_MetaData)) };
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_MappedMontages = { "MappedMontages", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAdvKitCharacter, MappedMontages), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_MappedMontages_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_MappedMontages_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_MappedMontages_Key_KeyProp = { "MappedMontages_Key", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_MappedMontages_ValueProp = { "MappedMontages", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
@@ -3161,7 +3568,7 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFAdvKitInventoryC
 		{ "ToolTip", "Configuration of items to create for the character by default" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_DefaultInventory = { "DefaultInventory", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAdvKitCharacter, DefaultInventory), METADATA_PARAMS(Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_DefaultInventory_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_DefaultInventory_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_DefaultInventory = { "DefaultInventory", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAdvKitCharacter, DefaultInventory), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_DefaultInventory_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_DefaultInventory_MetaData)) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_DefaultInventory_Inner = { "DefaultInventory", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FAdvKitInventoryConfig, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_PointAndClickTraceDistance_MetaData[] = {
@@ -3229,7 +3636,7 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFAdvKitInventoryC
 		{ "ToolTip", "List of collision channels to ignore while moving inside a zone" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_CollisionChannelsToIgnoreInZones = { "CollisionChannelsToIgnoreInZones", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAdvKitCharacter, CollisionChannelsToIgnoreInZones), METADATA_PARAMS(Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_CollisionChannelsToIgnoreInZones_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_CollisionChannelsToIgnoreInZones_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_CollisionChannelsToIgnoreInZones = { "CollisionChannelsToIgnoreInZones", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAdvKitCharacter, CollisionChannelsToIgnoreInZones), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_CollisionChannelsToIgnoreInZones_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_CollisionChannelsToIgnoreInZones_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_CollisionChannelsToIgnoreInZones_Inner = { "CollisionChannelsToIgnoreInZones", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UEnum_Engine_ECollisionChannel, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAdvKitCharacter_Statics::NewProp_bIgnoreItemWhenEnteringZonesAutomatically_MetaData[] = {
@@ -3325,12 +3732,30 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFAdvKitInventoryC
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAdvKitCharacter, 1235541691);
+	IMPLEMENT_CLASS(AAdvKitCharacter, 4076908848);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<AAdvKitCharacter>()
 	{
 		return AAdvKitCharacter::StaticClass();
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AAdvKitCharacter(Z_Construct_UClass_AAdvKitCharacter, &AAdvKitCharacter::StaticClass, TEXT("/Script/AdvKitRuntime"), TEXT("AAdvKitCharacter"), false, nullptr, nullptr, nullptr);
+
+	void AAdvKitCharacter::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
+	{
+		static const FName Name_Health(TEXT("Health"));
+		static const FName Name_MaxHealth(TEXT("MaxHealth"));
+		static const FName Name_InventoryManager(TEXT("InventoryManager"));
+		static const FName Name_PendingTransition(TEXT("PendingTransition"));
+		static const FName Name_RepAnimMontage(TEXT("RepAnimMontage"));
+
+		const bool bIsValid = true
+			&& Name_Health == ClassReps[(int32)ENetFields_Private::Health].Property->GetFName()
+			&& Name_MaxHealth == ClassReps[(int32)ENetFields_Private::MaxHealth].Property->GetFName()
+			&& Name_InventoryManager == ClassReps[(int32)ENetFields_Private::InventoryManager].Property->GetFName()
+			&& Name_PendingTransition == ClassReps[(int32)ENetFields_Private::PendingTransition].Property->GetFName()
+			&& Name_RepAnimMontage == ClassReps[(int32)ENetFields_Private::RepAnimMontage].Property->GetFName();
+
+		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in AAdvKitCharacter"));
+	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAdvKitCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER

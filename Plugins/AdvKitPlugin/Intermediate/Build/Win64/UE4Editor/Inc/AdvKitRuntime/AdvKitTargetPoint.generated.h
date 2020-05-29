@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,40 +17,14 @@ class AActor;
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitTargetPoint_h_14_SPARSE_DATA
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitTargetPoint_h_14_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execIsValidTarget) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->IsValidTarget(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetTargetedActor) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AActor**)Z_Param__Result=P_THIS->GetTargetedActor(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execIsValidTarget); \
+	DECLARE_FUNCTION(execGetTargetedActor);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitTargetPoint_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execIsValidTarget) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->IsValidTarget(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetTargetedActor) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AActor**)Z_Param__Result=P_THIS->GetTargetedActor(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execIsValidTarget); \
+	DECLARE_FUNCTION(execGetTargetedActor);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitTargetPoint_h_14_INCLASS_NO_PURE_DECLS \

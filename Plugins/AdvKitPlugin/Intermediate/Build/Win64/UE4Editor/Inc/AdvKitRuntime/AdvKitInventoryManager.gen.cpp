@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -22,19 +22,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitInventoryManager() {}
 	ADVKITRUNTIME_API UFunction* Z_Construct_UDelegateFunction_AdvKitRuntime_ItemAddedSignature__DelegateSignature();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitInventoryManager();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryManager_AddInventory();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryManager_CanEquipInventory();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryManager_GetCurrentInventory();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryManager_GetInventoryByClass();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryManager_GetPendingInventory();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryManager_NextItem();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryManager_OnRep_InventoryArray();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryManager_PreviousItem();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryManager_RemoveInventory();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryManager_SetNewInventory();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryManager_SetNewInventoryByClass();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryManager_SetNewInventoryServer();
 // End Cross Module References
 	struct Z_Construct_UDelegateFunction_AdvKitRuntime_InventoryItemsChanged__DelegateSignature_Statics
 	{
@@ -175,6 +163,107 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitInventoryManager() {}
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_AdvKitRuntime_ItemAddedSignature__DelegateSignature_Statics::FuncParams);
 		}
 		return ReturnFunction;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryManager::execOnRep_InventoryArray)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRep_InventoryArray();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryManager::execSetNewInventoryServer)
+	{
+		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_NewInventory);
+		P_GET_UBOOL(Z_Param_bInstant);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->SetNewInventoryServer_Validate(Z_Param_NewInventory,Z_Param_bInstant))
+		{
+			RPC_ValidateFailed(TEXT("SetNewInventoryServer_Validate"));
+			return;
+		}
+		P_THIS->SetNewInventoryServer_Implementation(Z_Param_NewInventory,Z_Param_bInstant);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryManager::execSetNewInventoryByClass)
+	{
+		P_GET_OBJECT(UClass,Z_Param_NewInventoryClass);
+		P_GET_UBOOL(Z_Param_bInstant);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetNewInventoryByClass(Z_Param_NewInventoryClass,Z_Param_bInstant);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryManager::execSetNewInventory)
+	{
+		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_NewInventory);
+		P_GET_UBOOL(Z_Param_bInstant);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetNewInventory(Z_Param_NewInventory,Z_Param_bInstant);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryManager::execCanEquipInventory)
+	{
+		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_NewInventory);
+		P_GET_UBOOL(Z_Param_bInstant);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CanEquipInventory_Implementation(Z_Param_NewInventory,Z_Param_bInstant);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryManager::execPreviousItem)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->PreviousItem();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryManager::execNextItem)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->NextItem();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryManager::execGetInventoryByClass)
+	{
+		P_GET_OBJECT(UClass,Z_Param_InventoryClass);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->GetInventoryByClass(Z_Param_InventoryClass);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryManager::execRemoveInventory)
+	{
+		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_RemovedInventory);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RemoveInventory_Implementation(Z_Param_RemovedInventory);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryManager::execAddInventory)
+	{
+		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_NewInventory);
+		P_GET_UBOOL(Z_Param_bEquip);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AddInventory_Implementation(Z_Param_NewInventory,Z_Param_bEquip);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryManager::execGetCurrentInventory)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->GetCurrentInventory();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryManager::execGetPendingInventory)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->GetPendingInventory();
+		P_NATIVE_END;
 	}
 	static FName NAME_AAdvKitInventoryManager_AddInventory = FName(TEXT("AddInventory"));
 	void AAdvKitInventoryManager::AddInventory(AAdvKitInventoryItem* NewInventory, bool bEquip)
@@ -784,7 +873,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitInventoryManager() {}
 		{ "ToolTip", "All items currently in the inventory" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AAdvKitInventoryManager_Statics::NewProp_Inventory = { "Inventory", "OnRep_InventoryArray", (EPropertyFlags)0x0020080100020035, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAdvKitInventoryManager, Inventory), METADATA_PARAMS(Z_Construct_UClass_AAdvKitInventoryManager_Statics::NewProp_Inventory_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAdvKitInventoryManager_Statics::NewProp_Inventory_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AAdvKitInventoryManager_Statics::NewProp_Inventory = { "Inventory", "OnRep_InventoryArray", (EPropertyFlags)0x0020080100020035, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAdvKitInventoryManager, Inventory), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AAdvKitInventoryManager_Statics::NewProp_Inventory_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAdvKitInventoryManager_Statics::NewProp_Inventory_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAdvKitInventoryManager_Statics::NewProp_Inventory_Inner = { "Inventory", nullptr, (EPropertyFlags)0x0000000000020000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AAdvKitInventoryItem_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAdvKitInventoryManager_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAdvKitInventoryManager_Statics::NewProp_OnInventoryItemsChanged,
@@ -821,12 +910,26 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitInventoryManager() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAdvKitInventoryManager, 3021008238);
+	IMPLEMENT_CLASS(AAdvKitInventoryManager, 2736671499);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<AAdvKitInventoryManager>()
 	{
 		return AAdvKitInventoryManager::StaticClass();
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AAdvKitInventoryManager(Z_Construct_UClass_AAdvKitInventoryManager, &AAdvKitInventoryManager::StaticClass, TEXT("/Script/AdvKitRuntime"), TEXT("AAdvKitInventoryManager"), false, nullptr, nullptr, nullptr);
+
+	void AAdvKitInventoryManager::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
+	{
+		static const FName Name_Inventory(TEXT("Inventory"));
+		static const FName Name_PendingInventory(TEXT("PendingInventory"));
+		static const FName Name_CurrentInventory(TEXT("CurrentInventory"));
+
+		const bool bIsValid = true
+			&& Name_Inventory == ClassReps[(int32)ENetFields_Private::Inventory].Property->GetFName()
+			&& Name_PendingInventory == ClassReps[(int32)ENetFields_Private::PendingInventory].Property->GetFName()
+			&& Name_CurrentInventory == ClassReps[(int32)ENetFields_Private::CurrentInventory].Property->GetFName();
+
+		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in AAdvKitInventoryManager"));
+	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAdvKitInventoryManager);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER

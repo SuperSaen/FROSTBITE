@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -136,7 +136,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitBuildModule_Ladder() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAdvKitBuildModule_Ladder, 2920408002);
+	IMPLEMENT_CLASS(UAdvKitBuildModule_Ladder, 3312709052);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<UAdvKitBuildModule_Ladder>()
 	{
 		return UAdvKitBuildModule_Ladder::StaticClass();

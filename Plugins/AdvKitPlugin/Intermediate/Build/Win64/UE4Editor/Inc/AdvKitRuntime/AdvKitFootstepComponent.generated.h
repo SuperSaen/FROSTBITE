@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -26,44 +26,14 @@ template<> ADVKITRUNTIME_API UScriptStruct* StaticStruct<struct FFootStepSound>(
 	virtual UAudioComponent* PlayFootstepAttached_Implementation(int32 Foot); \
 	virtual void PlayFootstep_Implementation(int32 Foot); \
  \
-	DECLARE_FUNCTION(execPlayFootstepAttached) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Foot); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAudioComponent**)Z_Param__Result=P_THIS->PlayFootstepAttached_Implementation(Z_Param_Foot); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execPlayFootstep) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Foot); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->PlayFootstep_Implementation(Z_Param_Foot); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execPlayFootstepAttached); \
+	DECLARE_FUNCTION(execPlayFootstep);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitFootstepComponent_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execPlayFootstepAttached) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Foot); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAudioComponent**)Z_Param__Result=P_THIS->PlayFootstepAttached_Implementation(Z_Param_Foot); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execPlayFootstep) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Foot); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->PlayFootstep_Implementation(Z_Param_Foot); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execPlayFootstepAttached); \
+	DECLARE_FUNCTION(execPlayFootstep);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitFootstepComponent_h_36_EVENT_PARMS \

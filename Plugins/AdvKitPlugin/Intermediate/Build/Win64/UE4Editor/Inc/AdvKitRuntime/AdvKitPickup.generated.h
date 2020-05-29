@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -21,62 +21,16 @@ class AAdvKitInventoryItem;
 	virtual bool CanBePickedUpBy_Implementation(AAdvKitCharacter* Character); \
 	virtual void Respawn_Implementation(); \
  \
-	DECLARE_FUNCTION(execPickedUpBy) \
-	{ \
-		P_GET_OBJECT(AAdvKitCharacter,Z_Param_Character); \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_WithItem); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->PickedUpBy_Implementation(Z_Param_Character,Z_Param_WithItem); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanBePickedUpBy) \
-	{ \
-		P_GET_OBJECT(AAdvKitCharacter,Z_Param_Character); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanBePickedUpBy_Implementation(Z_Param_Character); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRespawn) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Respawn_Implementation(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execPickedUpBy); \
+	DECLARE_FUNCTION(execCanBePickedUpBy); \
+	DECLARE_FUNCTION(execRespawn);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitPickup_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execPickedUpBy) \
-	{ \
-		P_GET_OBJECT(AAdvKitCharacter,Z_Param_Character); \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_WithItem); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->PickedUpBy_Implementation(Z_Param_Character,Z_Param_WithItem); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanBePickedUpBy) \
-	{ \
-		P_GET_OBJECT(AAdvKitCharacter,Z_Param_Character); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanBePickedUpBy_Implementation(Z_Param_Character); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRespawn) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Respawn_Implementation(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execPickedUpBy); \
+	DECLARE_FUNCTION(execCanBePickedUpBy); \
+	DECLARE_FUNCTION(execRespawn);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitPickup_h_14_EVENT_PARMS \

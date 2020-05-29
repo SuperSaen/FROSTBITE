@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,13 +17,39 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitWeaponTracing() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitWeaponTracing();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitWeapon();
 	UPackage* Z_Construct_UPackage__Script_AdvKitRuntime();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeaponTracing_ApplyDamageToHit();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeaponTracing_OnTraceHit();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeaponTracing_StartTracing();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeaponTracing_StopTracing();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitTraceUtilityComponent_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AAdvKitWeaponTracing::execApplyDamageToHit)
+	{
+		P_GET_STRUCT(FHitResult,Z_Param_Hit);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ApplyDamageToHit_Implementation(Z_Param_Hit);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeaponTracing::execOnTraceHit)
+	{
+		P_GET_STRUCT(FHitResult,Z_Param_Hit);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnTraceHit_Implementation(Z_Param_Hit);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeaponTracing::execStopTracing)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StopTracing();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeaponTracing::execStartTracing)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StartTracing();
+		P_NATIVE_END;
+	}
 	static FName NAME_AAdvKitWeaponTracing_ApplyDamageToHit = FName(TEXT("ApplyDamageToHit"));
 	void AAdvKitWeaponTracing::ApplyDamageToHit(FHitResult Hit)
 	{
@@ -272,7 +298,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitWeaponTracing() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAdvKitWeaponTracing, 1651305308);
+	IMPLEMENT_CLASS(AAdvKitWeaponTracing, 2682925462);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<AAdvKitWeaponTracing>()
 	{
 		return AAdvKitWeaponTracing::StaticClass();

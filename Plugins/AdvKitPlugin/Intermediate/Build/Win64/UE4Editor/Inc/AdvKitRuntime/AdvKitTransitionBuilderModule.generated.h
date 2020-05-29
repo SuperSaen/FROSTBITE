@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -31,346 +31,36 @@ struct FAdvKitMovementProperties;
 	virtual bool CanCreateTransitionsFor_Implementation(TSubclassOf<AAdvKitCharacter>  ForCharacterClass, AAdvKitZone* ForZone); \
 	virtual void CreateTransitions_Implementation(TArray<AAdvKitZone*>& OutAffectedZones); \
  \
-	DECLARE_FUNCTION(execCreateTransitionRect) \
-	{ \
-		P_GET_OBJECT(UAdvKitTransitionBuilderModule,Z_Param_ForModule); \
-		P_GET_PROPERTY(UStrProperty,Z_Param_Id); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_SourceZone); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldSourceLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldTargetLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldSourceLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldTargetLocation); \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacter); \
-		P_GET_ENUM(EAdvKitMovementMode,Z_Param_MovementMode); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_TargetZone); \
-		P_GET_PROPERTY(UByteProperty,Z_Param_CustomMovementMode); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAdvKitTransitionComponentRect**)Z_Param__Result=UAdvKitTransitionBuilderModule::CreateTransitionRect(Z_Param_ForModule,Z_Param_Id,Z_Param_SourceZone,Z_Param_Out_MinWorldSourceLocation,Z_Param_Out_MinWorldTargetLocation,Z_Param_Out_MaxWorldSourceLocation,Z_Param_Out_MaxWorldTargetLocation,Z_Param_ForCharacter,EAdvKitMovementMode(Z_Param_MovementMode),Z_Param_TargetZone,Z_Param_CustomMovementMode); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCreateTransitionSpline) \
-	{ \
-		P_GET_OBJECT(UAdvKitTransitionBuilderModule,Z_Param_ForModule); \
-		P_GET_PROPERTY(UStrProperty,Z_Param_Id); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_SourceZone); \
-		P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_MinSourceDistance); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldSourcePosition); \
-		P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_MinTargetDistance); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldTargetPosition); \
-		P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_MaxSourceDistance); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldSourcePosition); \
-		P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_MaxTargetDistance); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldTargetPosition); \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacter); \
-		P_GET_ENUM(EAdvKitMovementMode,Z_Param_MovementMode); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_TargetZone); \
-		P_GET_PROPERTY(UByteProperty,Z_Param_CustomMovementMode); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAdvKitTransitionComponentSpline**)Z_Param__Result=UAdvKitTransitionBuilderModule::CreateTransitionSpline(Z_Param_ForModule,Z_Param_Id,Z_Param_SourceZone,Z_Param_Out_MinSourceDistance,Z_Param_Out_MinWorldSourcePosition,Z_Param_Out_MinTargetDistance,Z_Param_Out_MinWorldTargetPosition,Z_Param_Out_MaxSourceDistance,Z_Param_Out_MaxWorldSourcePosition,Z_Param_Out_MaxTargetDistance,Z_Param_Out_MaxWorldTargetPosition,Z_Param_ForCharacter,EAdvKitMovementMode(Z_Param_MovementMode),Z_Param_TargetZone,Z_Param_CustomMovementMode); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCreateTransitionLine) \
-	{ \
-		P_GET_OBJECT(UAdvKitTransitionBuilderModule,Z_Param_ForModule); \
-		P_GET_PROPERTY(UStrProperty,Z_Param_Id); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_SourceZone); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldSourceLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldTargetLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldSourceLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldTargetLocation); \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacter); \
-		P_GET_ENUM(EAdvKitMovementMode,Z_Param_MovementMode); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_TargetZone); \
-		P_GET_PROPERTY(UByteProperty,Z_Param_CustomMovementMode); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAdvKitTransitionComponentLine**)Z_Param__Result=UAdvKitTransitionBuilderModule::CreateTransitionLine(Z_Param_ForModule,Z_Param_Id,Z_Param_SourceZone,Z_Param_Out_MinWorldSourceLocation,Z_Param_Out_MinWorldTargetLocation,Z_Param_Out_MaxWorldSourceLocation,Z_Param_Out_MaxWorldTargetLocation,Z_Param_ForCharacter,EAdvKitMovementMode(Z_Param_MovementMode),Z_Param_TargetZone,Z_Param_CustomMovementMode); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCreateTransitionPoint) \
-	{ \
-		P_GET_OBJECT(UAdvKitTransitionBuilderModule,Z_Param_ForModule); \
-		P_GET_PROPERTY(UStrProperty,Z_Param_Id); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_SourceZone); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldSourceLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldTargetLocation); \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacter); \
-		P_GET_ENUM(EAdvKitMovementMode,Z_Param_MovementMode); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_TargetZone); \
-		P_GET_PROPERTY(UByteProperty,Z_Param_CustomMovementMode); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAdvKitTransitionComponentPoint**)Z_Param__Result=UAdvKitTransitionBuilderModule::CreateTransitionPoint(Z_Param_ForModule,Z_Param_Id,Z_Param_SourceZone,Z_Param_Out_WorldSourceLocation,Z_Param_Out_WorldTargetLocation,Z_Param_ForCharacter,EAdvKitMovementMode(Z_Param_MovementMode),Z_Param_TargetZone,Z_Param_CustomMovementMode); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOverlapForCloseZones) \
-	{ \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_ToZone); \
-		P_GET_STRUCT(FVector,Z_Param_OverlapStart); \
-		P_GET_STRUCT(FVector,Z_Param_OverlapEnd); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_OverlapRadius); \
-		P_GET_TARRAY_REF(AAdvKitZone*,Z_Param_Out_OutOtherZones); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->OverlapForCloseZones(Z_Param_ToZone,Z_Param_OverlapStart,Z_Param_OverlapEnd,Z_Param_OverlapRadius,Z_Param_Out_OutOtherZones); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetCharacterMovementProperties_BP) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FAdvKitMovementProperties*)Z_Param__Result=P_THIS->GetCharacterMovementProperties_BP(Z_Param_ForCharacterClass); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetCharacterHalfExtent) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_ForZone); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetCharacterHalfExtent(Z_Param_ForCharacterClass,Z_Param_ForZone); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCreateTransitionBetween) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_SourceZone); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_TargetZone); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CreateTransitionBetween_Implementation(Z_Param_ForCharacterClass,Z_Param_SourceZone,Z_Param_TargetZone); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGatherPotentialTargetZones) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_ForZone); \
-		P_GET_TARRAY_REF(AAdvKitZone*,Z_Param_Out_OutZones); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->GatherPotentialTargetZones_Implementation(Z_Param_ForCharacterClass,Z_Param_ForZone,Z_Param_Out_OutZones); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCreateTransitionsFor) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_ForZone); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->CreateTransitionsFor_Implementation(Z_Param_ForCharacterClass,Z_Param_ForZone); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanCreateTransitionsFor) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_ForZone); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanCreateTransitionsFor_Implementation(Z_Param_ForCharacterClass,Z_Param_ForZone); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetOuterZone) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitZone**)Z_Param__Result=P_THIS->GetOuterZone(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCreateTransitions) \
-	{ \
-		P_GET_TARRAY_REF(AAdvKitZone*,Z_Param_Out_OutAffectedZones); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->CreateTransitions_Implementation(Z_Param_Out_OutAffectedZones); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execCreateTransitionRect); \
+	DECLARE_FUNCTION(execCreateTransitionSpline); \
+	DECLARE_FUNCTION(execCreateTransitionLine); \
+	DECLARE_FUNCTION(execCreateTransitionPoint); \
+	DECLARE_FUNCTION(execOverlapForCloseZones); \
+	DECLARE_FUNCTION(execGetCharacterMovementProperties_BP); \
+	DECLARE_FUNCTION(execGetCharacterHalfExtent); \
+	DECLARE_FUNCTION(execCreateTransitionBetween); \
+	DECLARE_FUNCTION(execGatherPotentialTargetZones); \
+	DECLARE_FUNCTION(execCreateTransitionsFor); \
+	DECLARE_FUNCTION(execCanCreateTransitionsFor); \
+	DECLARE_FUNCTION(execGetOuterZone); \
+	DECLARE_FUNCTION(execCreateTransitions);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Environment_AdvKitTransitionBuilderModule_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execCreateTransitionRect) \
-	{ \
-		P_GET_OBJECT(UAdvKitTransitionBuilderModule,Z_Param_ForModule); \
-		P_GET_PROPERTY(UStrProperty,Z_Param_Id); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_SourceZone); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldSourceLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldTargetLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldSourceLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldTargetLocation); \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacter); \
-		P_GET_ENUM(EAdvKitMovementMode,Z_Param_MovementMode); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_TargetZone); \
-		P_GET_PROPERTY(UByteProperty,Z_Param_CustomMovementMode); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAdvKitTransitionComponentRect**)Z_Param__Result=UAdvKitTransitionBuilderModule::CreateTransitionRect(Z_Param_ForModule,Z_Param_Id,Z_Param_SourceZone,Z_Param_Out_MinWorldSourceLocation,Z_Param_Out_MinWorldTargetLocation,Z_Param_Out_MaxWorldSourceLocation,Z_Param_Out_MaxWorldTargetLocation,Z_Param_ForCharacter,EAdvKitMovementMode(Z_Param_MovementMode),Z_Param_TargetZone,Z_Param_CustomMovementMode); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCreateTransitionSpline) \
-	{ \
-		P_GET_OBJECT(UAdvKitTransitionBuilderModule,Z_Param_ForModule); \
-		P_GET_PROPERTY(UStrProperty,Z_Param_Id); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_SourceZone); \
-		P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_MinSourceDistance); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldSourcePosition); \
-		P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_MinTargetDistance); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldTargetPosition); \
-		P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_MaxSourceDistance); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldSourcePosition); \
-		P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_MaxTargetDistance); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldTargetPosition); \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacter); \
-		P_GET_ENUM(EAdvKitMovementMode,Z_Param_MovementMode); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_TargetZone); \
-		P_GET_PROPERTY(UByteProperty,Z_Param_CustomMovementMode); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAdvKitTransitionComponentSpline**)Z_Param__Result=UAdvKitTransitionBuilderModule::CreateTransitionSpline(Z_Param_ForModule,Z_Param_Id,Z_Param_SourceZone,Z_Param_Out_MinSourceDistance,Z_Param_Out_MinWorldSourcePosition,Z_Param_Out_MinTargetDistance,Z_Param_Out_MinWorldTargetPosition,Z_Param_Out_MaxSourceDistance,Z_Param_Out_MaxWorldSourcePosition,Z_Param_Out_MaxTargetDistance,Z_Param_Out_MaxWorldTargetPosition,Z_Param_ForCharacter,EAdvKitMovementMode(Z_Param_MovementMode),Z_Param_TargetZone,Z_Param_CustomMovementMode); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCreateTransitionLine) \
-	{ \
-		P_GET_OBJECT(UAdvKitTransitionBuilderModule,Z_Param_ForModule); \
-		P_GET_PROPERTY(UStrProperty,Z_Param_Id); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_SourceZone); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldSourceLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MinWorldTargetLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldSourceLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_MaxWorldTargetLocation); \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacter); \
-		P_GET_ENUM(EAdvKitMovementMode,Z_Param_MovementMode); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_TargetZone); \
-		P_GET_PROPERTY(UByteProperty,Z_Param_CustomMovementMode); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAdvKitTransitionComponentLine**)Z_Param__Result=UAdvKitTransitionBuilderModule::CreateTransitionLine(Z_Param_ForModule,Z_Param_Id,Z_Param_SourceZone,Z_Param_Out_MinWorldSourceLocation,Z_Param_Out_MinWorldTargetLocation,Z_Param_Out_MaxWorldSourceLocation,Z_Param_Out_MaxWorldTargetLocation,Z_Param_ForCharacter,EAdvKitMovementMode(Z_Param_MovementMode),Z_Param_TargetZone,Z_Param_CustomMovementMode); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCreateTransitionPoint) \
-	{ \
-		P_GET_OBJECT(UAdvKitTransitionBuilderModule,Z_Param_ForModule); \
-		P_GET_PROPERTY(UStrProperty,Z_Param_Id); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_SourceZone); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldSourceLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldTargetLocation); \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacter); \
-		P_GET_ENUM(EAdvKitMovementMode,Z_Param_MovementMode); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_TargetZone); \
-		P_GET_PROPERTY(UByteProperty,Z_Param_CustomMovementMode); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAdvKitTransitionComponentPoint**)Z_Param__Result=UAdvKitTransitionBuilderModule::CreateTransitionPoint(Z_Param_ForModule,Z_Param_Id,Z_Param_SourceZone,Z_Param_Out_WorldSourceLocation,Z_Param_Out_WorldTargetLocation,Z_Param_ForCharacter,EAdvKitMovementMode(Z_Param_MovementMode),Z_Param_TargetZone,Z_Param_CustomMovementMode); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOverlapForCloseZones) \
-	{ \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_ToZone); \
-		P_GET_STRUCT(FVector,Z_Param_OverlapStart); \
-		P_GET_STRUCT(FVector,Z_Param_OverlapEnd); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_OverlapRadius); \
-		P_GET_TARRAY_REF(AAdvKitZone*,Z_Param_Out_OutOtherZones); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->OverlapForCloseZones(Z_Param_ToZone,Z_Param_OverlapStart,Z_Param_OverlapEnd,Z_Param_OverlapRadius,Z_Param_Out_OutOtherZones); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetCharacterMovementProperties_BP) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FAdvKitMovementProperties*)Z_Param__Result=P_THIS->GetCharacterMovementProperties_BP(Z_Param_ForCharacterClass); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetCharacterHalfExtent) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_ForZone); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetCharacterHalfExtent(Z_Param_ForCharacterClass,Z_Param_ForZone); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCreateTransitionBetween) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_SourceZone); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_TargetZone); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CreateTransitionBetween_Implementation(Z_Param_ForCharacterClass,Z_Param_SourceZone,Z_Param_TargetZone); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGatherPotentialTargetZones) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_ForZone); \
-		P_GET_TARRAY_REF(AAdvKitZone*,Z_Param_Out_OutZones); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->GatherPotentialTargetZones_Implementation(Z_Param_ForCharacterClass,Z_Param_ForZone,Z_Param_Out_OutZones); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCreateTransitionsFor) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_ForZone); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->CreateTransitionsFor_Implementation(Z_Param_ForCharacterClass,Z_Param_ForZone); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanCreateTransitionsFor) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ForCharacterClass); \
-		P_GET_OBJECT(AAdvKitZone,Z_Param_ForZone); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanCreateTransitionsFor_Implementation(Z_Param_ForCharacterClass,Z_Param_ForZone); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetOuterZone) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitZone**)Z_Param__Result=P_THIS->GetOuterZone(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCreateTransitions) \
-	{ \
-		P_GET_TARRAY_REF(AAdvKitZone*,Z_Param_Out_OutAffectedZones); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->CreateTransitions_Implementation(Z_Param_Out_OutAffectedZones); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execCreateTransitionRect); \
+	DECLARE_FUNCTION(execCreateTransitionSpline); \
+	DECLARE_FUNCTION(execCreateTransitionLine); \
+	DECLARE_FUNCTION(execCreateTransitionPoint); \
+	DECLARE_FUNCTION(execOverlapForCloseZones); \
+	DECLARE_FUNCTION(execGetCharacterMovementProperties_BP); \
+	DECLARE_FUNCTION(execGetCharacterHalfExtent); \
+	DECLARE_FUNCTION(execCreateTransitionBetween); \
+	DECLARE_FUNCTION(execGatherPotentialTargetZones); \
+	DECLARE_FUNCTION(execCreateTransitionsFor); \
+	DECLARE_FUNCTION(execCanCreateTransitionsFor); \
+	DECLARE_FUNCTION(execGetOuterZone); \
+	DECLARE_FUNCTION(execCreateTransitions);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Environment_AdvKitTransitionBuilderModule_h_23_EVENT_PARMS \

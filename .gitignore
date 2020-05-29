@@ -2,6 +2,17 @@ Binaries/
 Intermediate/
 Content/VTMP/
 Saved/
+
+Plugins/AdvKitPlugin/Binaries/
+Plugins/AdvKitPlugin/Intermediate/
+Plugins/FMODStudio/Binaries/
+Plugins/FMODStudio/Intermediate/
+Plugins/FlockingSystem422/Binaries/
+Plugins/FlockingSystem422/Intermediate/
+Plugins/BTUtilityPlugin/Binaries/
+Plugins/BTUtilityPlugin/Intermediate/
+
+
 Plugins/VTMP/
 *.vscode
 *.vs

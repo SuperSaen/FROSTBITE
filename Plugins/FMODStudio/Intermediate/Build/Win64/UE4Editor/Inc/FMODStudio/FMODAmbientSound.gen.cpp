@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -96,7 +96,7 @@ void EmptyLinkFunctionForGeneratedCodeFMODAmbientSound() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFMODAmbientSound, 3248527812);
+	IMPLEMENT_CLASS(AFMODAmbientSound, 2646169495);
 	template<> FMODSTUDIO_API UClass* StaticClass<AFMODAmbientSound>()
 	{
 		return AFMODAmbientSound::StaticClass();

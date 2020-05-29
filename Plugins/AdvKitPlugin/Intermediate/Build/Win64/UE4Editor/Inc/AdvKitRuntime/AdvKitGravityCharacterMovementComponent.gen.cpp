@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,11 +17,27 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitGravityCharacterMovementComponent() 
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitGravityCharacterMovementComponent();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitCharacterMovementComponent();
 	UPackage* Z_Construct_UPackage__Script_AdvKitRuntime();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitGravityCharacterMovementComponent_OnOrientationChanged();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitGravityCharacterMovementComponent_SetGravityVector();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 // End Cross Module References
+	DEFINE_FUNCTION(UAdvKitGravityCharacterMovementComponent::execOnOrientationChanged)
+	{
+		P_GET_STRUCT_REF(FTransform,Z_Param_Out_OldOrientation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnOrientationChanged(Z_Param_Out_OldOrientation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitGravityCharacterMovementComponent::execSetGravityVector)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_GravityDirection);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_GravityOrigin);
+		P_GET_UBOOL(Z_Param_bForce);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetGravityVector(Z_Param_Out_GravityDirection,Z_Param_Out_GravityOrigin,Z_Param_bForce);
+		P_NATIVE_END;
+	}
 	void UAdvKitGravityCharacterMovementComponent::StaticRegisterNativesUAdvKitGravityCharacterMovementComponent()
 	{
 		UClass* Class = UAdvKitGravityCharacterMovementComponent::StaticClass();
@@ -257,7 +273,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitGravityCharacterMovementComponent() 
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAdvKitGravityCharacterMovementComponent, 3554233862);
+	IMPLEMENT_CLASS(UAdvKitGravityCharacterMovementComponent, 155119825);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<UAdvKitGravityCharacterMovementComponent>()
 	{
 		return UAdvKitGravityCharacterMovementComponent::StaticClass();

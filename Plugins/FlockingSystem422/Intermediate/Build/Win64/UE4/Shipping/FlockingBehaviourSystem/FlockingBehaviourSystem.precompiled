@@ -1,7 +1,0 @@
-{
-	"OutputFiles": [
-		"PCH.FlockingBehaviourSystem.h.obj",
-		"Module.FlockingBehaviourSystem.cpp.obj",
-		"Module.FlockingBehaviourSystem.gen.cpp.obj"
-	]
-}

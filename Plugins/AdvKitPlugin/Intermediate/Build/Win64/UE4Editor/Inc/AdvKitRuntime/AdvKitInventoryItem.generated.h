@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -44,364 +44,50 @@ template<> ADVKITRUNTIME_API UScriptStruct* StaticStruct<struct FRepAdvKitInvent
 	virtual AAdvKitInventoryItem* CombinedWith_Implementation(AAdvKitInventoryItem* With); \
 	virtual bool CanBeCombinedWith_Implementation(AAdvKitInventoryItem* With); \
  \
-	DECLARE_FUNCTION(execOnUneqiupped) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnUneqiupped_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnUneqiup) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnUneqiup_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnEquipped) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnEquipped_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnEquip) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnEquip_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execEquipServer) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->EquipServer_Validate(Z_Param_bInstant)) \
-		{ \
-			RPC_ValidateFailed(TEXT("EquipServer_Validate")); \
-			return; \
-		} \
-		P_THIS->EquipServer_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execUneqiupServer) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->UneqiupServer_Validate(Z_Param_bInstant)) \
-		{ \
-			RPC_ValidateFailed(TEXT("UneqiupServer_Validate")); \
-			return; \
-		} \
-		P_THIS->UneqiupServer_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanUneqiup) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanUneqiup_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanEquip) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanEquip_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execUneqiup) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Uneqiup(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execEquip) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Equip(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetItemState) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(EAdvKitInventoryState*)Z_Param__Result=P_THIS->GetItemState(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRep_ItemState) \
-	{ \
-		P_GET_STRUCT(FRepAdvKitInventoryState,Z_Param_PreviousRepItemState); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_ItemState(Z_Param_PreviousRepItemState); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execDetachFromCharacter) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->DetachFromCharacter_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAttachToCharacter) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AttachToCharacter_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execDrop) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_Velocity); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Drop_Implementation(Z_Param_Velocity); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOwnerDied) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OwnerDied_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCombinedWith) \
-	{ \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_With); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->CombinedWith_Implementation(Z_Param_With); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanBeCombinedWith) \
-	{ \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_With); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanBeCombinedWith_Implementation(Z_Param_With); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetInventoryIconTexture) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_InventoryClass); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UTexture2D**)Z_Param__Result=AAdvKitInventoryItem::GetInventoryIconTexture(Z_Param_InventoryClass); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnUneqiupped); \
+	DECLARE_FUNCTION(execOnUneqiup); \
+	DECLARE_FUNCTION(execOnEquipped); \
+	DECLARE_FUNCTION(execOnEquip); \
+	DECLARE_FUNCTION(execEquipServer); \
+	DECLARE_FUNCTION(execUneqiupServer); \
+	DECLARE_FUNCTION(execCanUneqiup); \
+	DECLARE_FUNCTION(execCanEquip); \
+	DECLARE_FUNCTION(execUneqiup); \
+	DECLARE_FUNCTION(execEquip); \
+	DECLARE_FUNCTION(execGetItemState); \
+	DECLARE_FUNCTION(execOnRep_ItemState); \
+	DECLARE_FUNCTION(execDetachFromCharacter); \
+	DECLARE_FUNCTION(execAttachToCharacter); \
+	DECLARE_FUNCTION(execDrop); \
+	DECLARE_FUNCTION(execOwnerDied); \
+	DECLARE_FUNCTION(execCombinedWith); \
+	DECLARE_FUNCTION(execCanBeCombinedWith); \
+	DECLARE_FUNCTION(execGetInventoryIconTexture);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitInventoryItem_h_63_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual bool EquipServer_Validate(bool ); \
 	virtual bool UneqiupServer_Validate(bool ); \
  \
-	DECLARE_FUNCTION(execOnUneqiupped) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnUneqiupped_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnUneqiup) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnUneqiup_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnEquipped) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnEquipped_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnEquip) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnEquip_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execEquipServer) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->EquipServer_Validate(Z_Param_bInstant)) \
-		{ \
-			RPC_ValidateFailed(TEXT("EquipServer_Validate")); \
-			return; \
-		} \
-		P_THIS->EquipServer_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execUneqiupServer) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->UneqiupServer_Validate(Z_Param_bInstant)) \
-		{ \
-			RPC_ValidateFailed(TEXT("UneqiupServer_Validate")); \
-			return; \
-		} \
-		P_THIS->UneqiupServer_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanUneqiup) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanUneqiup_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanEquip) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanEquip_Implementation(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execUneqiup) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Uneqiup(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execEquip) \
-	{ \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Equip(Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetItemState) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(EAdvKitInventoryState*)Z_Param__Result=P_THIS->GetItemState(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRep_ItemState) \
-	{ \
-		P_GET_STRUCT(FRepAdvKitInventoryState,Z_Param_PreviousRepItemState); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_ItemState(Z_Param_PreviousRepItemState); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execDetachFromCharacter) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->DetachFromCharacter_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAttachToCharacter) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AttachToCharacter_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execDrop) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_Velocity); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Drop_Implementation(Z_Param_Velocity); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOwnerDied) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OwnerDied_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCombinedWith) \
-	{ \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_With); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->CombinedWith_Implementation(Z_Param_With); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanBeCombinedWith) \
-	{ \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_With); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanBeCombinedWith_Implementation(Z_Param_With); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetInventoryIconTexture) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_InventoryClass); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UTexture2D**)Z_Param__Result=AAdvKitInventoryItem::GetInventoryIconTexture(Z_Param_InventoryClass); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnUneqiupped); \
+	DECLARE_FUNCTION(execOnUneqiup); \
+	DECLARE_FUNCTION(execOnEquipped); \
+	DECLARE_FUNCTION(execOnEquip); \
+	DECLARE_FUNCTION(execEquipServer); \
+	DECLARE_FUNCTION(execUneqiupServer); \
+	DECLARE_FUNCTION(execCanUneqiup); \
+	DECLARE_FUNCTION(execCanEquip); \
+	DECLARE_FUNCTION(execUneqiup); \
+	DECLARE_FUNCTION(execEquip); \
+	DECLARE_FUNCTION(execGetItemState); \
+	DECLARE_FUNCTION(execOnRep_ItemState); \
+	DECLARE_FUNCTION(execDetachFromCharacter); \
+	DECLARE_FUNCTION(execAttachToCharacter); \
+	DECLARE_FUNCTION(execDrop); \
+	DECLARE_FUNCTION(execOwnerDied); \
+	DECLARE_FUNCTION(execCombinedWith); \
+	DECLARE_FUNCTION(execCanBeCombinedWith); \
+	DECLARE_FUNCTION(execGetInventoryIconTexture);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitInventoryItem_h_63_EVENT_PARMS \
@@ -487,7 +173,13 @@ private: \
 public: \
 	DECLARE_CLASS(AAdvKitInventoryItem, AActor, COMPILED_IN_FLAGS(CLASS_Abstract | CLASS_Config), CASTCLASS_None, TEXT("/Script/AdvKitRuntime"), NO_API) \
 	DECLARE_SERIALIZER(AAdvKitInventoryItem) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		RepItemState=NETFIELD_REP_START, \
+		NETFIELD_REP_END=RepItemState	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitInventoryItem_h_63_INCLASS \
@@ -497,7 +189,13 @@ private: \
 public: \
 	DECLARE_CLASS(AAdvKitInventoryItem, AActor, COMPILED_IN_FLAGS(CLASS_Abstract | CLASS_Config), CASTCLASS_None, TEXT("/Script/AdvKitRuntime"), NO_API) \
 	DECLARE_SERIALIZER(AAdvKitInventoryItem) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		RepItemState=NETFIELD_REP_START, \
+		NETFIELD_REP_END=RepItemState	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitInventoryItem_h_63_STANDARD_CONSTRUCTORS \

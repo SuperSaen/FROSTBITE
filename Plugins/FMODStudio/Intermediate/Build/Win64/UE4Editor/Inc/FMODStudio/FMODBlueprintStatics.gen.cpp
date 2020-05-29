@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -19,57 +19,17 @@ void EmptyLinkFunctionForGeneratedCodeFMODBlueprintStatics() {}
 	FMODSTUDIO_API UClass* Z_Construct_UClass_UFMODBlueprintStatics_NoRegister();
 	FMODSTUDIO_API UClass* Z_Construct_UClass_UFMODBlueprintStatics();
 	ENGINE_API UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_BusSetMute();
 	FMODSTUDIO_API UClass* Z_Construct_UClass_UFMODBus_NoRegister();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_BusSetPaused();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_BusSetVolume();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_BusStopAllEvents();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_EventInstanceGetParameter();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_EventInstanceGetParameterValue();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_EventInstanceIsValid();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_EventInstancePlay();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_EventInstanceRelease();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_EventInstanceSetParameter();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_EventInstanceSetPaused();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_EventInstanceSetPitch();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_EventInstanceSetProperty();
 	FMODSTUDIO_API UEnum* Z_Construct_UEnum_FMODStudio_EFMODEventProperty();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_EventInstanceSetTransform();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_EventInstanceSetVolume();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_EventInstanceStop();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_EventInstanceTriggerCue();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_FindAssetByName();
 	FMODSTUDIO_API UClass* Z_Construct_UClass_UFMODAsset_NoRegister();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_FindEventByName();
 	FMODSTUDIO_API UClass* Z_Construct_UClass_UFMODEvent_NoRegister();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_FindEventInstances();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_GetGlobalParameterByName();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_GetGlobalParameterValueByName();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_GetOutputDrivers();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_IsBankLoaded();
 	FMODSTUDIO_API UClass* Z_Construct_UClass_UFMODBank_NoRegister();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_LoadBank();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_LoadBankSampleData();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_LoadEventSampleData();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_MixerResume();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_MixerSuspend();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_PlayEvent2D();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_PlayEventAtLocation();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_PlayEventAttached();
 	FMODSTUDIO_API UClass* Z_Construct_UClass_UFMODAudioComponent_NoRegister();
 	ENGINE_API UEnum* Z_Construct_UEnum_Engine_EAttachLocation();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_SetGlobalParameterByName();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_SetLocale();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_SetOutputDriverByIndex();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_SetOutputDriverByName();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_UnloadBank();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_UnloadBankSampleData();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_UnloadEventSampleData();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODBlueprintStatics_VCASetVolume();
 	FMODSTUDIO_API UClass* Z_Construct_UClass_UFMODVCA_NoRegister();
 // End Cross Module References
 	static UEnum* EFMOD_STUDIO_STOP_MODE_StaticEnum()
@@ -194,6 +154,361 @@ static struct FScriptStruct_FMODStudio_StaticRegisterNativesFFMODEventInstance
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FFMODEventInstance_Hash() { return 3262348046U; }
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execSetLocale)
+	{
+		P_GET_PROPERTY(FStrProperty,Z_Param_Locale);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::SetLocale(Z_Param_Locale);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execMixerResume)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::MixerResume();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execMixerSuspend)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::MixerSuspend();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execSetOutputDriverByIndex)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_NewDriverIndex);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::SetOutputDriverByIndex(Z_Param_NewDriverIndex);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execSetOutputDriverByName)
+	{
+		P_GET_PROPERTY(FStrProperty,Z_Param_NewDriverName);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::SetOutputDriverByName(Z_Param_NewDriverName);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execGetOutputDrivers)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(TArray<FString>*)Z_Param__Result=UFMODBlueprintStatics::GetOutputDrivers();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execEventInstanceSetTransform)
+	{
+		P_GET_STRUCT(FFMODEventInstance,Z_Param_EventInstance);
+		P_GET_STRUCT_REF(FTransform,Z_Param_Out_Location);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::EventInstanceSetTransform(Z_Param_EventInstance,Z_Param_Out_Location);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execEventInstanceTriggerCue)
+	{
+		P_GET_STRUCT(FFMODEventInstance,Z_Param_EventInstance);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::EventInstanceTriggerCue(Z_Param_EventInstance);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execEventInstanceRelease)
+	{
+		P_GET_STRUCT(FFMODEventInstance,Z_Param_EventInstance);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::EventInstanceRelease(Z_Param_EventInstance);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execEventInstanceStop)
+	{
+		P_GET_STRUCT(FFMODEventInstance,Z_Param_EventInstance);
+		P_GET_UBOOL(Z_Param_Release);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::EventInstanceStop(Z_Param_EventInstance,Z_Param_Release);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execEventInstancePlay)
+	{
+		P_GET_STRUCT(FFMODEventInstance,Z_Param_EventInstance);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::EventInstancePlay(Z_Param_EventInstance);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execEventInstanceSetProperty)
+	{
+		P_GET_STRUCT(FFMODEventInstance,Z_Param_EventInstance);
+		P_GET_PROPERTY(FByteProperty,Z_Param_Property);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Value);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::EventInstanceSetProperty(Z_Param_EventInstance,EFMODEventProperty::Type(Z_Param_Property),Z_Param_Value);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execEventInstanceGetParameterValue)
+	{
+		P_GET_STRUCT(FFMODEventInstance,Z_Param_EventInstance);
+		P_GET_PROPERTY(FNameProperty,Z_Param_Name);
+		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_UserValue);
+		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_FinalValue);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::EventInstanceGetParameterValue(Z_Param_EventInstance,Z_Param_Name,Z_Param_Out_UserValue,Z_Param_Out_FinalValue);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execEventInstanceGetParameter)
+	{
+		P_GET_STRUCT(FFMODEventInstance,Z_Param_EventInstance);
+		P_GET_PROPERTY(FNameProperty,Z_Param_Name);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=UFMODBlueprintStatics::EventInstanceGetParameter(Z_Param_EventInstance,Z_Param_Name);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execEventInstanceSetParameter)
+	{
+		P_GET_STRUCT(FFMODEventInstance,Z_Param_EventInstance);
+		P_GET_PROPERTY(FNameProperty,Z_Param_Name);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Value);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::EventInstanceSetParameter(Z_Param_EventInstance,Z_Param_Name,Z_Param_Value);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execEventInstanceSetPaused)
+	{
+		P_GET_STRUCT(FFMODEventInstance,Z_Param_EventInstance);
+		P_GET_UBOOL(Z_Param_Paused);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::EventInstanceSetPaused(Z_Param_EventInstance,Z_Param_Paused);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execEventInstanceSetPitch)
+	{
+		P_GET_STRUCT(FFMODEventInstance,Z_Param_EventInstance);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Pitch);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::EventInstanceSetPitch(Z_Param_EventInstance,Z_Param_Pitch);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execEventInstanceSetVolume)
+	{
+		P_GET_STRUCT(FFMODEventInstance,Z_Param_EventInstance);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Volume);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::EventInstanceSetVolume(Z_Param_EventInstance,Z_Param_Volume);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execEventInstanceIsValid)
+	{
+		P_GET_STRUCT(FFMODEventInstance,Z_Param_EventInstance);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UFMODBlueprintStatics::EventInstanceIsValid(Z_Param_EventInstance);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execGetGlobalParameterValueByName)
+	{
+		P_GET_PROPERTY(FNameProperty,Z_Param_Name);
+		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_UserValue);
+		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_FinalValue);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::GetGlobalParameterValueByName(Z_Param_Name,Z_Param_Out_UserValue,Z_Param_Out_FinalValue);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execGetGlobalParameterByName)
+	{
+		P_GET_PROPERTY(FNameProperty,Z_Param_Name);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=UFMODBlueprintStatics::GetGlobalParameterByName(Z_Param_Name);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execSetGlobalParameterByName)
+	{
+		P_GET_PROPERTY(FNameProperty,Z_Param_Name);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Value);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::SetGlobalParameterByName(Z_Param_Name,Z_Param_Value);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execVCASetVolume)
+	{
+		P_GET_OBJECT(UFMODVCA,Z_Param_Vca);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Volume);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::VCASetVolume(Z_Param_Vca,Z_Param_Volume);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execBusStopAllEvents)
+	{
+		P_GET_OBJECT(UFMODBus,Z_Param_Bus);
+		P_GET_PROPERTY(FByteProperty,Z_Param_stopMode);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::BusStopAllEvents(Z_Param_Bus,EFMOD_STUDIO_STOP_MODE(Z_Param_stopMode));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execBusSetMute)
+	{
+		P_GET_OBJECT(UFMODBus,Z_Param_Bus);
+		P_GET_UBOOL(Z_Param_bMute);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::BusSetMute(Z_Param_Bus,Z_Param_bMute);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execBusSetPaused)
+	{
+		P_GET_OBJECT(UFMODBus,Z_Param_Bus);
+		P_GET_UBOOL(Z_Param_bPaused);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::BusSetPaused(Z_Param_Bus,Z_Param_bPaused);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execBusSetVolume)
+	{
+		P_GET_OBJECT(UFMODBus,Z_Param_Bus);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Volume);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::BusSetVolume(Z_Param_Bus,Z_Param_Volume);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execFindEventInstances)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_OBJECT(UFMODEvent,Z_Param_Event);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(TArray<FFMODEventInstance>*)Z_Param__Result=UFMODBlueprintStatics::FindEventInstances(Z_Param_WorldContextObject,Z_Param_Event);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execUnloadEventSampleData)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_OBJECT(UFMODEvent,Z_Param_Event);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::UnloadEventSampleData(Z_Param_WorldContextObject,Z_Param_Event);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execLoadEventSampleData)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_OBJECT(UFMODEvent,Z_Param_Event);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::LoadEventSampleData(Z_Param_WorldContextObject,Z_Param_Event);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execUnloadBankSampleData)
+	{
+		P_GET_OBJECT(UFMODBank,Z_Param_Bank);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::UnloadBankSampleData(Z_Param_Bank);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execLoadBankSampleData)
+	{
+		P_GET_OBJECT(UFMODBank,Z_Param_Bank);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::LoadBankSampleData(Z_Param_Bank);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execIsBankLoaded)
+	{
+		P_GET_OBJECT(UFMODBank,Z_Param_Bank);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UFMODBlueprintStatics::IsBankLoaded(Z_Param_Bank);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execUnloadBank)
+	{
+		P_GET_OBJECT(UFMODBank,Z_Param_Bank);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::UnloadBank(Z_Param_Bank);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execLoadBank)
+	{
+		P_GET_OBJECT(UFMODBank,Z_Param_Bank);
+		P_GET_UBOOL(Z_Param_bBlocking);
+		P_GET_UBOOL(Z_Param_bLoadSampleData);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UFMODBlueprintStatics::LoadBank(Z_Param_Bank,Z_Param_bBlocking,Z_Param_bLoadSampleData);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execFindEventByName)
+	{
+		P_GET_PROPERTY(FStrProperty,Z_Param_Name);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UFMODEvent**)Z_Param__Result=UFMODBlueprintStatics::FindEventByName(Z_Param_Name);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execFindAssetByName)
+	{
+		P_GET_PROPERTY(FStrProperty,Z_Param_Name);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UFMODAsset**)Z_Param__Result=UFMODBlueprintStatics::FindAssetByName(Z_Param_Name);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execPlayEventAttached)
+	{
+		P_GET_OBJECT(UFMODEvent,Z_Param_Event);
+		P_GET_OBJECT(USceneComponent,Z_Param_AttachToComponent);
+		P_GET_PROPERTY(FNameProperty,Z_Param_AttachPointName);
+		P_GET_STRUCT(FVector,Z_Param_Location);
+		P_GET_PROPERTY(FByteProperty,Z_Param_LocationType);
+		P_GET_UBOOL(Z_Param_bStopWhenAttachedToDestroyed);
+		P_GET_UBOOL(Z_Param_bAutoPlay);
+		P_GET_UBOOL(Z_Param_bAutoDestroy);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UFMODAudioComponent**)Z_Param__Result=UFMODBlueprintStatics::PlayEventAttached(Z_Param_Event,Z_Param_AttachToComponent,Z_Param_AttachPointName,Z_Param_Location,EAttachLocation::Type(Z_Param_LocationType),Z_Param_bStopWhenAttachedToDestroyed,Z_Param_bAutoPlay,Z_Param_bAutoDestroy);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execPlayEventAtLocation)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_OBJECT(UFMODEvent,Z_Param_Event);
+		P_GET_STRUCT_REF(FTransform,Z_Param_Out_Location);
+		P_GET_UBOOL(Z_Param_bAutoPlay);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FFMODEventInstance*)Z_Param__Result=UFMODBlueprintStatics::PlayEventAtLocation(Z_Param_WorldContextObject,Z_Param_Event,Z_Param_Out_Location,Z_Param_bAutoPlay);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODBlueprintStatics::execPlayEvent2D)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_OBJECT(UFMODEvent,Z_Param_Event);
+		P_GET_UBOOL(Z_Param_bAutoPlay);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FFMODEventInstance*)Z_Param__Result=UFMODBlueprintStatics::PlayEvent2D(Z_Param_WorldContextObject,Z_Param_Event,Z_Param_bAutoPlay);
+		P_NATIVE_END;
+	}
 	void UFMODBlueprintStatics::StaticRegisterNativesUFMODBlueprintStatics()
 	{
 		UClass* Class = UFMODBlueprintStatics::StaticClass();
@@ -1075,7 +1390,7 @@ static struct FScriptStruct_FMODStudio_StaticRegisterNativesFFMODEventInstance
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UFMODBlueprintStatics_FindEventInstances_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMODBlueprintStatics_eventFindEventInstances_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UFMODBlueprintStatics_FindEventInstances_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMODBlueprintStatics_eventFindEventInstances_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UFMODBlueprintStatics_FindEventInstances_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FFMODEventInstance, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UFMODBlueprintStatics_FindEventInstances_Statics::NewProp_Event = { "Event", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMODBlueprintStatics_eventFindEventInstances_Parms, Event), Z_Construct_UClass_UFMODEvent_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UFMODBlueprintStatics_FindEventInstances_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMODBlueprintStatics_eventFindEventInstances_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
@@ -1204,7 +1519,7 @@ static struct FScriptStruct_FMODStudio_StaticRegisterNativesFFMODEventInstance
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UFMODBlueprintStatics_GetOutputDrivers_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMODBlueprintStatics_eventGetOutputDrivers_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UFMODBlueprintStatics_GetOutputDrivers_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMODBlueprintStatics_eventGetOutputDrivers_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UFMODBlueprintStatics_GetOutputDrivers_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UFMODBlueprintStatics_GetOutputDrivers_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFMODBlueprintStatics_GetOutputDrivers_Statics::NewProp_ReturnValue,
@@ -2028,10 +2343,10 @@ static struct FScriptStruct_FMODStudio_StaticRegisterNativesFFMODEventInstance
 		{ &Z_Construct_UFunction_UFMODBlueprintStatics_EventInstanceTriggerCue, "EventInstanceTriggerCue" }, // 60862779
 		{ &Z_Construct_UFunction_UFMODBlueprintStatics_FindAssetByName, "FindAssetByName" }, // 3761929532
 		{ &Z_Construct_UFunction_UFMODBlueprintStatics_FindEventByName, "FindEventByName" }, // 2358837488
-		{ &Z_Construct_UFunction_UFMODBlueprintStatics_FindEventInstances, "FindEventInstances" }, // 4048489374
+		{ &Z_Construct_UFunction_UFMODBlueprintStatics_FindEventInstances, "FindEventInstances" }, // 2964642036
 		{ &Z_Construct_UFunction_UFMODBlueprintStatics_GetGlobalParameterByName, "GetGlobalParameterByName" }, // 4128960165
 		{ &Z_Construct_UFunction_UFMODBlueprintStatics_GetGlobalParameterValueByName, "GetGlobalParameterValueByName" }, // 1381355376
-		{ &Z_Construct_UFunction_UFMODBlueprintStatics_GetOutputDrivers, "GetOutputDrivers" }, // 3872264498
+		{ &Z_Construct_UFunction_UFMODBlueprintStatics_GetOutputDrivers, "GetOutputDrivers" }, // 993891541
 		{ &Z_Construct_UFunction_UFMODBlueprintStatics_IsBankLoaded, "IsBankLoaded" }, // 468389645
 		{ &Z_Construct_UFunction_UFMODBlueprintStatics_LoadBank, "LoadBank" }, // 1562112261
 		{ &Z_Construct_UFunction_UFMODBlueprintStatics_LoadBankSampleData, "LoadBankSampleData" }, // 36665782
@@ -2083,7 +2398,7 @@ static struct FScriptStruct_FMODStudio_StaticRegisterNativesFFMODEventInstance
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UFMODBlueprintStatics, 3168379469);
+	IMPLEMENT_CLASS(UFMODBlueprintStatics, 3300768607);
 	template<> FMODSTUDIO_API UClass* StaticClass<UFMODBlueprintStatics>()
 	{
 		return UFMODBlueprintStatics::StaticClass();

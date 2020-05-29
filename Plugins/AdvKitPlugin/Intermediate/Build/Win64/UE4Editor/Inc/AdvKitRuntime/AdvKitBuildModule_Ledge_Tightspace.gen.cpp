@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -76,7 +76,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitBuildModule_Ledge_Tightspace() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAdvKitBuildModule_Ledge_Tightspace, 2733575307);
+	IMPLEMENT_CLASS(UAdvKitBuildModule_Ledge_Tightspace, 1392264718);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<UAdvKitBuildModule_Ledge_Tightspace>()
 	{
 		return UAdvKitBuildModule_Ledge_Tightspace::StaticClass();

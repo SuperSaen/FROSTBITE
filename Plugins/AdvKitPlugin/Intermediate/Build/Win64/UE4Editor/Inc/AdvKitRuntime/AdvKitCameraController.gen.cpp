@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -19,18 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitCameraController() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitCameraController_NoRegister();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitCameraController();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCameraController_GetViewLocation();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCameraController_GetViewRotation();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCameraController_NextCamera();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCameraController_OnRep_CurrentConfig();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCameraController_PreviousCamera();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCameraController_RestrictViewRotation();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCameraController_ServerSetActiveConfig();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCameraController_SetActiveCameraComponent();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCameraController_SetActiveConfig();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCameraController_SetActiveConfigByName();
 // End Cross Module References
 class UScriptStruct* FCameraConfig::StaticStruct()
 {
@@ -403,6 +393,89 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFCameraConfig
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FCameraConfig_Hash() { return 663975820U; }
+	DEFINE_FUNCTION(UAdvKitCameraController::execGetViewRotation)
+	{
+		P_GET_STRUCT_REF(FRotator,Z_Param_Out_OriginalRotation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FRotator*)Z_Param__Result=P_THIS->GetViewRotation_Implementation(Z_Param_Out_OriginalRotation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCameraController::execGetViewLocation)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_OriginalLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetViewLocation_Implementation(Z_Param_Out_OriginalLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCameraController::execRestrictViewRotation)
+	{
+		P_GET_STRUCT_REF(FRotator,Z_Param_Out_DesiredRotation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RestrictViewRotation_Implementation(Z_Param_Out_DesiredRotation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCameraController::execSetActiveCameraComponent)
+	{
+		P_GET_OBJECT(UCameraComponent,Z_Param_NewCameraComponent);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->SetActiveCameraComponent_Implementation(Z_Param_NewCameraComponent);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCameraController::execSetActiveConfigByName)
+	{
+		P_GET_PROPERTY(FNameProperty,Z_Param_NewConfigName);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetActiveConfigByName(Z_Param_NewConfigName);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCameraController::execOnRep_CurrentConfig)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_LastConfig);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRep_CurrentConfig(Z_Param_LastConfig);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCameraController::execServerSetActiveConfig)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_Index);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->ServerSetActiveConfig_Validate(Z_Param_Index))
+		{
+			RPC_ValidateFailed(TEXT("ServerSetActiveConfig_Validate"));
+			return;
+		}
+		P_THIS->ServerSetActiveConfig_Implementation(Z_Param_Index);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCameraController::execSetActiveConfig)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_Index);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetActiveConfig(Z_Param_Index);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCameraController::execPreviousCamera)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->PreviousCamera();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCameraController::execNextCamera)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->NextCamera();
+		P_NATIVE_END;
+	}
 	static FName NAME_UAdvKitCameraController_GetViewLocation = FName(TEXT("GetViewLocation"));
 	FVector UAdvKitCameraController::GetViewLocation(FVector const& OriginalLocation) const
 	{
@@ -928,7 +1001,7 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFCameraConfig
 		{ "ModuleRelativePath", "Public/Player/AdvKitCameraController.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAdvKitCameraController_Statics::NewProp_CameraConfigurations = { "CameraConfigurations", nullptr, (EPropertyFlags)0x0020088000000005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UAdvKitCameraController, CameraConfigurations), METADATA_PARAMS(Z_Construct_UClass_UAdvKitCameraController_Statics::NewProp_CameraConfigurations_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UAdvKitCameraController_Statics::NewProp_CameraConfigurations_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAdvKitCameraController_Statics::NewProp_CameraConfigurations = { "CameraConfigurations", nullptr, (EPropertyFlags)0x0020088000000005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UAdvKitCameraController, CameraConfigurations), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UAdvKitCameraController_Statics::NewProp_CameraConfigurations_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UAdvKitCameraController_Statics::NewProp_CameraConfigurations_MetaData)) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UAdvKitCameraController_Statics::NewProp_CameraConfigurations_Inner = { "CameraConfigurations", nullptr, (EPropertyFlags)0x0000008000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FCameraConfig, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UAdvKitCameraController_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAdvKitCameraController_Statics::NewProp_CurrentConfig,
@@ -967,12 +1040,22 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFCameraConfig
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAdvKitCameraController, 2093743194);
+	IMPLEMENT_CLASS(UAdvKitCameraController, 2623692104);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<UAdvKitCameraController>()
 	{
 		return UAdvKitCameraController::StaticClass();
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UAdvKitCameraController(Z_Construct_UClass_UAdvKitCameraController, &UAdvKitCameraController::StaticClass, TEXT("/Script/AdvKitRuntime"), TEXT("UAdvKitCameraController"), false, nullptr, nullptr, nullptr);
+
+	void UAdvKitCameraController::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
+	{
+		static const FName Name_CurrentConfig(TEXT("CurrentConfig"));
+
+		const bool bIsValid = true
+			&& Name_CurrentConfig == ClassReps[(int32)ENetFields_Private::CurrentConfig].Property->GetFName();
+
+		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in UAdvKitCameraController"));
+	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UAdvKitCameraController);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER

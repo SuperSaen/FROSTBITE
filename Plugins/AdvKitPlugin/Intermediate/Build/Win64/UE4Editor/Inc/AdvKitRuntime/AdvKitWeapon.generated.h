@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -73,481 +73,60 @@ template<> ADVKITRUNTIME_API UScriptStruct* StaticStruct<struct FAdvKitWeaponSta
 	virtual void StopFire_Implementation(); \
 	virtual void StartFire_Implementation(uint8 FireModeIndex); \
  \
-	DECLARE_FUNCTION(execOnWeaponEmpty) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnWeaponEmpty_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnMagazineEmpty) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnMagazineEmpty_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnReloadEnd) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnReloadEnd_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnReloaded) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnReloaded_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnReloadBegin) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnReloadBegin_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnFireEnd) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnFireEnd_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnFireShot) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnFireShot_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnFireBegin) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnFireBegin_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRep_BurstCounter) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_OldBurstCounter); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_BurstCounter(Z_Param_OldBurstCounter); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRep_WeaponState) \
-	{ \
-		P_GET_STRUCT(FAdvKitWeaponState,Z_Param_OldState); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_WeaponState(Z_Param_OldState); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopReloadServer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->StopReloadServer_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("StopReloadServer_Validate")); \
-			return; \
-		} \
-		P_THIS->StopReloadServer_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartReloadServer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->StartReloadServer_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("StartReloadServer_Validate")); \
-			return; \
-		} \
-		P_THIS->StartReloadServer_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopFireServer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->StopFireServer_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("StopFireServer_Validate")); \
-			return; \
-		} \
-		P_THIS->StopFireServer_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartFireServer) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->StartFireServer_Validate(Z_Param_FireModeIndex)) \
-		{ \
-			RPC_ValidateFailed(TEXT("StartFireServer_Validate")); \
-			return; \
-		} \
-		P_THIS->StartFireServer_Implementation(Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execBlockedBy) \
-	{ \
-		P_GET_OBJECT(AActor,Z_Param_By); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_BlockedDamage); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->BlockedBy_Implementation(Z_Param_By,Z_Param_BlockedDamage); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execBlockDamage) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_Damage); \
-		P_GET_STRUCT_REF(FDamageEvent,Z_Param_Out_DamageEvent); \
-		P_GET_OBJECT(AController,Z_Param_EventInstigator); \
-		P_GET_OBJECT(AActor,Z_Param_DamageCauser); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->BlockDamage_Implementation(Z_Param_Damage,Z_Param_Out_DamageEvent,Z_Param_EventInstigator,Z_Param_DamageCauser); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetFireModeClass) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(TSubclassOf<UAdvKitFireModeConfiguration> *)Z_Param__Result=P_THIS->GetFireModeClass(Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetFireModeBP) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAdvKitFireModeConfiguration**)Z_Param__Result=P_THIS->GetFireModeBP(Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execHasFireMode) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->HasFireMode(Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execReloadedTimer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ReloadedTimer(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopReloadTimer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StopReloadTimer_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartReloadTimer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartReloadTimer_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddAmmunition) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Amount); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AddAmmunition_Implementation(Z_Param_Amount); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execReloadAmmunition) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ReloadAmmunition_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopReloadInternal) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StopReloadInternal_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartReloadInternal) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartReloadInternal_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanReload) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanReload_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopFireInternal) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StopFireInternal_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartFireInternal) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartFireInternal_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanFire) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanFire_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddSpread) \
-	{ \
-		P_GET_STRUCT(FRotator,Z_Param_OriginalAim); \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FRotator*)Z_Param__Result=P_THIS->AddSpread(Z_Param_OriginalAim,Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetAdjustedAim) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_StartFireLocation); \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FRotator*)Z_Param__Result=P_THIS->GetAdjustedAim(Z_Param_StartFireLocation,Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetTraceStart) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetTraceStart_Implementation(Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetMuzzleLocation) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetMuzzleLocation_Implementation(Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execIsReloading) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->IsReloading(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execIsFiring) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->IsFiring(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execIsIdle) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->IsIdle(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execHasAmmunitionInMagazine) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Amount); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->HasAmmunitionInMagazine(Z_Param_Amount); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execHasAmmunition) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Amount); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->HasAmmunition(Z_Param_Amount); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execIsMagazineEmpty) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->IsMagazineEmpty(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRefireTimer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RefireTimer(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopRefireTimer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StopRefireTimer(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartRefireTimer) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_Duration); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartRefireTimer(Z_Param_Duration); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execFireCustom) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->FireCustom_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execFireProjectile) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitProjectile**)Z_Param__Result=P_THIS->FireProjectile_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execFireInstant) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->FireInstant_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execFireAmmunition) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->FireAmmunition_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execHandleFiringPrerequisites) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->HandleFiringPrerequisites_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execConsumeAmmunition) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ConsumeAmmunition_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopReload) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StopReload_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartReload) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartReload_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopFire) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StopFire_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartFire) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartFire_Implementation(Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetWeaponCrosshairTexture) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_WeaponClass); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UTexture2D**)Z_Param__Result=AAdvKitWeapon::GetWeaponCrosshairTexture(Z_Param_WeaponClass); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnWeaponEmpty); \
+	DECLARE_FUNCTION(execOnMagazineEmpty); \
+	DECLARE_FUNCTION(execOnReloadEnd); \
+	DECLARE_FUNCTION(execOnReloaded); \
+	DECLARE_FUNCTION(execOnReloadBegin); \
+	DECLARE_FUNCTION(execOnFireEnd); \
+	DECLARE_FUNCTION(execOnFireShot); \
+	DECLARE_FUNCTION(execOnFireBegin); \
+	DECLARE_FUNCTION(execOnRep_BurstCounter); \
+	DECLARE_FUNCTION(execOnRep_WeaponState); \
+	DECLARE_FUNCTION(execStopReloadServer); \
+	DECLARE_FUNCTION(execStartReloadServer); \
+	DECLARE_FUNCTION(execStopFireServer); \
+	DECLARE_FUNCTION(execStartFireServer); \
+	DECLARE_FUNCTION(execBlockedBy); \
+	DECLARE_FUNCTION(execBlockDamage); \
+	DECLARE_FUNCTION(execGetFireModeClass); \
+	DECLARE_FUNCTION(execGetFireModeBP); \
+	DECLARE_FUNCTION(execHasFireMode); \
+	DECLARE_FUNCTION(execReloadedTimer); \
+	DECLARE_FUNCTION(execStopReloadTimer); \
+	DECLARE_FUNCTION(execStartReloadTimer); \
+	DECLARE_FUNCTION(execAddAmmunition); \
+	DECLARE_FUNCTION(execReloadAmmunition); \
+	DECLARE_FUNCTION(execStopReloadInternal); \
+	DECLARE_FUNCTION(execStartReloadInternal); \
+	DECLARE_FUNCTION(execCanReload); \
+	DECLARE_FUNCTION(execStopFireInternal); \
+	DECLARE_FUNCTION(execStartFireInternal); \
+	DECLARE_FUNCTION(execCanFire); \
+	DECLARE_FUNCTION(execAddSpread); \
+	DECLARE_FUNCTION(execGetAdjustedAim); \
+	DECLARE_FUNCTION(execGetTraceStart); \
+	DECLARE_FUNCTION(execGetMuzzleLocation); \
+	DECLARE_FUNCTION(execIsReloading); \
+	DECLARE_FUNCTION(execIsFiring); \
+	DECLARE_FUNCTION(execIsIdle); \
+	DECLARE_FUNCTION(execHasAmmunitionInMagazine); \
+	DECLARE_FUNCTION(execHasAmmunition); \
+	DECLARE_FUNCTION(execIsMagazineEmpty); \
+	DECLARE_FUNCTION(execRefireTimer); \
+	DECLARE_FUNCTION(execStopRefireTimer); \
+	DECLARE_FUNCTION(execStartRefireTimer); \
+	DECLARE_FUNCTION(execFireCustom); \
+	DECLARE_FUNCTION(execFireProjectile); \
+	DECLARE_FUNCTION(execFireInstant); \
+	DECLARE_FUNCTION(execFireAmmunition); \
+	DECLARE_FUNCTION(execHandleFiringPrerequisites); \
+	DECLARE_FUNCTION(execConsumeAmmunition); \
+	DECLARE_FUNCTION(execStopReload); \
+	DECLARE_FUNCTION(execStartReload); \
+	DECLARE_FUNCTION(execStopFire); \
+	DECLARE_FUNCTION(execStartFire); \
+	DECLARE_FUNCTION(execGetWeaponCrosshairTexture);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitWeapon_h_78_RPC_WRAPPERS_NO_PURE_DECLS \
@@ -556,481 +135,60 @@ template<> ADVKITRUNTIME_API UScriptStruct* StaticStruct<struct FAdvKitWeaponSta
 	virtual bool StopFireServer_Validate(); \
 	virtual bool StartFireServer_Validate(uint8 ); \
  \
-	DECLARE_FUNCTION(execOnWeaponEmpty) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnWeaponEmpty_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnMagazineEmpty) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnMagazineEmpty_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnReloadEnd) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnReloadEnd_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnReloaded) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnReloaded_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnReloadBegin) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnReloadBegin_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnFireEnd) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnFireEnd_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnFireShot) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnFireShot_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnFireBegin) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnFireBegin_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRep_BurstCounter) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_OldBurstCounter); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_BurstCounter(Z_Param_OldBurstCounter); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRep_WeaponState) \
-	{ \
-		P_GET_STRUCT(FAdvKitWeaponState,Z_Param_OldState); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_WeaponState(Z_Param_OldState); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopReloadServer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->StopReloadServer_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("StopReloadServer_Validate")); \
-			return; \
-		} \
-		P_THIS->StopReloadServer_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartReloadServer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->StartReloadServer_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("StartReloadServer_Validate")); \
-			return; \
-		} \
-		P_THIS->StartReloadServer_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopFireServer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->StopFireServer_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("StopFireServer_Validate")); \
-			return; \
-		} \
-		P_THIS->StopFireServer_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartFireServer) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->StartFireServer_Validate(Z_Param_FireModeIndex)) \
-		{ \
-			RPC_ValidateFailed(TEXT("StartFireServer_Validate")); \
-			return; \
-		} \
-		P_THIS->StartFireServer_Implementation(Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execBlockedBy) \
-	{ \
-		P_GET_OBJECT(AActor,Z_Param_By); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_BlockedDamage); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->BlockedBy_Implementation(Z_Param_By,Z_Param_BlockedDamage); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execBlockDamage) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_Damage); \
-		P_GET_STRUCT_REF(FDamageEvent,Z_Param_Out_DamageEvent); \
-		P_GET_OBJECT(AController,Z_Param_EventInstigator); \
-		P_GET_OBJECT(AActor,Z_Param_DamageCauser); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->BlockDamage_Implementation(Z_Param_Damage,Z_Param_Out_DamageEvent,Z_Param_EventInstigator,Z_Param_DamageCauser); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetFireModeClass) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(TSubclassOf<UAdvKitFireModeConfiguration> *)Z_Param__Result=P_THIS->GetFireModeClass(Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetFireModeBP) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAdvKitFireModeConfiguration**)Z_Param__Result=P_THIS->GetFireModeBP(Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execHasFireMode) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->HasFireMode(Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execReloadedTimer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ReloadedTimer(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopReloadTimer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StopReloadTimer_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartReloadTimer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartReloadTimer_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddAmmunition) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Amount); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AddAmmunition_Implementation(Z_Param_Amount); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execReloadAmmunition) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ReloadAmmunition_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopReloadInternal) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StopReloadInternal_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartReloadInternal) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartReloadInternal_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanReload) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanReload_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopFireInternal) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StopFireInternal_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartFireInternal) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartFireInternal_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanFire) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanFire_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddSpread) \
-	{ \
-		P_GET_STRUCT(FRotator,Z_Param_OriginalAim); \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FRotator*)Z_Param__Result=P_THIS->AddSpread(Z_Param_OriginalAim,Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetAdjustedAim) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_StartFireLocation); \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FRotator*)Z_Param__Result=P_THIS->GetAdjustedAim(Z_Param_StartFireLocation,Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetTraceStart) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetTraceStart_Implementation(Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetMuzzleLocation) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetMuzzleLocation_Implementation(Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execIsReloading) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->IsReloading(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execIsFiring) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->IsFiring(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execIsIdle) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->IsIdle(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execHasAmmunitionInMagazine) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Amount); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->HasAmmunitionInMagazine(Z_Param_Amount); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execHasAmmunition) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Amount); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->HasAmmunition(Z_Param_Amount); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execIsMagazineEmpty) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->IsMagazineEmpty(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRefireTimer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RefireTimer(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopRefireTimer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StopRefireTimer(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartRefireTimer) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_Duration); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartRefireTimer(Z_Param_Duration); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execFireCustom) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->FireCustom_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execFireProjectile) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitProjectile**)Z_Param__Result=P_THIS->FireProjectile_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execFireInstant) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->FireInstant_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execFireAmmunition) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->FireAmmunition_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execHandleFiringPrerequisites) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->HandleFiringPrerequisites_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execConsumeAmmunition) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ConsumeAmmunition_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopReload) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StopReload_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartReload) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartReload_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopFire) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StopFire_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartFire) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_FireModeIndex); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartFire_Implementation(Z_Param_FireModeIndex); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetWeaponCrosshairTexture) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_WeaponClass); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UTexture2D**)Z_Param__Result=AAdvKitWeapon::GetWeaponCrosshairTexture(Z_Param_WeaponClass); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnWeaponEmpty); \
+	DECLARE_FUNCTION(execOnMagazineEmpty); \
+	DECLARE_FUNCTION(execOnReloadEnd); \
+	DECLARE_FUNCTION(execOnReloaded); \
+	DECLARE_FUNCTION(execOnReloadBegin); \
+	DECLARE_FUNCTION(execOnFireEnd); \
+	DECLARE_FUNCTION(execOnFireShot); \
+	DECLARE_FUNCTION(execOnFireBegin); \
+	DECLARE_FUNCTION(execOnRep_BurstCounter); \
+	DECLARE_FUNCTION(execOnRep_WeaponState); \
+	DECLARE_FUNCTION(execStopReloadServer); \
+	DECLARE_FUNCTION(execStartReloadServer); \
+	DECLARE_FUNCTION(execStopFireServer); \
+	DECLARE_FUNCTION(execStartFireServer); \
+	DECLARE_FUNCTION(execBlockedBy); \
+	DECLARE_FUNCTION(execBlockDamage); \
+	DECLARE_FUNCTION(execGetFireModeClass); \
+	DECLARE_FUNCTION(execGetFireModeBP); \
+	DECLARE_FUNCTION(execHasFireMode); \
+	DECLARE_FUNCTION(execReloadedTimer); \
+	DECLARE_FUNCTION(execStopReloadTimer); \
+	DECLARE_FUNCTION(execStartReloadTimer); \
+	DECLARE_FUNCTION(execAddAmmunition); \
+	DECLARE_FUNCTION(execReloadAmmunition); \
+	DECLARE_FUNCTION(execStopReloadInternal); \
+	DECLARE_FUNCTION(execStartReloadInternal); \
+	DECLARE_FUNCTION(execCanReload); \
+	DECLARE_FUNCTION(execStopFireInternal); \
+	DECLARE_FUNCTION(execStartFireInternal); \
+	DECLARE_FUNCTION(execCanFire); \
+	DECLARE_FUNCTION(execAddSpread); \
+	DECLARE_FUNCTION(execGetAdjustedAim); \
+	DECLARE_FUNCTION(execGetTraceStart); \
+	DECLARE_FUNCTION(execGetMuzzleLocation); \
+	DECLARE_FUNCTION(execIsReloading); \
+	DECLARE_FUNCTION(execIsFiring); \
+	DECLARE_FUNCTION(execIsIdle); \
+	DECLARE_FUNCTION(execHasAmmunitionInMagazine); \
+	DECLARE_FUNCTION(execHasAmmunition); \
+	DECLARE_FUNCTION(execIsMagazineEmpty); \
+	DECLARE_FUNCTION(execRefireTimer); \
+	DECLARE_FUNCTION(execStopRefireTimer); \
+	DECLARE_FUNCTION(execStartRefireTimer); \
+	DECLARE_FUNCTION(execFireCustom); \
+	DECLARE_FUNCTION(execFireProjectile); \
+	DECLARE_FUNCTION(execFireInstant); \
+	DECLARE_FUNCTION(execFireAmmunition); \
+	DECLARE_FUNCTION(execHandleFiringPrerequisites); \
+	DECLARE_FUNCTION(execConsumeAmmunition); \
+	DECLARE_FUNCTION(execStopReload); \
+	DECLARE_FUNCTION(execStartReload); \
+	DECLARE_FUNCTION(execStopFire); \
+	DECLARE_FUNCTION(execStartFire); \
+	DECLARE_FUNCTION(execGetWeaponCrosshairTexture);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitWeapon_h_78_EVENT_PARMS \
@@ -1127,7 +285,17 @@ private: \
 public: \
 	DECLARE_CLASS(AAdvKitWeapon, AAdvKitInventoryItem, COMPILED_IN_FLAGS(CLASS_Abstract | CLASS_Config), CASTCLASS_None, TEXT("/Script/AdvKitRuntime"), NO_API) \
 	DECLARE_SERIALIZER(AAdvKitWeapon) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		WeaponState=NETFIELD_REP_START, \
+		BurstCounter, \
+		Ammunition, \
+		DefaultFireModes, \
+		FireModes_OLD, \
+		NETFIELD_REP_END=FireModes_OLD	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitWeapon_h_78_INCLASS \
@@ -1137,7 +305,17 @@ private: \
 public: \
 	DECLARE_CLASS(AAdvKitWeapon, AAdvKitInventoryItem, COMPILED_IN_FLAGS(CLASS_Abstract | CLASS_Config), CASTCLASS_None, TEXT("/Script/AdvKitRuntime"), NO_API) \
 	DECLARE_SERIALIZER(AAdvKitWeapon) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		WeaponState=NETFIELD_REP_START, \
+		BurstCounter, \
+		Ammunition, \
+		DefaultFireModes, \
+		FireModes_OLD, \
+		NETFIELD_REP_END=FireModes_OLD	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitWeapon_h_78_STANDARD_CONSTRUCTORS \

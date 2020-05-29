@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,17 +17,47 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTransitionComponent() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitTransitionComponent();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 	UPackage* Z_Construct_UPackage__Script_AdvKitRuntime();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionComponent_CanTransition();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitCharacter_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionComponent_GetClosestSourcePosition();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionComponent_GetClosestTargetPosition();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTransitionComponent_IsDynamicTransitionValid();
 	ADVKITRUNTIME_API UEnum* Z_Construct_UEnum_AdvKitRuntime_EAdvKitMovementMode();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitZone_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitTransitionBuilderModule_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(UAdvKitTransitionComponent::execIsDynamicTransitionValid)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsDynamicTransitionValid();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTransitionComponent::execCanTransition)
+	{
+		P_GET_OBJECT(AAdvKitCharacter,Z_Param_Character);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_AtLocation);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_InDirection);
+		P_GET_UBOOL(Z_Param_bIsJump);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CanTransition(Z_Param_Character,Z_Param_Out_AtLocation,Z_Param_Out_InDirection,Z_Param_bIsJump);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTransitionComponent::execGetClosestTargetPosition)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldPosition);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetClosestTargetPosition(Z_Param_Out_ToWorldPosition);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTransitionComponent::execGetClosestSourcePosition)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldPosition);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetClosestSourcePosition(Z_Param_Out_ToWorldPosition);
+		P_NATIVE_END;
+	}
 	void UAdvKitTransitionComponent::StaticRegisterNativesUAdvKitTransitionComponent()
 	{
 		UClass* Class = UAdvKitTransitionComponent::StaticClass();
@@ -498,7 +528,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTransitionComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAdvKitTransitionComponent, 1999760885);
+	IMPLEMENT_CLASS(UAdvKitTransitionComponent, 2772549013);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<UAdvKitTransitionComponent>()
 	{
 		return UAdvKitTransitionComponent::StaticClass();

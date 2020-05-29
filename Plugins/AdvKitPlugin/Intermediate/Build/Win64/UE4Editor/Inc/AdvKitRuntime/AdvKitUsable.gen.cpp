@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -20,8 +20,6 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitUsable() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitUsable_NoRegister();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitUsable();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitUsable_CanBeUsedBy();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitUsable_UsedBy();
 // End Cross Module References
 	struct Z_Construct_UDelegateFunction_AdvKitRuntime_UsedBySignature__DelegateSignature_Statics
 	{
@@ -58,6 +56,24 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitUsable() {}
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_AdvKitRuntime_UsedBySignature__DelegateSignature_Statics::FuncParams);
 		}
 		return ReturnFunction;
+	}
+	DEFINE_FUNCTION(AAdvKitUsable::execCanBeUsedBy)
+	{
+		P_GET_OBJECT(AAdvKitCharacter,Z_Param_Character);
+		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_WithItem);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CanBeUsedBy_Implementation(Z_Param_Character,Z_Param_WithItem);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitUsable::execUsedBy)
+	{
+		P_GET_OBJECT(AAdvKitCharacter,Z_Param_Character);
+		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_WithItem);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->UsedBy_Implementation(Z_Param_Character,Z_Param_WithItem);
+		P_NATIVE_END;
 	}
 	static FName NAME_AAdvKitUsable_CanBeUsedBy = FName(TEXT("CanBeUsedBy"));
 	bool AAdvKitUsable::CanBeUsedBy(AAdvKitCharacter* Character, AAdvKitInventoryItem* WithItem)
@@ -238,7 +254,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitUsable() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAdvKitUsable, 1234776473);
+	IMPLEMENT_CLASS(AAdvKitUsable, 2792371633);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<AAdvKitUsable>()
 	{
 		return AAdvKitUsable::StaticClass();

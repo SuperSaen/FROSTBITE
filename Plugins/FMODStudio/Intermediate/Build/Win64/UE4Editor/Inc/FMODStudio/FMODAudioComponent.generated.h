@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -76,326 +76,46 @@ static inline void FOnEventStopped_DelegateWrapper(const FMulticastScriptDelegat
 #define FROSTBITE_Plugins_FMODStudio_Source_FMODStudio_Classes_FMODAudioComponent_h_133_SPARSE_DATA
 #define FROSTBITE_Plugins_FMODStudio_Source_FMODStudio_Classes_FMODAudioComponent_h_133_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execSetProgrammerSoundName) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_Value); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetProgrammerSoundName(Z_Param_Value); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetTimelinePosition) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(int32*)Z_Param__Result=P_THIS->GetTimelinePosition(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetTimelinePosition) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Time); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetTimelinePosition(Z_Param_Time); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetLength) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(int32*)Z_Param__Result=P_THIS->GetLength(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetProperty) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_Property); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->GetProperty(EFMODEventProperty::Type(Z_Param_Property)); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetProperty) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_Property); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_Value); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetProperty(EFMODEventProperty::Type(Z_Param_Property),Z_Param_Value); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetParameterValue) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_Name); \
-		P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_UserValue); \
-		P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_FinalValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->GetParameterValue(Z_Param_Name,Z_Param_Out_UserValue,Z_Param_Out_FinalValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetParameter) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_Name); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->GetParameter(Z_Param_Name); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetParameter) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_Name); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_Value); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetParameter(Z_Param_Name,Z_Param_Value); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetPaused) \
-	{ \
-		P_GET_UBOOL(Z_Param_paused); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetPaused(Z_Param_paused); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetPitch) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_pitch); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetPitch(Z_Param_pitch); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetVolume) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_volume); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetVolume(Z_Param_volume); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execIsPlaying) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->IsPlaying(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTriggerCue) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->TriggerCue(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRelease) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Release(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStop) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Stop(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execPlay) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Play(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetEvent) \
-	{ \
-		P_GET_OBJECT(UFMODEvent,Z_Param_NewEvent); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetEvent(Z_Param_NewEvent); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execSetProgrammerSoundName); \
+	DECLARE_FUNCTION(execGetTimelinePosition); \
+	DECLARE_FUNCTION(execSetTimelinePosition); \
+	DECLARE_FUNCTION(execGetLength); \
+	DECLARE_FUNCTION(execGetProperty); \
+	DECLARE_FUNCTION(execSetProperty); \
+	DECLARE_FUNCTION(execGetParameterValue); \
+	DECLARE_FUNCTION(execGetParameter); \
+	DECLARE_FUNCTION(execSetParameter); \
+	DECLARE_FUNCTION(execSetPaused); \
+	DECLARE_FUNCTION(execSetPitch); \
+	DECLARE_FUNCTION(execSetVolume); \
+	DECLARE_FUNCTION(execIsPlaying); \
+	DECLARE_FUNCTION(execTriggerCue); \
+	DECLARE_FUNCTION(execRelease); \
+	DECLARE_FUNCTION(execStop); \
+	DECLARE_FUNCTION(execPlay); \
+	DECLARE_FUNCTION(execSetEvent);
 
 
 #define FROSTBITE_Plugins_FMODStudio_Source_FMODStudio_Classes_FMODAudioComponent_h_133_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execSetProgrammerSoundName) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_Value); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetProgrammerSoundName(Z_Param_Value); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetTimelinePosition) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(int32*)Z_Param__Result=P_THIS->GetTimelinePosition(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetTimelinePosition) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_Time); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetTimelinePosition(Z_Param_Time); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetLength) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(int32*)Z_Param__Result=P_THIS->GetLength(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetProperty) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_Property); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->GetProperty(EFMODEventProperty::Type(Z_Param_Property)); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetProperty) \
-	{ \
-		P_GET_PROPERTY(UByteProperty,Z_Param_Property); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_Value); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetProperty(EFMODEventProperty::Type(Z_Param_Property),Z_Param_Value); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetParameterValue) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_Name); \
-		P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_UserValue); \
-		P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_FinalValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->GetParameterValue(Z_Param_Name,Z_Param_Out_UserValue,Z_Param_Out_FinalValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetParameter) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_Name); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->GetParameter(Z_Param_Name); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetParameter) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_Name); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_Value); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetParameter(Z_Param_Name,Z_Param_Value); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetPaused) \
-	{ \
-		P_GET_UBOOL(Z_Param_paused); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetPaused(Z_Param_paused); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetPitch) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_pitch); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetPitch(Z_Param_pitch); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetVolume) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_volume); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetVolume(Z_Param_volume); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execIsPlaying) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->IsPlaying(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTriggerCue) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->TriggerCue(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRelease) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Release(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStop) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Stop(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execPlay) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Play(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetEvent) \
-	{ \
-		P_GET_OBJECT(UFMODEvent,Z_Param_NewEvent); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetEvent(Z_Param_NewEvent); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execSetProgrammerSoundName); \
+	DECLARE_FUNCTION(execGetTimelinePosition); \
+	DECLARE_FUNCTION(execSetTimelinePosition); \
+	DECLARE_FUNCTION(execGetLength); \
+	DECLARE_FUNCTION(execGetProperty); \
+	DECLARE_FUNCTION(execSetProperty); \
+	DECLARE_FUNCTION(execGetParameterValue); \
+	DECLARE_FUNCTION(execGetParameter); \
+	DECLARE_FUNCTION(execSetParameter); \
+	DECLARE_FUNCTION(execSetPaused); \
+	DECLARE_FUNCTION(execSetPitch); \
+	DECLARE_FUNCTION(execSetVolume); \
+	DECLARE_FUNCTION(execIsPlaying); \
+	DECLARE_FUNCTION(execTriggerCue); \
+	DECLARE_FUNCTION(execRelease); \
+	DECLARE_FUNCTION(execStop); \
+	DECLARE_FUNCTION(execPlay); \
+	DECLARE_FUNCTION(execSetEvent);
 
 
 #define FROSTBITE_Plugins_FMODStudio_Source_FMODStudio_Classes_FMODAudioComponent_h_133_INCLASS_NO_PURE_DECLS \

@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -22,97 +22,19 @@ struct FFindFloorResult;
 	virtual void SetNewOrientationServer_Implementation(FVector GravityUpVector, FVector Origin, bool bForce); \
 	virtual bool CanWallWalkOn_Implementation(FFindFloorResult NewFloor); \
  \
-	DECLARE_FUNCTION(execGetAdvGravityMovementComponent) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAdvKitGravityCharacterMovementComponent**)Z_Param__Result=P_THIS->GetAdvGravityMovementComponent(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetNewOrientationServer) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_GravityUpVector); \
-		P_GET_STRUCT(FVector,Z_Param_Origin); \
-		P_GET_UBOOL(Z_Param_bForce); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SetNewOrientationServer_Validate(Z_Param_GravityUpVector,Z_Param_Origin,Z_Param_bForce)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SetNewOrientationServer_Validate")); \
-			return; \
-		} \
-		P_THIS->SetNewOrientationServer_Implementation(Z_Param_GravityUpVector,Z_Param_Origin,Z_Param_bForce); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetNewOrientation) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_GravityUpVector); \
-		P_GET_STRUCT(FVector,Z_Param_Origin); \
-		P_GET_UBOOL(Z_Param_bForce); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetNewOrientation(Z_Param_GravityUpVector,Z_Param_Origin,Z_Param_bForce); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanWallWalkOn) \
-	{ \
-		P_GET_STRUCT(FFindFloorResult,Z_Param_NewFloor); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanWallWalkOn_Implementation(Z_Param_NewFloor); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execGetAdvGravityMovementComponent); \
+	DECLARE_FUNCTION(execSetNewOrientationServer); \
+	DECLARE_FUNCTION(execSetNewOrientation); \
+	DECLARE_FUNCTION(execCanWallWalkOn);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitGravityCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual bool SetNewOrientationServer_Validate(FVector , FVector , bool ); \
  \
-	DECLARE_FUNCTION(execGetAdvGravityMovementComponent) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UAdvKitGravityCharacterMovementComponent**)Z_Param__Result=P_THIS->GetAdvGravityMovementComponent(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetNewOrientationServer) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_GravityUpVector); \
-		P_GET_STRUCT(FVector,Z_Param_Origin); \
-		P_GET_UBOOL(Z_Param_bForce); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SetNewOrientationServer_Validate(Z_Param_GravityUpVector,Z_Param_Origin,Z_Param_bForce)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SetNewOrientationServer_Validate")); \
-			return; \
-		} \
-		P_THIS->SetNewOrientationServer_Implementation(Z_Param_GravityUpVector,Z_Param_Origin,Z_Param_bForce); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetNewOrientation) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_GravityUpVector); \
-		P_GET_STRUCT(FVector,Z_Param_Origin); \
-		P_GET_UBOOL(Z_Param_bForce); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetNewOrientation(Z_Param_GravityUpVector,Z_Param_Origin,Z_Param_bForce); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanWallWalkOn) \
-	{ \
-		P_GET_STRUCT(FFindFloorResult,Z_Param_NewFloor); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanWallWalkOn_Implementation(Z_Param_NewFloor); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execGetAdvGravityMovementComponent); \
+	DECLARE_FUNCTION(execSetNewOrientationServer); \
+	DECLARE_FUNCTION(execSetNewOrientation); \
+	DECLARE_FUNCTION(execCanWallWalkOn);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitGravityCharacter_h_16_EVENT_PARMS \
@@ -143,7 +65,13 @@ private: \
 public: \
 	DECLARE_CLASS(AAdvKitGravityCharacter, AAdvKitCharacter, COMPILED_IN_FLAGS(CLASS_Abstract | CLASS_Config), CASTCLASS_None, TEXT("/Script/AdvKitRuntime"), NO_API) \
 	DECLARE_SERIALIZER(AAdvKitGravityCharacter) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		WorldOrientationComponent=NETFIELD_REP_START, \
+		NETFIELD_REP_END=WorldOrientationComponent	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitGravityCharacter_h_16_INCLASS \
@@ -153,7 +81,13 @@ private: \
 public: \
 	DECLARE_CLASS(AAdvKitGravityCharacter, AAdvKitCharacter, COMPILED_IN_FLAGS(CLASS_Abstract | CLASS_Config), CASTCLASS_None, TEXT("/Script/AdvKitRuntime"), NO_API) \
 	DECLARE_SERIALIZER(AAdvKitGravityCharacter) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		WorldOrientationComponent=NETFIELD_REP_START, \
+		NETFIELD_REP_END=WorldOrientationComponent	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitGravityCharacter_h_16_STANDARD_CONSTRUCTORS \

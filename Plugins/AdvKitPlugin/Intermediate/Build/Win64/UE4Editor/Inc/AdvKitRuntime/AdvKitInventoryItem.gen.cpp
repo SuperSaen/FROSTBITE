@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -19,28 +19,9 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitInventoryItem() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitInventoryItem_NoRegister();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitInventoryItem();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_AttachToCharacter();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_CanBeCombinedWith();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_CanEquip();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_CanUneqiup();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_CombinedWith();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_DetachFromCharacter();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_Drop();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_Equip();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_EquipServer();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_GetInventoryIconTexture();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_GetItemState();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_OnEquip();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_OnEquipped();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_OnRep_ItemState();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_OnUneqiup();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_OnUneqiupped();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_OwnerDied();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_Uneqiup();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitInventoryItem_UneqiupServer();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitPickup_NoRegister();
 // End Cross Module References
@@ -248,6 +229,164 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFRepAdvKitInvento
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FRepAdvKitInventoryState_Hash() { return 2789347175U; }
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execOnUneqiupped)
+	{
+		P_GET_UBOOL(Z_Param_bInstant);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnUneqiupped_Implementation(Z_Param_bInstant);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execOnUneqiup)
+	{
+		P_GET_UBOOL(Z_Param_bInstant);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnUneqiup_Implementation(Z_Param_bInstant);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execOnEquipped)
+	{
+		P_GET_UBOOL(Z_Param_bInstant);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnEquipped_Implementation(Z_Param_bInstant);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execOnEquip)
+	{
+		P_GET_UBOOL(Z_Param_bInstant);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnEquip_Implementation(Z_Param_bInstant);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execEquipServer)
+	{
+		P_GET_UBOOL(Z_Param_bInstant);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->EquipServer_Validate(Z_Param_bInstant))
+		{
+			RPC_ValidateFailed(TEXT("EquipServer_Validate"));
+			return;
+		}
+		P_THIS->EquipServer_Implementation(Z_Param_bInstant);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execUneqiupServer)
+	{
+		P_GET_UBOOL(Z_Param_bInstant);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->UneqiupServer_Validate(Z_Param_bInstant))
+		{
+			RPC_ValidateFailed(TEXT("UneqiupServer_Validate"));
+			return;
+		}
+		P_THIS->UneqiupServer_Implementation(Z_Param_bInstant);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execCanUneqiup)
+	{
+		P_GET_UBOOL(Z_Param_bInstant);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CanUneqiup_Implementation(Z_Param_bInstant);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execCanEquip)
+	{
+		P_GET_UBOOL(Z_Param_bInstant);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CanEquip_Implementation(Z_Param_bInstant);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execUneqiup)
+	{
+		P_GET_UBOOL(Z_Param_bInstant);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Uneqiup(Z_Param_bInstant);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execEquip)
+	{
+		P_GET_UBOOL(Z_Param_bInstant);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Equip(Z_Param_bInstant);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execGetItemState)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(EAdvKitInventoryState*)Z_Param__Result=P_THIS->GetItemState();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execOnRep_ItemState)
+	{
+		P_GET_STRUCT(FRepAdvKitInventoryState,Z_Param_PreviousRepItemState);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRep_ItemState(Z_Param_PreviousRepItemState);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execDetachFromCharacter)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->DetachFromCharacter_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execAttachToCharacter)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AttachToCharacter_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execDrop)
+	{
+		P_GET_STRUCT(FVector,Z_Param_Velocity);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Drop_Implementation(Z_Param_Velocity);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execOwnerDied)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OwnerDied_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execCombinedWith)
+	{
+		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_With);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->CombinedWith_Implementation(Z_Param_With);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execCanBeCombinedWith)
+	{
+		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_With);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CanBeCombinedWith_Implementation(Z_Param_With);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitInventoryItem::execGetInventoryIconTexture)
+	{
+		P_GET_OBJECT(UClass,Z_Param_InventoryClass);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UTexture2D**)Z_Param__Result=AAdvKitInventoryItem::GetInventoryIconTexture(Z_Param_InventoryClass);
+		P_NATIVE_END;
+	}
 	static FName NAME_AAdvKitInventoryItem_AttachToCharacter = FName(TEXT("AttachToCharacter"));
 	void AAdvKitInventoryItem::AttachToCharacter()
 	{
@@ -1306,12 +1445,22 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFRepAdvKitInvento
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAdvKitInventoryItem, 1222123699);
+	IMPLEMENT_CLASS(AAdvKitInventoryItem, 4010627316);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<AAdvKitInventoryItem>()
 	{
 		return AAdvKitInventoryItem::StaticClass();
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AAdvKitInventoryItem(Z_Construct_UClass_AAdvKitInventoryItem, &AAdvKitInventoryItem::StaticClass, TEXT("/Script/AdvKitRuntime"), TEXT("AAdvKitInventoryItem"), false, nullptr, nullptr, nullptr);
+
+	void AAdvKitInventoryItem::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
+	{
+		static const FName Name_RepItemState(TEXT("RepItemState"));
+
+		const bool bIsValid = true
+			&& Name_RepItemState == ClassReps[(int32)ENetFields_Private::RepItemState].Property->GetFName();
+
+		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in AAdvKitInventoryItem"));
+	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAdvKitInventoryItem);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER

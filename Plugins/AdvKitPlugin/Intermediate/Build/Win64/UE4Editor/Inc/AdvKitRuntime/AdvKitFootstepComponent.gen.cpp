@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -20,8 +20,6 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitFootstepComponent() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitFootstepComponent_NoRegister();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitFootstepComponent();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitFootstepComponent_PlayFootstep();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitFootstepComponent_PlayFootstepAttached();
 	ENGINE_API UClass* Z_Construct_UClass_UAudioComponent_NoRegister();
 // End Cross Module References
 class UScriptStruct* FFootStepSound::StaticStruct()
@@ -126,6 +124,22 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFFootStepSound
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FFootStepSound_Hash() { return 3215085409U; }
+	DEFINE_FUNCTION(UAdvKitFootstepComponent::execPlayFootstepAttached)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_Foot);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UAudioComponent**)Z_Param__Result=P_THIS->PlayFootstepAttached_Implementation(Z_Param_Foot);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitFootstepComponent::execPlayFootstep)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_Foot);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->PlayFootstep_Implementation(Z_Param_Foot);
+		P_NATIVE_END;
+	}
 	static FName NAME_UAdvKitFootstepComponent_PlayFootstep = FName(TEXT("PlayFootstep"));
 	void UAdvKitFootstepComponent::PlayFootstep(int32 Foot)
 	{
@@ -291,7 +305,7 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFFootStepSound
 		{ "ToolTip", "List of foot sockets on the character" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootSocketNames = { "FootSocketNames", nullptr, (EPropertyFlags)0x0020080000000015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UAdvKitFootstepComponent, FootSocketNames), METADATA_PARAMS(Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootSocketNames_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootSocketNames_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootSocketNames = { "FootSocketNames", nullptr, (EPropertyFlags)0x0020080000000015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UAdvKitFootstepComponent, FootSocketNames), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootSocketNames_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootSocketNames_MetaData)) };
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootSocketNames_Inner = { "FootSocketNames", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootStepSounds_MetaData[] = {
@@ -301,7 +315,7 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFFootStepSound
 		{ "ToolTip", "List of sounds configured for surfaces" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootStepSounds = { "FootStepSounds", nullptr, (EPropertyFlags)0x0020080000000015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UAdvKitFootstepComponent, FootStepSounds), METADATA_PARAMS(Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootStepSounds_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootStepSounds_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootStepSounds = { "FootStepSounds", nullptr, (EPropertyFlags)0x0020080000000015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UAdvKitFootstepComponent, FootStepSounds), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootStepSounds_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootStepSounds_MetaData)) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootStepSounds_Inner = { "FootStepSounds", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FFootStepSound, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UAdvKitFootstepComponent_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAdvKitFootstepComponent_Statics::NewProp_FootStepTraceDistance,
@@ -337,7 +351,7 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFFootStepSound
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAdvKitFootstepComponent, 2921253534);
+	IMPLEMENT_CLASS(UAdvKitFootstepComponent, 409911745);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<UAdvKitFootstepComponent>()
 	{
 		return UAdvKitFootstepComponent::StaticClass();

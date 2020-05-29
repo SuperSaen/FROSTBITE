@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -106,7 +106,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTransitionComponentPoint() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAdvKitTransitionComponentPoint, 1260193092);
+	IMPLEMENT_CLASS(UAdvKitTransitionComponentPoint, 3110331586);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<UAdvKitTransitionComponentPoint>()
 	{
 		return UAdvKitTransitionComponentPoint::StaticClass();

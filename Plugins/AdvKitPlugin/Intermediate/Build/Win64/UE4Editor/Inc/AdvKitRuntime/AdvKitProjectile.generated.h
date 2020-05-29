@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -19,44 +19,14 @@ struct FHitResult;
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitProjectile_h_15_RPC_WRAPPERS \
 	virtual void OnImpact_Implementation(FHitResult const& Impact); \
  \
-	DECLARE_FUNCTION(execInit) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_Direction); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Init(Z_Param_Out_Direction); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnImpact) \
-	{ \
-		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_Impact); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnImpact_Implementation(Z_Param_Out_Impact); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execInit); \
+	DECLARE_FUNCTION(execOnImpact);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execInit) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_Direction); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Init(Z_Param_Out_Direction); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnImpact) \
-	{ \
-		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_Impact); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnImpact_Implementation(Z_Param_Out_Impact); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execInit); \
+	DECLARE_FUNCTION(execOnImpact);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitProjectile_h_15_EVENT_PARMS \

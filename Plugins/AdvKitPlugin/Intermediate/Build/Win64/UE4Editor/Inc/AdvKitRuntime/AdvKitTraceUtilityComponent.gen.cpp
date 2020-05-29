@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,34 +17,264 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitTraceUtilityComponent();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent();
 	UPackage* Z_Construct_UPackage__Script_AdvKitRuntime();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API UEnum* Z_Construct_UEnum_Engine_EDrawDebugTrace();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UEnum* Z_Construct_UEnum_Engine_ETraceTypeQuery();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint();
 	ENGINE_API UEnum* Z_Construct_UEnum_Engine_EObjectTypeQuery();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleBlueprint();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleBlueprint();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_DrawDebug();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_GetEnd();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_GetStart();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleBlueprint();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleBlueprint();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FColor();
 // End Cross Module References
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execCapsuleTraceMultiForObjects)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Radius);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_HalfHeight);
+		P_GET_TARRAY_REF(TEnumAsByte<EObjectTypeQuery>,Z_Param_Out_ObjectTypes);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_TARRAY_REF(FHitResult,Z_Param_Out_OutHits);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CapsuleTraceMultiForObjects(Z_Param_Radius,Z_Param_HalfHeight,Z_Param_Out_ObjectTypes,Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHits,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execCapsuleTraceSingleForObjectsBlueprint)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Radius);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_HalfHeight);
+		P_GET_TARRAY_REF(TEnumAsByte<EObjectTypeQuery>,Z_Param_Out_ObjectTypes);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_OutHit);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CapsuleTraceSingleForObjectsBlueprint(Z_Param_Radius,Z_Param_HalfHeight,Z_Param_Out_ObjectTypes,Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHit,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execBoxTraceMultiForObjectsBlueprint)
+	{
+		P_GET_STRUCT(FVector,Z_Param_HalfSize);
+		P_GET_STRUCT(FRotator,Z_Param_Orientation);
+		P_GET_TARRAY_REF(TEnumAsByte<EObjectTypeQuery>,Z_Param_Out_ObjectTypes);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_TARRAY_REF(FHitResult,Z_Param_Out_OutHits);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->BoxTraceMultiForObjectsBlueprint(Z_Param_HalfSize,Z_Param_Orientation,Z_Param_Out_ObjectTypes,Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHits,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execBoxTraceSingleForObjectsBlueprint)
+	{
+		P_GET_STRUCT(FVector,Z_Param_HalfSize);
+		P_GET_STRUCT(FRotator,Z_Param_Orientation);
+		P_GET_TARRAY_REF(TEnumAsByte<EObjectTypeQuery>,Z_Param_Out_ObjectTypes);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_OutHit);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->BoxTraceSingleForObjectsBlueprint(Z_Param_HalfSize,Z_Param_Orientation,Z_Param_Out_ObjectTypes,Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHit,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execSphereTraceMultiForObjectsBlueprint)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Radius);
+		P_GET_TARRAY_REF(TEnumAsByte<EObjectTypeQuery>,Z_Param_Out_ObjectTypes);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_TARRAY_REF(FHitResult,Z_Param_Out_OutHits);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->SphereTraceMultiForObjectsBlueprint(Z_Param_Radius,Z_Param_Out_ObjectTypes,Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHits,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execSphereTraceSingleForObjectBlueprints)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Radius);
+		P_GET_TARRAY_REF(TEnumAsByte<EObjectTypeQuery>,Z_Param_Out_ObjectTypes);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_OutHit);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->SphereTraceSingleForObjectBlueprints(Z_Param_Radius,Z_Param_Out_ObjectTypes,Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHit,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execLineTraceMultiForObjectsBlueprint)
+	{
+		P_GET_TARRAY_REF(TEnumAsByte<EObjectTypeQuery>,Z_Param_Out_ObjectTypes);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_TARRAY_REF(FHitResult,Z_Param_Out_OutHits);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->LineTraceMultiForObjectsBlueprint(Z_Param_Out_ObjectTypes,Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHits,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execLineTraceSingleForObjectBlueprints)
+	{
+		P_GET_TARRAY_REF(TEnumAsByte<EObjectTypeQuery>,Z_Param_Out_ObjectTypes);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_OutHit);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->LineTraceSingleForObjectBlueprints(Z_Param_Out_ObjectTypes,Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHit,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execCapsuleTraceMultiBlueprint)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Radius);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_HalfHeight);
+		P_GET_PROPERTY(FByteProperty,Z_Param_TraceChannel);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_TARRAY_REF(FHitResult,Z_Param_Out_OutHits);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CapsuleTraceMultiBlueprint(Z_Param_Radius,Z_Param_HalfHeight,ETraceTypeQuery(Z_Param_TraceChannel),Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHits,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execCapsuleTraceSingleBlueprint)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Radius);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_HalfHeight);
+		P_GET_PROPERTY(FByteProperty,Z_Param_TraceChannel);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_OutHit);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CapsuleTraceSingleBlueprint(Z_Param_Radius,Z_Param_HalfHeight,ETraceTypeQuery(Z_Param_TraceChannel),Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHit,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execBoxTraceMultiBlueprint)
+	{
+		P_GET_STRUCT(FVector,Z_Param_HalfSize);
+		P_GET_STRUCT(FRotator,Z_Param_Orientation);
+		P_GET_PROPERTY(FByteProperty,Z_Param_TraceChannel);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_TARRAY_REF(FHitResult,Z_Param_Out_OutHits);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->BoxTraceMultiBlueprint(Z_Param_HalfSize,Z_Param_Orientation,ETraceTypeQuery(Z_Param_TraceChannel),Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHits,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execBoxTraceSingleBlueprint)
+	{
+		P_GET_STRUCT(FVector,Z_Param_HalfSize);
+		P_GET_STRUCT(FRotator,Z_Param_Orientation);
+		P_GET_PROPERTY(FByteProperty,Z_Param_TraceChannel);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_OutHit);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->BoxTraceSingleBlueprint(Z_Param_HalfSize,Z_Param_Orientation,ETraceTypeQuery(Z_Param_TraceChannel),Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHit,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execSphereTraceMultiBlueprint)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Radius);
+		P_GET_PROPERTY(FByteProperty,Z_Param_TraceChannel);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_TARRAY_REF(FHitResult,Z_Param_Out_OutHits);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->SphereTraceMultiBlueprint(Z_Param_Radius,ETraceTypeQuery(Z_Param_TraceChannel),Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHits,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execSphereTraceSingleBlueprint)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Radius);
+		P_GET_PROPERTY(FByteProperty,Z_Param_TraceChannel);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_OutHit);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->SphereTraceSingleBlueprint(Z_Param_Radius,ETraceTypeQuery(Z_Param_TraceChannel),Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHit,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execLineTraceMultiBlueprint)
+	{
+		P_GET_PROPERTY(FByteProperty,Z_Param_TraceChannel);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_TARRAY_REF(FHitResult,Z_Param_Out_OutHits);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->LineTraceMultiBlueprint(ETraceTypeQuery(Z_Param_TraceChannel),Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHits,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execLineTraceSingleBlueprint)
+	{
+		P_GET_PROPERTY(FByteProperty,Z_Param_TraceChannel);
+		P_GET_UBOOL(Z_Param_bTraceComplex);
+		P_GET_TARRAY_REF(AActor*,Z_Param_Out_ActorsToIgnore);
+		P_GET_PROPERTY(FByteProperty,Z_Param_DrawDebugType);
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_OutHit);
+		P_GET_UBOOL(Z_Param_bIgnoreSelf);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->LineTraceSingleBlueprint(ETraceTypeQuery(Z_Param_TraceChannel),Z_Param_bTraceComplex,Z_Param_Out_ActorsToIgnore,EDrawDebugTrace::Type(Z_Param_DrawDebugType),Z_Param_Out_OutHit,Z_Param_bIgnoreSelf);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execDrawDebug)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->DrawDebug();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execGetEnd)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetEnd();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitTraceUtilityComponent::execGetStart)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetStart();
+		P_NATIVE_END;
+	}
 	void UAdvKitTraceUtilityComponent::StaticRegisterNativesUAdvKitTraceUtilityComponent()
 	{
 		UClass* Class = UAdvKitTraceUtilityComponent::StaticClass();
@@ -121,7 +351,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		((AdvKitTraceUtilityComponent_eventBoxTraceMultiBlueprint_Parms*)Obj)->bIgnoreSelf = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint_Statics::NewProp_bIgnoreSelf = { "bIgnoreSelf", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AdvKitTraceUtilityComponent_eventBoxTraceMultiBlueprint_Parms), &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint_Statics::NewProp_bIgnoreSelf_SetBit, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceMultiBlueprint_Parms, OutHits), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceMultiBlueprint_Parms, OutHits), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint_Statics::NewProp_OutHits_Inner = { "OutHits", nullptr, (EPropertyFlags)0x0000008000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint_Statics::NewProp_DrawDebugType = { "DrawDebugType", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceMultiBlueprint_Parms, DrawDebugType), Z_Construct_UEnum_Engine_EDrawDebugTrace, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
@@ -129,7 +359,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceMultiBlueprint_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceMultiBlueprint_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -236,7 +466,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		((AdvKitTraceUtilityComponent_eventBoxTraceMultiForObjectsBlueprint_Parms*)Obj)->bIgnoreSelf = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_bIgnoreSelf = { "bIgnoreSelf", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AdvKitTraceUtilityComponent_eventBoxTraceMultiForObjectsBlueprint_Parms), &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_bIgnoreSelf_SetBit, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceMultiForObjectsBlueprint_Parms, OutHits), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceMultiForObjectsBlueprint_Parms, OutHits), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_OutHits_Inner = { "OutHits", nullptr, (EPropertyFlags)0x0000008000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_DrawDebugType = { "DrawDebugType", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceMultiForObjectsBlueprint_Parms, DrawDebugType), Z_Construct_UEnum_Engine_EDrawDebugTrace, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
@@ -244,7 +474,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceMultiForObjectsBlueprint_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceMultiForObjectsBlueprint_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -256,7 +486,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceMultiForObjectsBlueprint_Parms, ObjectTypes), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceMultiForObjectsBlueprint_Parms, ObjectTypes), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes_Inner = { "ObjectTypes", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UEnum_Engine_EObjectTypeQuery, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint_Statics::NewProp_Orientation_MetaData[] = {
@@ -365,7 +595,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceSingleBlueprint_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceSingleBlueprint_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleBlueprint_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -482,7 +712,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceSingleForObjectsBlueprint_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceSingleForObjectsBlueprint_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -494,7 +724,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceSingleForObjectsBlueprint_Parms, ObjectTypes), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventBoxTraceSingleForObjectsBlueprint_Parms, ObjectTypes), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_ObjectTypes_Inner = { "ObjectTypes", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UEnum_Engine_EObjectTypeQuery, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint_Statics::NewProp_Orientation_MetaData[] = {
@@ -590,7 +820,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		((AdvKitTraceUtilityComponent_eventCapsuleTraceMultiBlueprint_Parms*)Obj)->bIgnoreSelf = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint_Statics::NewProp_bIgnoreSelf = { "bIgnoreSelf", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiBlueprint_Parms), &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint_Statics::NewProp_bIgnoreSelf_SetBit, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiBlueprint_Parms, OutHits), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiBlueprint_Parms, OutHits), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint_Statics::NewProp_OutHits_Inner = { "OutHits", nullptr, (EPropertyFlags)0x0000008000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint_Statics::NewProp_DrawDebugType = { "DrawDebugType", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiBlueprint_Parms, DrawDebugType), Z_Construct_UEnum_Engine_EDrawDebugTrace, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
@@ -598,7 +828,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiBlueprint_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiBlueprint_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -694,7 +924,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		((AdvKitTraceUtilityComponent_eventCapsuleTraceMultiForObjects_Parms*)Obj)->bIgnoreSelf = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_bIgnoreSelf = { "bIgnoreSelf", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiForObjects_Parms), &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_bIgnoreSelf_SetBit, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiForObjects_Parms, OutHits), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiForObjects_Parms, OutHits), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_OutHits_Inner = { "OutHits", nullptr, (EPropertyFlags)0x0000008000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_DrawDebugType = { "DrawDebugType", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiForObjects_Parms, DrawDebugType), Z_Construct_UEnum_Engine_EDrawDebugTrace, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
@@ -702,7 +932,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiForObjects_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiForObjects_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -714,7 +944,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiForObjects_Parms, ObjectTypes), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_ObjectTypes_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiForObjects_Parms, ObjectTypes), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_ObjectTypes_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_ObjectTypes_Inner = { "ObjectTypes", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UEnum_Engine_EObjectTypeQuery, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_HalfHeight = { "HalfHeight", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiForObjects_Parms, HalfHeight), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects_Statics::NewProp_Radius = { "Radius", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceMultiForObjects_Parms, Radius), METADATA_PARAMS(nullptr, 0) };
@@ -807,7 +1037,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceSingleBlueprint_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceSingleBlueprint_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleBlueprint_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -908,7 +1138,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceSingleForObjectsBlueprint_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceSingleForObjectsBlueprint_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -920,7 +1150,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceSingleForObjectsBlueprint_Parms, ObjectTypes), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceSingleForObjectsBlueprint_Parms, ObjectTypes), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_ObjectTypes_Inner = { "ObjectTypes", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UEnum_Engine_EObjectTypeQuery, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_HalfHeight = { "HalfHeight", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceSingleForObjectsBlueprint_Parms, HalfHeight), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint_Statics::NewProp_Radius = { "Radius", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventCapsuleTraceSingleForObjectsBlueprint_Parms, Radius), METADATA_PARAMS(nullptr, 0) };
@@ -1097,7 +1327,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		((AdvKitTraceUtilityComponent_eventLineTraceMultiBlueprint_Parms*)Obj)->bIgnoreSelf = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint_Statics::NewProp_bIgnoreSelf = { "bIgnoreSelf", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AdvKitTraceUtilityComponent_eventLineTraceMultiBlueprint_Parms), &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint_Statics::NewProp_bIgnoreSelf_SetBit, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceMultiBlueprint_Parms, OutHits), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceMultiBlueprint_Parms, OutHits), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint_Statics::NewProp_OutHits_Inner = { "OutHits", nullptr, (EPropertyFlags)0x0000008000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint_Statics::NewProp_DrawDebugType = { "DrawDebugType", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceMultiBlueprint_Parms, DrawDebugType), Z_Construct_UEnum_Engine_EDrawDebugTrace, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
@@ -1105,7 +1335,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceMultiBlueprint_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceMultiBlueprint_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -1193,7 +1423,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		((AdvKitTraceUtilityComponent_eventLineTraceMultiForObjectsBlueprint_Parms*)Obj)->bIgnoreSelf = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_bIgnoreSelf = { "bIgnoreSelf", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AdvKitTraceUtilityComponent_eventLineTraceMultiForObjectsBlueprint_Parms), &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_bIgnoreSelf_SetBit, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceMultiForObjectsBlueprint_Parms, OutHits), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceMultiForObjectsBlueprint_Parms, OutHits), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_OutHits_Inner = { "OutHits", nullptr, (EPropertyFlags)0x0000008000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_DrawDebugType = { "DrawDebugType", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceMultiForObjectsBlueprint_Parms, DrawDebugType), Z_Construct_UEnum_Engine_EDrawDebugTrace, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
@@ -1201,7 +1431,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceMultiForObjectsBlueprint_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceMultiForObjectsBlueprint_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -1213,7 +1443,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceMultiForObjectsBlueprint_Parms, ObjectTypes), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceMultiForObjectsBlueprint_Parms, ObjectTypes), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes_Inner = { "ObjectTypes", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UEnum_Engine_EObjectTypeQuery, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint_Statics::NewProp_ReturnValue,
@@ -1298,7 +1528,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceSingleBlueprint_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceSingleBlueprint_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleBlueprint_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -1391,7 +1621,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceSingleForObjectBlueprints_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceSingleForObjectBlueprints_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -1403,7 +1633,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceSingleForObjectBlueprints_Parms, ObjectTypes), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_ObjectTypes_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventLineTraceSingleForObjectBlueprints_Parms, ObjectTypes), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_ObjectTypes_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_ObjectTypes_Inner = { "ObjectTypes", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UEnum_Engine_EObjectTypeQuery, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints_Statics::NewProp_ReturnValue,
@@ -1483,7 +1713,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		((AdvKitTraceUtilityComponent_eventSphereTraceMultiBlueprint_Parms*)Obj)->bIgnoreSelf = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint_Statics::NewProp_bIgnoreSelf = { "bIgnoreSelf", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AdvKitTraceUtilityComponent_eventSphereTraceMultiBlueprint_Parms), &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint_Statics::NewProp_bIgnoreSelf_SetBit, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceMultiBlueprint_Parms, OutHits), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceMultiBlueprint_Parms, OutHits), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint_Statics::NewProp_OutHits_Inner = { "OutHits", nullptr, (EPropertyFlags)0x0000008000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint_Statics::NewProp_DrawDebugType = { "DrawDebugType", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceMultiBlueprint_Parms, DrawDebugType), Z_Construct_UEnum_Engine_EDrawDebugTrace, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
@@ -1491,7 +1721,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceMultiBlueprint_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceMultiBlueprint_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -1583,7 +1813,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		((AdvKitTraceUtilityComponent_eventSphereTraceMultiForObjectsBlueprint_Parms*)Obj)->bIgnoreSelf = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_bIgnoreSelf = { "bIgnoreSelf", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AdvKitTraceUtilityComponent_eventSphereTraceMultiForObjectsBlueprint_Parms), &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_bIgnoreSelf_SetBit, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceMultiForObjectsBlueprint_Parms, OutHits), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_OutHits = { "OutHits", nullptr, (EPropertyFlags)0x0010008000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceMultiForObjectsBlueprint_Parms, OutHits), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_OutHits_Inner = { "OutHits", nullptr, (EPropertyFlags)0x0000008000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_DrawDebugType = { "DrawDebugType", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceMultiForObjectsBlueprint_Parms, DrawDebugType), Z_Construct_UEnum_Engine_EDrawDebugTrace, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
@@ -1591,7 +1821,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceMultiForObjectsBlueprint_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceMultiForObjectsBlueprint_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -1603,7 +1833,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceMultiForObjectsBlueprint_Parms, ObjectTypes), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceMultiForObjectsBlueprint_Parms, ObjectTypes), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_ObjectTypes_Inner = { "ObjectTypes", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UEnum_Engine_EObjectTypeQuery, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::NewProp_Radius = { "Radius", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceMultiForObjectsBlueprint_Parms, Radius), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint_Statics::PropPointers[] = {
@@ -1692,7 +1922,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceSingleBlueprint_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceSingleBlueprint_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleBlueprint_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleBlueprint_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -1789,7 +2019,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceSingleForObjectBlueprints_Parms, ActorsToIgnore), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_ActorsToIgnore_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_ActorsToIgnore = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceSingleForObjectBlueprints_Parms, ActorsToIgnore), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_ActorsToIgnore_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_ActorsToIgnore_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_ActorsToIgnore_Inner = { "ActorsToIgnore", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_bTraceComplex_SetBit(void* Obj)
 	{
@@ -1801,7 +2031,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceSingleForObjectBlueprints_Parms, ObjectTypes), METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_ObjectTypes_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_ObjectTypes = { "ObjectTypes", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceSingleForObjectBlueprints_Parms, ObjectTypes), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_ObjectTypes_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_ObjectTypes_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_ObjectTypes_Inner = { "ObjectTypes", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UEnum_Engine_EObjectTypeQuery, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::NewProp_Radius = { "Radius", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AdvKitTraceUtilityComponent_eventSphereTraceSingleForObjectBlueprints_Parms, Radius), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints_Statics::PropPointers[] = {
@@ -1870,25 +2100,25 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_AdvKitRuntime,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UAdvKitTraceUtilityComponent_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint, "BoxTraceMultiBlueprint" }, // 4146361712
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint, "BoxTraceMultiForObjectsBlueprint" }, // 1033843756
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleBlueprint, "BoxTraceSingleBlueprint" }, // 3738263456
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint, "BoxTraceSingleForObjectsBlueprint" }, // 2788140026
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint, "CapsuleTraceMultiBlueprint" }, // 88602856
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects, "CapsuleTraceMultiForObjects" }, // 2685630479
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleBlueprint, "CapsuleTraceSingleBlueprint" }, // 1274400818
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint, "CapsuleTraceSingleForObjectsBlueprint" }, // 2958134587
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiBlueprint, "BoxTraceMultiBlueprint" }, // 51929214
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceMultiForObjectsBlueprint, "BoxTraceMultiForObjectsBlueprint" }, // 44216025
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleBlueprint, "BoxTraceSingleBlueprint" }, // 2788705366
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_BoxTraceSingleForObjectsBlueprint, "BoxTraceSingleForObjectsBlueprint" }, // 2819333136
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiBlueprint, "CapsuleTraceMultiBlueprint" }, // 670476012
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceMultiForObjects, "CapsuleTraceMultiForObjects" }, // 1346308644
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleBlueprint, "CapsuleTraceSingleBlueprint" }, // 1933963237
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_CapsuleTraceSingleForObjectsBlueprint, "CapsuleTraceSingleForObjectsBlueprint" }, // 1755689411
 		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_DrawDebug, "DrawDebug" }, // 1414389291
 		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_GetEnd, "GetEnd" }, // 1442684685
 		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_GetStart, "GetStart" }, // 2486208056
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint, "LineTraceMultiBlueprint" }, // 1536649014
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint, "LineTraceMultiForObjectsBlueprint" }, // 99008422
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleBlueprint, "LineTraceSingleBlueprint" }, // 2547593462
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints, "LineTraceSingleForObjectBlueprints" }, // 2836934411
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint, "SphereTraceMultiBlueprint" }, // 3784762240
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint, "SphereTraceMultiForObjectsBlueprint" }, // 2734871008
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleBlueprint, "SphereTraceSingleBlueprint" }, // 331723000
-		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints, "SphereTraceSingleForObjectBlueprints" }, // 2870060799
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiBlueprint, "LineTraceMultiBlueprint" }, // 2648676164
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceMultiForObjectsBlueprint, "LineTraceMultiForObjectsBlueprint" }, // 4217896732
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleBlueprint, "LineTraceSingleBlueprint" }, // 479856576
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_LineTraceSingleForObjectBlueprints, "LineTraceSingleForObjectBlueprints" }, // 2153000033
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiBlueprint, "SphereTraceMultiBlueprint" }, // 1980428916
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceMultiForObjectsBlueprint, "SphereTraceMultiForObjectsBlueprint" }, // 839318862
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleBlueprint, "SphereTraceSingleBlueprint" }, // 1543189493
+		{ &Z_Construct_UFunction_UAdvKitTraceUtilityComponent_SphereTraceSingleForObjectBlueprints, "SphereTraceSingleForObjectBlueprints" }, // 1791056936
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UAdvKitTraceUtilityComponent_Statics::Class_MetaDataParams[] = {
@@ -1961,7 +2191,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTraceUtilityComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAdvKitTraceUtilityComponent, 1647457858);
+	IMPLEMENT_CLASS(UAdvKitTraceUtilityComponent, 2476312776);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<UAdvKitTraceUtilityComponent>()
 	{
 		return UAdvKitTraceUtilityComponent::StaticClass();

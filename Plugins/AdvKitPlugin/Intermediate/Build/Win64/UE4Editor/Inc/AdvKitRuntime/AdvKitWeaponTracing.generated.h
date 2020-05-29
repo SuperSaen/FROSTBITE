@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -19,76 +19,18 @@ struct FHitResult;
 	virtual void ApplyDamageToHit_Implementation(FHitResult Hit); \
 	virtual void OnTraceHit_Implementation(FHitResult Hit); \
  \
-	DECLARE_FUNCTION(execApplyDamageToHit) \
-	{ \
-		P_GET_STRUCT(FHitResult,Z_Param_Hit); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ApplyDamageToHit_Implementation(Z_Param_Hit); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnTraceHit) \
-	{ \
-		P_GET_STRUCT(FHitResult,Z_Param_Hit); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnTraceHit_Implementation(Z_Param_Hit); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopTracing) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StopTracing(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartTracing) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartTracing(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execApplyDamageToHit); \
+	DECLARE_FUNCTION(execOnTraceHit); \
+	DECLARE_FUNCTION(execStopTracing); \
+	DECLARE_FUNCTION(execStartTracing);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitWeaponTracing_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execApplyDamageToHit) \
-	{ \
-		P_GET_STRUCT(FHitResult,Z_Param_Hit); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ApplyDamageToHit_Implementation(Z_Param_Hit); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnTraceHit) \
-	{ \
-		P_GET_STRUCT(FHitResult,Z_Param_Hit); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnTraceHit_Implementation(Z_Param_Hit); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStopTracing) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StopTracing(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartTracing) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartTracing(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execApplyDamageToHit); \
+	DECLARE_FUNCTION(execOnTraceHit); \
+	DECLARE_FUNCTION(execStopTracing); \
+	DECLARE_FUNCTION(execStartTracing);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitWeaponTracing_h_18_EVENT_PARMS \

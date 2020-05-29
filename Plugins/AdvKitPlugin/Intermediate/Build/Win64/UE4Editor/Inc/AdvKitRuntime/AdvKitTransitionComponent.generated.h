@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -18,84 +18,18 @@ struct FVector;
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Environment_AdvKitTransitionComponent_h_18_SPARSE_DATA
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Environment_AdvKitTransitionComponent_h_18_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execIsDynamicTransitionValid) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->IsDynamicTransitionValid(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanTransition) \
-	{ \
-		P_GET_OBJECT(AAdvKitCharacter,Z_Param_Character); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_AtLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_InDirection); \
-		P_GET_UBOOL(Z_Param_bIsJump); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanTransition(Z_Param_Character,Z_Param_Out_AtLocation,Z_Param_Out_InDirection,Z_Param_bIsJump); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetClosestTargetPosition) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldPosition); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetClosestTargetPosition(Z_Param_Out_ToWorldPosition); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetClosestSourcePosition) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldPosition); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetClosestSourcePosition(Z_Param_Out_ToWorldPosition); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execIsDynamicTransitionValid); \
+	DECLARE_FUNCTION(execCanTransition); \
+	DECLARE_FUNCTION(execGetClosestTargetPosition); \
+	DECLARE_FUNCTION(execGetClosestSourcePosition);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Environment_AdvKitTransitionComponent_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execIsDynamicTransitionValid) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->IsDynamicTransitionValid(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanTransition) \
-	{ \
-		P_GET_OBJECT(AAdvKitCharacter,Z_Param_Character); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_AtLocation); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_InDirection); \
-		P_GET_UBOOL(Z_Param_bIsJump); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanTransition(Z_Param_Character,Z_Param_Out_AtLocation,Z_Param_Out_InDirection,Z_Param_bIsJump); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetClosestTargetPosition) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldPosition); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetClosestTargetPosition(Z_Param_Out_ToWorldPosition); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetClosestSourcePosition) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldPosition); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetClosestSourcePosition(Z_Param_Out_ToWorldPosition); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execIsDynamicTransitionValid); \
+	DECLARE_FUNCTION(execCanTransition); \
+	DECLARE_FUNCTION(execGetClosestTargetPosition); \
+	DECLARE_FUNCTION(execGetClosestSourcePosition);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Environment_AdvKitTransitionComponent_h_18_INCLASS_NO_PURE_DECLS \

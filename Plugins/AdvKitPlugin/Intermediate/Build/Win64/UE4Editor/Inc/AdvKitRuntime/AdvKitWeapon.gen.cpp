@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -19,69 +19,15 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitWeapon() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitWeapon_NoRegister();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitWeapon();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitInventoryItem();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_AddAmmunition();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_AddSpread();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_BlockDamage();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AController_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FDamageEvent();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_BlockedBy();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_CanFire();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_CanReload();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_ConsumeAmmunition();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_FireAmmunition();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_FireCustom();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_FireInstant();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_FireProjectile();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitProjectile_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_GetAdjustedAim();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_GetFireModeBP();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitFireModeConfiguration_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_GetFireModeClass();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_GetMuzzleLocation();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_GetTraceStart();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_GetWeaponCrosshairTexture();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_HandleFiringPrerequisites();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_HasAmmunition();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_HasAmmunitionInMagazine();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_HasFireMode();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_IsFiring();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_IsIdle();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_IsMagazineEmpty();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_IsReloading();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_OnFireBegin();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_OnFireEnd();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_OnFireShot();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_OnMagazineEmpty();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_OnReloadBegin();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_OnReloaded();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_OnReloadEnd();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_OnRep_BurstCounter();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_OnRep_WeaponState();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_OnWeaponEmpty();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_RefireTimer();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_ReloadAmmunition();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_ReloadedTimer();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StartFire();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StartFireInternal();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StartFireServer();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StartRefireTimer();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StartReload();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StartReloadInternal();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StartReloadServer();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StartReloadTimer();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StopFire();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StopFireInternal();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StopFireServer();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StopRefireTimer();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StopReload();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StopReloadInternal();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StopReloadServer();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitWeapon_StopReloadTimer();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 // End Cross Module References
@@ -299,6 +245,428 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFAdvKitWeaponStat
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FAdvKitWeaponState_Hash() { return 1188653483U; }
+	DEFINE_FUNCTION(AAdvKitWeapon::execOnWeaponEmpty)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnWeaponEmpty_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execOnMagazineEmpty)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnMagazineEmpty_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execOnReloadEnd)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnReloadEnd_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execOnReloaded)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnReloaded_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execOnReloadBegin)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnReloadBegin_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execOnFireEnd)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnFireEnd_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execOnFireShot)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnFireShot_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execOnFireBegin)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnFireBegin_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execOnRep_BurstCounter)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_OldBurstCounter);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRep_BurstCounter(Z_Param_OldBurstCounter);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execOnRep_WeaponState)
+	{
+		P_GET_STRUCT(FAdvKitWeaponState,Z_Param_OldState);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRep_WeaponState(Z_Param_OldState);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStopReloadServer)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->StopReloadServer_Validate())
+		{
+			RPC_ValidateFailed(TEXT("StopReloadServer_Validate"));
+			return;
+		}
+		P_THIS->StopReloadServer_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStartReloadServer)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->StartReloadServer_Validate())
+		{
+			RPC_ValidateFailed(TEXT("StartReloadServer_Validate"));
+			return;
+		}
+		P_THIS->StartReloadServer_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStopFireServer)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->StopFireServer_Validate())
+		{
+			RPC_ValidateFailed(TEXT("StopFireServer_Validate"));
+			return;
+		}
+		P_THIS->StopFireServer_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStartFireServer)
+	{
+		P_GET_PROPERTY(FByteProperty,Z_Param_FireModeIndex);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->StartFireServer_Validate(Z_Param_FireModeIndex))
+		{
+			RPC_ValidateFailed(TEXT("StartFireServer_Validate"));
+			return;
+		}
+		P_THIS->StartFireServer_Implementation(Z_Param_FireModeIndex);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execBlockedBy)
+	{
+		P_GET_OBJECT(AActor,Z_Param_By);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_BlockedDamage);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->BlockedBy_Implementation(Z_Param_By,Z_Param_BlockedDamage);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execBlockDamage)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Damage);
+		P_GET_STRUCT_REF(FDamageEvent,Z_Param_Out_DamageEvent);
+		P_GET_OBJECT(AController,Z_Param_EventInstigator);
+		P_GET_OBJECT(AActor,Z_Param_DamageCauser);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->BlockDamage_Implementation(Z_Param_Damage,Z_Param_Out_DamageEvent,Z_Param_EventInstigator,Z_Param_DamageCauser);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execGetFireModeClass)
+	{
+		P_GET_PROPERTY(FByteProperty,Z_Param_FireModeIndex);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(TSubclassOf<UAdvKitFireModeConfiguration> *)Z_Param__Result=P_THIS->GetFireModeClass(Z_Param_FireModeIndex);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execGetFireModeBP)
+	{
+		P_GET_PROPERTY(FByteProperty,Z_Param_FireModeIndex);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UAdvKitFireModeConfiguration**)Z_Param__Result=P_THIS->GetFireModeBP(Z_Param_FireModeIndex);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execHasFireMode)
+	{
+		P_GET_PROPERTY(FByteProperty,Z_Param_FireModeIndex);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->HasFireMode(Z_Param_FireModeIndex);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execReloadedTimer)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ReloadedTimer();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStopReloadTimer)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StopReloadTimer_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStartReloadTimer)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StartReloadTimer_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execAddAmmunition)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_Amount);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AddAmmunition_Implementation(Z_Param_Amount);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execReloadAmmunition)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ReloadAmmunition_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStopReloadInternal)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StopReloadInternal_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStartReloadInternal)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StartReloadInternal_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execCanReload)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CanReload_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStopFireInternal)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StopFireInternal_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStartFireInternal)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StartFireInternal_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execCanFire)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CanFire_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execAddSpread)
+	{
+		P_GET_STRUCT(FRotator,Z_Param_OriginalAim);
+		P_GET_PROPERTY(FByteProperty,Z_Param_FireModeIndex);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FRotator*)Z_Param__Result=P_THIS->AddSpread(Z_Param_OriginalAim,Z_Param_FireModeIndex);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execGetAdjustedAim)
+	{
+		P_GET_STRUCT(FVector,Z_Param_StartFireLocation);
+		P_GET_PROPERTY(FByteProperty,Z_Param_FireModeIndex);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FRotator*)Z_Param__Result=P_THIS->GetAdjustedAim(Z_Param_StartFireLocation,Z_Param_FireModeIndex);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execGetTraceStart)
+	{
+		P_GET_PROPERTY(FByteProperty,Z_Param_FireModeIndex);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetTraceStart_Implementation(Z_Param_FireModeIndex);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execGetMuzzleLocation)
+	{
+		P_GET_PROPERTY(FByteProperty,Z_Param_FireModeIndex);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetMuzzleLocation_Implementation(Z_Param_FireModeIndex);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execIsReloading)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsReloading();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execIsFiring)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsFiring();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execIsIdle)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsIdle();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execHasAmmunitionInMagazine)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_Amount);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->HasAmmunitionInMagazine(Z_Param_Amount);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execHasAmmunition)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_Amount);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->HasAmmunition(Z_Param_Amount);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execIsMagazineEmpty)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsMagazineEmpty();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execRefireTimer)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RefireTimer();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStopRefireTimer)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StopRefireTimer();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStartRefireTimer)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Duration);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StartRefireTimer(Z_Param_Duration);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execFireCustom)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->FireCustom_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execFireProjectile)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(AAdvKitProjectile**)Z_Param__Result=P_THIS->FireProjectile_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execFireInstant)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->FireInstant_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execFireAmmunition)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->FireAmmunition_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execHandleFiringPrerequisites)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->HandleFiringPrerequisites_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execConsumeAmmunition)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ConsumeAmmunition_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStopReload)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StopReload_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStartReload)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StartReload_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStopFire)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StopFire_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execStartFire)
+	{
+		P_GET_PROPERTY(FByteProperty,Z_Param_FireModeIndex);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StartFire_Implementation(Z_Param_FireModeIndex);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitWeapon::execGetWeaponCrosshairTexture)
+	{
+		P_GET_OBJECT(UClass,Z_Param_WeaponClass);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UTexture2D**)Z_Param__Result=AAdvKitWeapon::GetWeaponCrosshairTexture(Z_Param_WeaponClass);
+		P_NATIVE_END;
+	}
 	static FName NAME_AAdvKitWeapon_AddAmmunition = FName(TEXT("AddAmmunition"));
 	void AAdvKitWeapon::AddAmmunition(int32 Amount)
 	{
@@ -2435,7 +2803,7 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFAdvKitWeaponStat
 		{ "ToolTip", "List of fire modes the weapon has" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_FireModes_OLD = { "FireModes_OLD", nullptr, (EPropertyFlags)0x0020080000000034, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAdvKitWeapon, FireModes_OLD), METADATA_PARAMS(Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_FireModes_OLD_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_FireModes_OLD_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_FireModes_OLD = { "FireModes_OLD", nullptr, (EPropertyFlags)0x0020080000000034, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAdvKitWeapon, FireModes_OLD), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_FireModes_OLD_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_FireModes_OLD_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_FireModes_OLD_Inner = { "FireModes_OLD", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UAdvKitFireModeConfiguration_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_DefaultFireModes_MetaData[] = {
@@ -2445,7 +2813,7 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFAdvKitWeaponStat
 		{ "ToolTip", "Which fire modes the weapon should have, will be instantiated on startup" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_DefaultFireModes = { "DefaultFireModes", nullptr, (EPropertyFlags)0x0024080000010021, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAdvKitWeapon, DefaultFireModes), METADATA_PARAMS(Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_DefaultFireModes_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_DefaultFireModes_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_DefaultFireModes = { "DefaultFireModes", nullptr, (EPropertyFlags)0x0024080000010021, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAdvKitWeapon, DefaultFireModes), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_DefaultFireModes_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_DefaultFireModes_MetaData)) };
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_DefaultFireModes_Inner = { "DefaultFireModes", nullptr, (EPropertyFlags)0x0004000000000000, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UAdvKitFireModeConfiguration_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAdvKitWeapon_Statics::NewProp_bHasInfiniteAmmunition_MetaData[] = {
@@ -2567,12 +2935,30 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFAdvKitWeaponStat
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAdvKitWeapon, 587033564);
+	IMPLEMENT_CLASS(AAdvKitWeapon, 38632547);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<AAdvKitWeapon>()
 	{
 		return AAdvKitWeapon::StaticClass();
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AAdvKitWeapon(Z_Construct_UClass_AAdvKitWeapon, &AAdvKitWeapon::StaticClass, TEXT("/Script/AdvKitRuntime"), TEXT("AAdvKitWeapon"), false, nullptr, nullptr, nullptr);
+
+	void AAdvKitWeapon::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
+	{
+		static const FName Name_WeaponState(TEXT("WeaponState"));
+		static const FName Name_BurstCounter(TEXT("BurstCounter"));
+		static const FName Name_Ammunition(TEXT("Ammunition"));
+		static const FName Name_DefaultFireModes(TEXT("DefaultFireModes"));
+		static const FName Name_FireModes_OLD(TEXT("FireModes_OLD"));
+
+		const bool bIsValid = true
+			&& Name_WeaponState == ClassReps[(int32)ENetFields_Private::WeaponState].Property->GetFName()
+			&& Name_BurstCounter == ClassReps[(int32)ENetFields_Private::BurstCounter].Property->GetFName()
+			&& Name_Ammunition == ClassReps[(int32)ENetFields_Private::Ammunition].Property->GetFName()
+			&& Name_DefaultFireModes == ClassReps[(int32)ENetFields_Private::DefaultFireModes].Property->GetFName()
+			&& Name_FireModes_OLD == ClassReps[(int32)ENetFields_Private::FireModes_OLD].Property->GetFName();
+
+		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in AAdvKitWeapon"));
+	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAdvKitWeapon);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER

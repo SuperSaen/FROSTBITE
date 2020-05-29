@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -27,166 +27,26 @@ template<> ADVKITRUNTIME_API UScriptStruct* StaticStruct<struct FAdvKitMovementP
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitCharacterMovementComponent_h_96_SPARSE_DATA
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitCharacterMovementComponent_h_96_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execAccumulateRootMotion) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_MovementDelta); \
-		P_GET_STRUCT(FRotator,Z_Param_NewRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AccumulateRootMotion(Z_Param_MovementDelta,Z_Param_NewRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execPhysMoveInZone) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_GlobalAcceleration); \
-		P_GET_STRUCT(FVector,Z_Param_WorldOffset); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_DeltaSeconds); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_UBOOL(Z_Param_bAutoTransition); \
-		P_GET_UBOOL(Z_Param_ConstrainAcceleration); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->PhysMoveInZone(Z_Param_GlobalAcceleration,Z_Param_WorldOffset,Z_Param_DeltaSeconds,Z_Param_Out_HalfExtent,Z_Param_bAutoTransition,Z_Param_ConstrainAcceleration); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execMoveLocationInZone) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_GlobalAcceleration); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_DeltaSeconds); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_UBOOL(Z_Param_bAutoTransition); \
-		P_GET_UBOOL(Z_Param_ConstrainAcceleration); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->MoveLocationInZone(Z_Param_GlobalAcceleration,Z_Param_DeltaSeconds,Z_Param_Out_HalfExtent,Z_Param_bAutoTransition,Z_Param_ConstrainAcceleration); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZone) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitZone**)Z_Param__Result=P_THIS->GetZone(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execChangeTargetBalance) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ChangeTargetBalance(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetAdvCustomMovementMode) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(uint8*)Z_Param__Result=P_THIS->GetAdvCustomMovementMode(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetAdvMovementMode) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(EAdvKitMovementMode*)Z_Param__Result=P_THIS->GetAdvMovementMode(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetAdvMovementMode) \
-	{ \
-		P_GET_ENUM(EAdvKitMovementMode,Z_Param_NewMovementMode); \
-		P_GET_PROPERTY(UByteProperty,Z_Param_NewCustomMode); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetAdvMovementMode(EAdvKitMovementMode(Z_Param_NewMovementMode),Z_Param_NewCustomMode); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execAccumulateRootMotion); \
+	DECLARE_FUNCTION(execPhysMoveInZone); \
+	DECLARE_FUNCTION(execMoveLocationInZone); \
+	DECLARE_FUNCTION(execGetZone); \
+	DECLARE_FUNCTION(execChangeTargetBalance); \
+	DECLARE_FUNCTION(execGetAdvCustomMovementMode); \
+	DECLARE_FUNCTION(execGetAdvMovementMode); \
+	DECLARE_FUNCTION(execSetAdvMovementMode);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitCharacterMovementComponent_h_96_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execAccumulateRootMotion) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_MovementDelta); \
-		P_GET_STRUCT(FRotator,Z_Param_NewRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AccumulateRootMotion(Z_Param_MovementDelta,Z_Param_NewRotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execPhysMoveInZone) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_GlobalAcceleration); \
-		P_GET_STRUCT(FVector,Z_Param_WorldOffset); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_DeltaSeconds); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_UBOOL(Z_Param_bAutoTransition); \
-		P_GET_UBOOL(Z_Param_ConstrainAcceleration); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->PhysMoveInZone(Z_Param_GlobalAcceleration,Z_Param_WorldOffset,Z_Param_DeltaSeconds,Z_Param_Out_HalfExtent,Z_Param_bAutoTransition,Z_Param_ConstrainAcceleration); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execMoveLocationInZone) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_GlobalAcceleration); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_DeltaSeconds); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_UBOOL(Z_Param_bAutoTransition); \
-		P_GET_UBOOL(Z_Param_ConstrainAcceleration); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->MoveLocationInZone(Z_Param_GlobalAcceleration,Z_Param_DeltaSeconds,Z_Param_Out_HalfExtent,Z_Param_bAutoTransition,Z_Param_ConstrainAcceleration); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetZone) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitZone**)Z_Param__Result=P_THIS->GetZone(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execChangeTargetBalance) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ChangeTargetBalance(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetAdvCustomMovementMode) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(uint8*)Z_Param__Result=P_THIS->GetAdvCustomMovementMode(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetAdvMovementMode) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(EAdvKitMovementMode*)Z_Param__Result=P_THIS->GetAdvMovementMode(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetAdvMovementMode) \
-	{ \
-		P_GET_ENUM(EAdvKitMovementMode,Z_Param_NewMovementMode); \
-		P_GET_PROPERTY(UByteProperty,Z_Param_NewCustomMode); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetAdvMovementMode(EAdvKitMovementMode(Z_Param_NewMovementMode),Z_Param_NewCustomMode); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execAccumulateRootMotion); \
+	DECLARE_FUNCTION(execPhysMoveInZone); \
+	DECLARE_FUNCTION(execMoveLocationInZone); \
+	DECLARE_FUNCTION(execGetZone); \
+	DECLARE_FUNCTION(execChangeTargetBalance); \
+	DECLARE_FUNCTION(execGetAdvCustomMovementMode); \
+	DECLARE_FUNCTION(execGetAdvMovementMode); \
+	DECLARE_FUNCTION(execSetAdvMovementMode);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitCharacterMovementComponent_h_96_INCLASS_NO_PURE_DECLS \
@@ -196,7 +56,15 @@ private: \
 public: \
 	DECLARE_CLASS(UAdvKitCharacterMovementComponent, UCharacterMovementComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/AdvKitRuntime"), NO_API) \
 	DECLARE_SERIALIZER(UAdvKitCharacterMovementComponent) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		LocalZoneLocation=NETFIELD_REP_START, \
+		BalanceOffset, \
+		CurrentBalance, \
+		NETFIELD_REP_END=CurrentBalance	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitCharacterMovementComponent_h_96_INCLASS \
@@ -206,7 +74,15 @@ private: \
 public: \
 	DECLARE_CLASS(UAdvKitCharacterMovementComponent, UCharacterMovementComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/AdvKitRuntime"), NO_API) \
 	DECLARE_SERIALIZER(UAdvKitCharacterMovementComponent) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		LocalZoneLocation=NETFIELD_REP_START, \
+		BalanceOffset, \
+		CurrentBalance, \
+		NETFIELD_REP_END=CurrentBalance	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitCharacterMovementComponent_h_96_STANDARD_CONSTRUCTORS \

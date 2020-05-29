@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -32,138 +32,24 @@ static inline void FOrientationChanged_DelegateWrapper(const FMulticastScriptDel
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitOrientationComponent_h_20_SPARSE_DATA
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitOrientationComponent_h_20_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execSetOrientation) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_Origin); \
-		P_GET_STRUCT(FVector,Z_Param_UpNormal); \
-		P_GET_UBOOL(Z_Param_bForce); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetOrientation(Z_Param_Origin,Z_Param_UpNormal,Z_Param_bForce); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTransformRotationL2W) \
-	{ \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_Rotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FRotator*)Z_Param__Result=P_THIS->TransformRotationL2W(Z_Param_Out_Rotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTransformRotationW2L) \
-	{ \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_Rotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FRotator*)Z_Param__Result=P_THIS->TransformRotationW2L(Z_Param_Out_Rotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTransformPositionL2W) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_Position); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->TransformPositionL2W(Z_Param_Out_Position); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTransformPositionW2L) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_Position); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->TransformPositionW2L(Z_Param_Out_Position); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTransformDirectionL2W) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_Direction); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->TransformDirectionL2W(Z_Param_Out_Direction); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTransformDirectionW2L) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_Direction); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->TransformDirectionW2L(Z_Param_Out_Direction); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execSetOrientation); \
+	DECLARE_FUNCTION(execTransformRotationL2W); \
+	DECLARE_FUNCTION(execTransformRotationW2L); \
+	DECLARE_FUNCTION(execTransformPositionL2W); \
+	DECLARE_FUNCTION(execTransformPositionW2L); \
+	DECLARE_FUNCTION(execTransformDirectionL2W); \
+	DECLARE_FUNCTION(execTransformDirectionW2L);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitOrientationComponent_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execSetOrientation) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_Origin); \
-		P_GET_STRUCT(FVector,Z_Param_UpNormal); \
-		P_GET_UBOOL(Z_Param_bForce); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetOrientation(Z_Param_Origin,Z_Param_UpNormal,Z_Param_bForce); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTransformRotationL2W) \
-	{ \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_Rotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FRotator*)Z_Param__Result=P_THIS->TransformRotationL2W(Z_Param_Out_Rotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTransformRotationW2L) \
-	{ \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_Rotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FRotator*)Z_Param__Result=P_THIS->TransformRotationW2L(Z_Param_Out_Rotation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTransformPositionL2W) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_Position); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->TransformPositionL2W(Z_Param_Out_Position); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTransformPositionW2L) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_Position); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->TransformPositionW2L(Z_Param_Out_Position); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTransformDirectionL2W) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_Direction); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->TransformDirectionL2W(Z_Param_Out_Direction); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTransformDirectionW2L) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_Direction); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->TransformDirectionW2L(Z_Param_Out_Direction); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execSetOrientation); \
+	DECLARE_FUNCTION(execTransformRotationL2W); \
+	DECLARE_FUNCTION(execTransformRotationW2L); \
+	DECLARE_FUNCTION(execTransformPositionL2W); \
+	DECLARE_FUNCTION(execTransformPositionW2L); \
+	DECLARE_FUNCTION(execTransformDirectionL2W); \
+	DECLARE_FUNCTION(execTransformDirectionW2L);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitOrientationComponent_h_20_INCLASS_NO_PURE_DECLS \

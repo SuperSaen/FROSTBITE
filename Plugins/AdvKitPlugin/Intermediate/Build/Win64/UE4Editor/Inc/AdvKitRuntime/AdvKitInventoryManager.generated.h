@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -81,235 +81,35 @@ static inline void FItemAddedSignature_DelegateWrapper(const FMulticastScriptDel
 	virtual void RemoveInventory_Implementation(AAdvKitInventoryItem* RemovedInventory); \
 	virtual void AddInventory_Implementation(AAdvKitInventoryItem* NewInventory, bool bEquip); \
  \
-	DECLARE_FUNCTION(execOnRep_InventoryArray) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_InventoryArray(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetNewInventoryServer) \
-	{ \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_NewInventory); \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SetNewInventoryServer_Validate(Z_Param_NewInventory,Z_Param_bInstant)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SetNewInventoryServer_Validate")); \
-			return; \
-		} \
-		P_THIS->SetNewInventoryServer_Implementation(Z_Param_NewInventory,Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetNewInventoryByClass) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_NewInventoryClass); \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetNewInventoryByClass(Z_Param_NewInventoryClass,Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetNewInventory) \
-	{ \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_NewInventory); \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetNewInventory(Z_Param_NewInventory,Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanEquipInventory) \
-	{ \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_NewInventory); \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanEquipInventory_Implementation(Z_Param_NewInventory,Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execPreviousItem) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->PreviousItem(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execNextItem) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->NextItem(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetInventoryByClass) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_InventoryClass); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->GetInventoryByClass(Z_Param_InventoryClass); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveInventory) \
-	{ \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_RemovedInventory); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveInventory_Implementation(Z_Param_RemovedInventory); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddInventory) \
-	{ \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_NewInventory); \
-		P_GET_UBOOL(Z_Param_bEquip); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AddInventory_Implementation(Z_Param_NewInventory,Z_Param_bEquip); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetCurrentInventory) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->GetCurrentInventory(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetPendingInventory) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->GetPendingInventory(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnRep_InventoryArray); \
+	DECLARE_FUNCTION(execSetNewInventoryServer); \
+	DECLARE_FUNCTION(execSetNewInventoryByClass); \
+	DECLARE_FUNCTION(execSetNewInventory); \
+	DECLARE_FUNCTION(execCanEquipInventory); \
+	DECLARE_FUNCTION(execPreviousItem); \
+	DECLARE_FUNCTION(execNextItem); \
+	DECLARE_FUNCTION(execGetInventoryByClass); \
+	DECLARE_FUNCTION(execRemoveInventory); \
+	DECLARE_FUNCTION(execAddInventory); \
+	DECLARE_FUNCTION(execGetCurrentInventory); \
+	DECLARE_FUNCTION(execGetPendingInventory);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitInventoryManager_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual bool SetNewInventoryServer_Validate(AAdvKitInventoryItem* , bool ); \
  \
-	DECLARE_FUNCTION(execOnRep_InventoryArray) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_InventoryArray(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetNewInventoryServer) \
-	{ \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_NewInventory); \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SetNewInventoryServer_Validate(Z_Param_NewInventory,Z_Param_bInstant)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SetNewInventoryServer_Validate")); \
-			return; \
-		} \
-		P_THIS->SetNewInventoryServer_Implementation(Z_Param_NewInventory,Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetNewInventoryByClass) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_NewInventoryClass); \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetNewInventoryByClass(Z_Param_NewInventoryClass,Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetNewInventory) \
-	{ \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_NewInventory); \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetNewInventory(Z_Param_NewInventory,Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCanEquipInventory) \
-	{ \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_NewInventory); \
-		P_GET_UBOOL(Z_Param_bInstant); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanEquipInventory_Implementation(Z_Param_NewInventory,Z_Param_bInstant); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execPreviousItem) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->PreviousItem(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execNextItem) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->NextItem(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetInventoryByClass) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_InventoryClass); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->GetInventoryByClass(Z_Param_InventoryClass); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveInventory) \
-	{ \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_RemovedInventory); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveInventory_Implementation(Z_Param_RemovedInventory); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddInventory) \
-	{ \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_NewInventory); \
-		P_GET_UBOOL(Z_Param_bEquip); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AddInventory_Implementation(Z_Param_NewInventory,Z_Param_bEquip); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetCurrentInventory) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->GetCurrentInventory(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetPendingInventory) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(AAdvKitInventoryItem**)Z_Param__Result=P_THIS->GetPendingInventory(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnRep_InventoryArray); \
+	DECLARE_FUNCTION(execSetNewInventoryServer); \
+	DECLARE_FUNCTION(execSetNewInventoryByClass); \
+	DECLARE_FUNCTION(execSetNewInventory); \
+	DECLARE_FUNCTION(execCanEquipInventory); \
+	DECLARE_FUNCTION(execPreviousItem); \
+	DECLARE_FUNCTION(execNextItem); \
+	DECLARE_FUNCTION(execGetInventoryByClass); \
+	DECLARE_FUNCTION(execRemoveInventory); \
+	DECLARE_FUNCTION(execAddInventory); \
+	DECLARE_FUNCTION(execGetCurrentInventory); \
+	DECLARE_FUNCTION(execGetPendingInventory);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitInventoryManager_h_21_EVENT_PARMS \
@@ -349,7 +149,15 @@ private: \
 public: \
 	DECLARE_CLASS(AAdvKitInventoryManager, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/AdvKitRuntime"), NO_API) \
 	DECLARE_SERIALIZER(AAdvKitInventoryManager) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		Inventory=NETFIELD_REP_START, \
+		PendingInventory, \
+		CurrentInventory, \
+		NETFIELD_REP_END=CurrentInventory	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitInventoryManager_h_21_INCLASS \
@@ -359,7 +167,15 @@ private: \
 public: \
 	DECLARE_CLASS(AAdvKitInventoryManager, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/AdvKitRuntime"), NO_API) \
 	DECLARE_SERIALIZER(AAdvKitInventoryManager) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		Inventory=NETFIELD_REP_START, \
+		PendingInventory, \
+		CurrentInventory, \
+		NETFIELD_REP_END=CurrentInventory	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Player_AdvKitInventoryManager_h_21_STANDARD_CONSTRUCTORS \

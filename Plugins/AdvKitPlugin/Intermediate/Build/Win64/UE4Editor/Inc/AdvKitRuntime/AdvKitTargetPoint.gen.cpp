@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,10 +17,22 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTargetPoint() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitTargetPoint();
 	ENGINE_API UClass* Z_Construct_UClass_ATargetPoint();
 	UPackage* Z_Construct_UPackage__Script_AdvKitRuntime();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitTargetPoint_GetTargetedActor();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitTargetPoint_IsValidTarget();
 // End Cross Module References
+	DEFINE_FUNCTION(AAdvKitTargetPoint::execIsValidTarget)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsValidTarget();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitTargetPoint::execGetTargetedActor)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(AActor**)Z_Param__Result=P_THIS->GetTargetedActor();
+		P_NATIVE_END;
+	}
 	void AAdvKitTargetPoint::StaticRegisterNativesAAdvKitTargetPoint()
 	{
 		UClass* Class = AAdvKitTargetPoint::StaticClass();
@@ -185,7 +197,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitTargetPoint() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAdvKitTargetPoint, 24889533);
+	IMPLEMENT_CLASS(AAdvKitTargetPoint, 386487708);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<AAdvKitTargetPoint>()
 	{
 		return AAdvKitTargetPoint::StaticClass();

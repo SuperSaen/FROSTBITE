@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,41 +17,230 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitZone() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitZone();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_AdvKitRuntime();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_AddTransition();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitTransitionComponent_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitCharacter_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_ConstrainDirectionToZone();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_ConstrainPositionToZone();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GenerateTransitions();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetClosestZoneForwardVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetClosestZoneLocationNew();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetClosestZoneRightVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetClosestZoneTransform();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetClosestZoneUpVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetCustomPhysics();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetPhysics();
 	ADVKITRUNTIME_API UEnum* Z_Construct_UEnum_AdvKitRuntime_EAdvKitMovementMode();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetPositionInDirection();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetZoneForwardVector();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitZoneLocation_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetZoneForwardVectorNew();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetZoneLocationLocal();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetZoneLocationWorld();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetZoneRightVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetZoneRightVectorNew();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetZoneUpVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_GetZoneUpVectorNew();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_HasCustomPhysics();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_HasPhysics();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_MoveLocationInDirection();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_MoveLocationInDirectionNew();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitZone_RemoveExistingTransitionsTo();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitTransitionBuilderModule_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AAdvKitZone::execConstrainDirectionToZone)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldDirection);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_AtWorldLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->ConstrainDirectionToZone_Implementation(Z_Param_Out_WorldDirection,Z_Param_Out_AtWorldLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetClosestZoneLocationNew)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldLocation);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent);
+		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetClosestZoneLocationNew_Implementation(Z_Param_Out_WorldLocation,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetClosestZoneTransform)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FTransform*)Z_Param__Result=P_THIS->GetClosestZoneTransform(Z_Param_Out_ToWorldLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetClosestZoneUpVector)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetClosestZoneUpVector_Implementation(Z_Param_Out_ToWorldLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetClosestZoneRightVector)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetClosestZoneRightVector_Implementation(Z_Param_Out_ToWorldLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetClosestZoneForwardVector)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_ToWorldLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetClosestZoneForwardVector_Implementation(Z_Param_Out_ToWorldLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetZoneUpVectorNew)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalZoneLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetZoneUpVectorNew_Implementation(Z_Param_Out_LocalZoneLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetZoneRightVectorNew)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalZoneLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetZoneRightVectorNew_Implementation(Z_Param_Out_LocalZoneLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetZoneForwardVectorNew)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalZoneLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetZoneForwardVectorNew_Implementation(Z_Param_Out_LocalZoneLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetZoneLocationLocal)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetZoneLocationLocal(Z_Param_Out_WorldLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetZoneLocationWorld)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalZoneLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetZoneLocationWorld(Z_Param_Out_LocalZoneLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execMoveLocationInDirectionNew)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalZoneLocation);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldDesiredDelta);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent);
+		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->MoveLocationInDirectionNew(Z_Param_Out_LocalZoneLocation,Z_Param_Out_WorldDesiredDelta,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execHasCustomPhysics)
+	{
+		P_GET_PROPERTY(FByteProperty,Z_Param_QueryPhysics);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->HasCustomPhysics(Z_Param_QueryPhysics);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execHasPhysics)
+	{
+		P_GET_ENUM(EAdvKitMovementMode,Z_Param_QueryPhysics);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->HasPhysics(EAdvKitMovementMode(Z_Param_QueryPhysics));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetCustomPhysics)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(uint8*)Z_Param__Result=P_THIS->GetCustomPhysics();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetPhysics)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(EAdvKitMovementMode*)Z_Param__Result=P_THIS->GetPhysics();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execConstrainPositionToZone)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldPosition);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent);
+		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->ConstrainPositionToZone_Implementation(Z_Param_Out_WorldPosition,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetZoneUpVector)
+	{
+		P_GET_OBJECT(UAdvKitZoneLocation,Z_Param_AtLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetZoneUpVector(Z_Param_AtLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetZoneRightVector)
+	{
+		P_GET_OBJECT(UAdvKitZoneLocation,Z_Param_AtLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetZoneRightVector(Z_Param_AtLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetZoneForwardVector)
+	{
+		P_GET_OBJECT(UAdvKitZoneLocation,Z_Param_AtLocation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetZoneForwardVector(Z_Param_AtLocation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execMoveLocationInDirection)
+	{
+		P_GET_OBJECT(UAdvKitZoneLocation,Z_Param_LocationToMove);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldDesiredDelta);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent);
+		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->MoveLocationInDirection(Z_Param_LocationToMove,Z_Param_Out_WorldDesiredDelta,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGetPositionInDirection)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_FromWorldPosition);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_WorldDesiredDelta);
+		P_GET_UBOOL(Z_Param_bClamp);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent);
+		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetPositionInDirection_Implementation(Z_Param_Out_FromWorldPosition,Z_Param_Out_WorldDesiredDelta,Z_Param_bClamp,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execRemoveExistingTransitionsTo)
+	{
+		P_GET_OBJECT(AAdvKitZone,Z_Param_Other);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RemoveExistingTransitionsTo(Z_Param_Other);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execAddTransition)
+	{
+		P_GET_OBJECT(UClass,Z_Param_For);
+		P_GET_OBJECT(UAdvKitTransitionComponent,Z_Param_Transition);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AddTransition(Z_Param_For,Z_Param_Transition);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitZone::execGenerateTransitions)
+	{
+		P_GET_UBOOL(Z_Param_bZoneMoved);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->GenerateTransitions_Implementation(Z_Param_bZoneMoved);
+		P_NATIVE_END;
+	}
 	static FName NAME_AAdvKitZone_ConstrainDirectionToZone = FName(TEXT("ConstrainDirectionToZone"));
 	FVector AAdvKitZone::ConstrainDirectionToZone(FVector const& WorldDirection, FVector const& AtWorldLocation) const
 	{
@@ -1503,7 +1692,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitZone() {}
 		{ "ToolTip", "Build modules this zone will use." },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AAdvKitZone_Statics::NewProp_BuildModules = { "BuildModules", nullptr, (EPropertyFlags)0x001000800000000d, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAdvKitZone, BuildModules), METADATA_PARAMS(Z_Construct_UClass_AAdvKitZone_Statics::NewProp_BuildModules_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAdvKitZone_Statics::NewProp_BuildModules_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AAdvKitZone_Statics::NewProp_BuildModules = { "BuildModules", nullptr, (EPropertyFlags)0x001000800000000d, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAdvKitZone, BuildModules), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AAdvKitZone_Statics::NewProp_BuildModules_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAdvKitZone_Statics::NewProp_BuildModules_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAdvKitZone_Statics::NewProp_BuildModules_Inner_MetaData[] = {
 		{ "Category", "Transitions" },
@@ -1567,7 +1756,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitZone() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAdvKitZone, 3512182192);
+	IMPLEMENT_CLASS(AAdvKitZone, 4078804010);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<AAdvKitZone>()
 	{
 		return AAdvKitZone::StaticClass();

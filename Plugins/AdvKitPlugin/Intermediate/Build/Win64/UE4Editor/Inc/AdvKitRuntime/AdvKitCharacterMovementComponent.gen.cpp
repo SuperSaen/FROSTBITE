@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -18,18 +18,10 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitCharacterMovementComponent() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitCharacterMovementComponent_NoRegister();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_UAdvKitCharacterMovementComponent();
 	ENGINE_API UClass* Z_Construct_UClass_UCharacterMovementComponent();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCharacterMovementComponent_AccumulateRootMotion();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCharacterMovementComponent_ChangeTargetBalance();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCharacterMovementComponent_GetAdvCustomMovementMode();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCharacterMovementComponent_GetAdvMovementMode();
 	ADVKITRUNTIME_API UEnum* Z_Construct_UEnum_AdvKitRuntime_EAdvKitMovementMode();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCharacterMovementComponent_GetZone();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitZone_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCharacterMovementComponent_MoveLocationInZone();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCharacterMovementComponent_PhysMoveInZone();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_UAdvKitCharacterMovementComponent_SetAdvMovementMode();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitCharacter_NoRegister();
 // End Cross Module References
 class UScriptStruct* FAdvKitMovementProperties::StaticStruct()
@@ -220,6 +212,77 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFAdvKitMovementPr
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FAdvKitMovementProperties_Hash() { return 1597673971U; }
+	DEFINE_FUNCTION(UAdvKitCharacterMovementComponent::execAccumulateRootMotion)
+	{
+		P_GET_STRUCT(FVector,Z_Param_MovementDelta);
+		P_GET_STRUCT(FRotator,Z_Param_NewRotation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AccumulateRootMotion(Z_Param_MovementDelta,Z_Param_NewRotation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCharacterMovementComponent::execPhysMoveInZone)
+	{
+		P_GET_STRUCT(FVector,Z_Param_GlobalAcceleration);
+		P_GET_STRUCT(FVector,Z_Param_WorldOffset);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_DeltaSeconds);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent);
+		P_GET_UBOOL(Z_Param_bAutoTransition);
+		P_GET_UBOOL(Z_Param_ConstrainAcceleration);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->PhysMoveInZone(Z_Param_GlobalAcceleration,Z_Param_WorldOffset,Z_Param_DeltaSeconds,Z_Param_Out_HalfExtent,Z_Param_bAutoTransition,Z_Param_ConstrainAcceleration);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCharacterMovementComponent::execMoveLocationInZone)
+	{
+		P_GET_STRUCT(FVector,Z_Param_GlobalAcceleration);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_DeltaSeconds);
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent);
+		P_GET_UBOOL(Z_Param_bAutoTransition);
+		P_GET_UBOOL(Z_Param_ConstrainAcceleration);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->MoveLocationInZone(Z_Param_GlobalAcceleration,Z_Param_DeltaSeconds,Z_Param_Out_HalfExtent,Z_Param_bAutoTransition,Z_Param_ConstrainAcceleration);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCharacterMovementComponent::execGetZone)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(AAdvKitZone**)Z_Param__Result=P_THIS->GetZone();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCharacterMovementComponent::execChangeTargetBalance)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ChangeTargetBalance();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCharacterMovementComponent::execGetAdvCustomMovementMode)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(uint8*)Z_Param__Result=P_THIS->GetAdvCustomMovementMode();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCharacterMovementComponent::execGetAdvMovementMode)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(EAdvKitMovementMode*)Z_Param__Result=P_THIS->GetAdvMovementMode();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UAdvKitCharacterMovementComponent::execSetAdvMovementMode)
+	{
+		P_GET_ENUM(EAdvKitMovementMode,Z_Param_NewMovementMode);
+		P_GET_PROPERTY(FByteProperty,Z_Param_NewCustomMode);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetAdvMovementMode(EAdvKitMovementMode(Z_Param_NewMovementMode),Z_Param_NewCustomMode);
+		P_NATIVE_END;
+	}
 	void UAdvKitCharacterMovementComponent::StaticRegisterNativesUAdvKitCharacterMovementComponent()
 	{
 		UClass* Class = UAdvKitCharacterMovementComponent::StaticClass();
@@ -1199,12 +1262,26 @@ static struct FScriptStruct_AdvKitRuntime_StaticRegisterNativesFAdvKitMovementPr
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAdvKitCharacterMovementComponent, 1117733583);
+	IMPLEMENT_CLASS(UAdvKitCharacterMovementComponent, 355119232);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<UAdvKitCharacterMovementComponent>()
 	{
 		return UAdvKitCharacterMovementComponent::StaticClass();
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UAdvKitCharacterMovementComponent(Z_Construct_UClass_UAdvKitCharacterMovementComponent, &UAdvKitCharacterMovementComponent::StaticClass, TEXT("/Script/AdvKitRuntime"), TEXT("UAdvKitCharacterMovementComponent"), false, nullptr, nullptr, nullptr);
+
+	void UAdvKitCharacterMovementComponent::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
+	{
+		static const FName Name_LocalZoneLocation(TEXT("LocalZoneLocation"));
+		static const FName Name_BalanceOffset(TEXT("BalanceOffset"));
+		static const FName Name_CurrentBalance(TEXT("CurrentBalance"));
+
+		const bool bIsValid = true
+			&& Name_LocalZoneLocation == ClassReps[(int32)ENetFields_Private::LocalZoneLocation].Property->GetFName()
+			&& Name_BalanceOffset == ClassReps[(int32)ENetFields_Private::BalanceOffset].Property->GetFName()
+			&& Name_CurrentBalance == ClassReps[(int32)ENetFields_Private::CurrentBalance].Property->GetFName();
+
+		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in UAdvKitCharacterMovementComponent"));
+	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UAdvKitCharacterMovementComponent);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER

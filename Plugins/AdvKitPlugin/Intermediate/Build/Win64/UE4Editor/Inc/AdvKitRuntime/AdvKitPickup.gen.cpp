@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,12 +17,33 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitPickup() {}
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitPickup();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitUsable();
 	UPackage* Z_Construct_UPackage__Script_AdvKitRuntime();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitPickup_CanBePickedUpBy();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitCharacter_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitPickup_PickedUpBy();
 	ADVKITRUNTIME_API UClass* Z_Construct_UClass_AAdvKitInventoryItem_NoRegister();
-	ADVKITRUNTIME_API UFunction* Z_Construct_UFunction_AAdvKitPickup_Respawn();
 // End Cross Module References
+	DEFINE_FUNCTION(AAdvKitPickup::execPickedUpBy)
+	{
+		P_GET_OBJECT(AAdvKitCharacter,Z_Param_Character);
+		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_WithItem);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->PickedUpBy_Implementation(Z_Param_Character,Z_Param_WithItem);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitPickup::execCanBePickedUpBy)
+	{
+		P_GET_OBJECT(AAdvKitCharacter,Z_Param_Character);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CanBePickedUpBy_Implementation(Z_Param_Character);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AAdvKitPickup::execRespawn)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Respawn_Implementation();
+		P_NATIVE_END;
+	}
 	static FName NAME_AAdvKitPickup_CanBePickedUpBy = FName(TEXT("CanBePickedUpBy"));
 	bool AAdvKitPickup::CanBePickedUpBy(AAdvKitCharacter* Character)
 	{
@@ -326,7 +347,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvKitPickup() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAdvKitPickup, 120020155);
+	IMPLEMENT_CLASS(AAdvKitPickup, 1049085153);
 	template<> ADVKITRUNTIME_API UClass* StaticClass<AAdvKitPickup>()
 	{
 		return AAdvKitPickup::StaticClass();

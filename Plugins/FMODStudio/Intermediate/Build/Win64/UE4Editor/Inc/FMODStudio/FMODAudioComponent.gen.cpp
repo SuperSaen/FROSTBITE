@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -24,25 +24,7 @@ void EmptyLinkFunctionForGeneratedCodeFMODAudioComponent() {}
 	FMODSTUDIO_API UClass* Z_Construct_UClass_UFMODAudioComponent_NoRegister();
 	FMODSTUDIO_API UClass* Z_Construct_UClass_UFMODAudioComponent();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_GetLength();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_GetParameter();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_GetParameterValue();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_GetProperty();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_GetTimelinePosition();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_IsPlaying();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_Play();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_Release();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_SetEvent();
 	FMODSTUDIO_API UClass* Z_Construct_UClass_UFMODEvent_NoRegister();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_SetParameter();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_SetPaused();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_SetPitch();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_SetProgrammerSoundName();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_SetProperty();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_SetTimelinePosition();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_SetVolume();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_Stop();
-	FMODSTUDIO_API UFunction* Z_Construct_UFunction_UFMODAudioComponent_TriggerCue();
 // End Cross Module References
 	struct Z_Construct_UDelegateFunction_FMODStudio_OnTimelineBeat__DelegateSignature_Statics
 	{
@@ -485,6 +467,147 @@ static struct FScriptStruct_FMODStudio_StaticRegisterNativesFFMODAttenuationDeta
 		return ReturnStruct;
 	}
 	uint32 Get_Z_Construct_UScriptStruct_FFMODAttenuationDetails_Hash() { return 2847987557U; }
+	DEFINE_FUNCTION(UFMODAudioComponent::execSetProgrammerSoundName)
+	{
+		P_GET_PROPERTY(FStrProperty,Z_Param_Value);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetProgrammerSoundName(Z_Param_Value);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execGetTimelinePosition)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(int32*)Z_Param__Result=P_THIS->GetTimelinePosition();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execSetTimelinePosition)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_Time);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetTimelinePosition(Z_Param_Time);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execGetLength)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(int32*)Z_Param__Result=P_THIS->GetLength();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execGetProperty)
+	{
+		P_GET_PROPERTY(FByteProperty,Z_Param_Property);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetProperty(EFMODEventProperty::Type(Z_Param_Property));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execSetProperty)
+	{
+		P_GET_PROPERTY(FByteProperty,Z_Param_Property);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Value);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetProperty(EFMODEventProperty::Type(Z_Param_Property),Z_Param_Value);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execGetParameterValue)
+	{
+		P_GET_PROPERTY(FNameProperty,Z_Param_Name);
+		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_UserValue);
+		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_FinalValue);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->GetParameterValue(Z_Param_Name,Z_Param_Out_UserValue,Z_Param_Out_FinalValue);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execGetParameter)
+	{
+		P_GET_PROPERTY(FNameProperty,Z_Param_Name);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetParameter(Z_Param_Name);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execSetParameter)
+	{
+		P_GET_PROPERTY(FNameProperty,Z_Param_Name);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Value);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetParameter(Z_Param_Name,Z_Param_Value);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execSetPaused)
+	{
+		P_GET_UBOOL(Z_Param_paused);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetPaused(Z_Param_paused);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execSetPitch)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_pitch);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetPitch(Z_Param_pitch);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execSetVolume)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_volume);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetVolume(Z_Param_volume);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execIsPlaying)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsPlaying();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execTriggerCue)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->TriggerCue();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execRelease)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Release();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execStop)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Stop();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execPlay)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Play();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UFMODAudioComponent::execSetEvent)
+	{
+		P_GET_OBJECT(UFMODEvent,Z_Param_NewEvent);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetEvent(Z_Param_NewEvent);
+		P_NATIVE_END;
+	}
 	void UFMODAudioComponent::StaticRegisterNativesUFMODAudioComponent()
 	{
 		UClass* Class = UFMODAudioComponent::StaticClass();
@@ -1329,7 +1452,7 @@ static struct FScriptStruct_FMODStudio_StaticRegisterNativesFFMODAttenuationDeta
 		{ "ToolTip", "Event parameter cache." },
 	};
 #endif
-	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_UFMODAudioComponent_Statics::NewProp_ParameterCache = { "ParameterCache", nullptr, (EPropertyFlags)0x0010020000000005, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFMODAudioComponent, ParameterCache), METADATA_PARAMS(Z_Construct_UClass_UFMODAudioComponent_Statics::NewProp_ParameterCache_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFMODAudioComponent_Statics::NewProp_ParameterCache_MetaData)) };
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_UFMODAudioComponent_Statics::NewProp_ParameterCache = { "ParameterCache", nullptr, (EPropertyFlags)0x0010020000000005, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFMODAudioComponent, ParameterCache), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UFMODAudioComponent_Statics::NewProp_ParameterCache_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFMODAudioComponent_Statics::NewProp_ParameterCache_MetaData)) };
 	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_UFMODAudioComponent_Statics::NewProp_ParameterCache_Key_KeyProp = { "ParameterCache_Key", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UFMODAudioComponent_Statics::NewProp_ParameterCache_ValueProp = { "ParameterCache", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
@@ -1383,7 +1506,7 @@ static struct FScriptStruct_FMODStudio_StaticRegisterNativesFFMODAttenuationDeta
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UFMODAudioComponent, 3944402093);
+	IMPLEMENT_CLASS(UFMODAudioComponent, 4164172880);
 	template<> FMODSTUDIO_API UClass* StaticClass<UFMODAudioComponent>()
 	{
 		return UFMODAudioComponent::StaticClass();

@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -18,30 +18,12 @@ struct FRotator;
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Environment_Zones_AdvKitZoneSpline_h_17_SPARSE_DATA
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Environment_Zones_AdvKitZoneSpline_h_17_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execGetProjectedHalfExtent) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalDirection); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetProjectedHalfExtent(Z_Param_Out_LocalDirection,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execGetProjectedHalfExtent);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Environment_Zones_AdvKitZoneSpline_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execGetProjectedHalfExtent) \
-	{ \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_LocalDirection); \
-		P_GET_STRUCT_REF(FVector,Z_Param_Out_HalfExtent); \
-		P_GET_STRUCT_REF(FRotator,Z_Param_Out_ExtentWorldRotation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FVector*)Z_Param__Result=P_THIS->GetProjectedHalfExtent(Z_Param_Out_LocalDirection,Z_Param_Out_HalfExtent,Z_Param_Out_ExtentWorldRotation); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execGetProjectedHalfExtent);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Environment_Zones_AdvKitZoneSpline_h_17_INCLASS_NO_PURE_DECLS \

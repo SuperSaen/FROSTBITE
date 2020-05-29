@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -35,48 +35,14 @@ static inline void FUsedBySignature_DelegateWrapper(const FMulticastScriptDelega
 	virtual bool CanBeUsedBy_Implementation(AAdvKitCharacter* Character, AAdvKitInventoryItem* WithItem); \
 	virtual void UsedBy_Implementation(AAdvKitCharacter* Character, AAdvKitInventoryItem* WithItem); \
  \
-	DECLARE_FUNCTION(execCanBeUsedBy) \
-	{ \
-		P_GET_OBJECT(AAdvKitCharacter,Z_Param_Character); \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_WithItem); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanBeUsedBy_Implementation(Z_Param_Character,Z_Param_WithItem); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execUsedBy) \
-	{ \
-		P_GET_OBJECT(AAdvKitCharacter,Z_Param_Character); \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_WithItem); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->UsedBy_Implementation(Z_Param_Character,Z_Param_WithItem); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execCanBeUsedBy); \
+	DECLARE_FUNCTION(execUsedBy);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitUsable_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execCanBeUsedBy) \
-	{ \
-		P_GET_OBJECT(AAdvKitCharacter,Z_Param_Character); \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_WithItem); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CanBeUsedBy_Implementation(Z_Param_Character,Z_Param_WithItem); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execUsedBy) \
-	{ \
-		P_GET_OBJECT(AAdvKitCharacter,Z_Param_Character); \
-		P_GET_OBJECT(AAdvKitInventoryItem,Z_Param_WithItem); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->UsedBy_Implementation(Z_Param_Character,Z_Param_WithItem); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execCanBeUsedBy); \
+	DECLARE_FUNCTION(execUsedBy);
 
 
 #define FROSTBITE_Plugins_AdvKitPlugin_Source_AdvKitRuntime_Public_Items_AdvKitUsable_h_16_EVENT_PARMS \
