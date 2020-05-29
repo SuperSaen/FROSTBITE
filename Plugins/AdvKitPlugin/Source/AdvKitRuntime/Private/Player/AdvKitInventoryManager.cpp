@@ -138,40 +138,9 @@ AAdvKitInventoryItem* AAdvKitInventoryManager::GetCurrentInventory() const
 	return CurrentInventory;
 }
 
-void AAdvKitInventoryManager::AddInventory_Implementation(class AAdvKitInventoryItem* NewInventory, bool bEquip)
-{
-	NewInventory->Instigator = this->Instigator;
-	NewInventory->SetOwner(this->GetOwner());
-	Inventory.AddUnique(NewInventory);
-	
-	if (HasAuthority())
-	{
-		OnRep_InventoryArray();
-	}
 
-	if (bEquip)
-	{
-		SetNewInventory(NewInventory, false);
-	}
-}
 
-void AAdvKitInventoryManager::RemoveInventory_Implementation(class AAdvKitInventoryItem* RemovedInventory)
-{
-	Inventory.Remove(RemovedInventory);
 
-	if (HasAuthority())
-	{
-		OnRep_InventoryArray();
-	}
-
-	//Equip something else if the removed item was equipped
-	if (CurrentInventory == RemovedInventory)
-	{
-		CurrentInventory = nullptr;
-		//TODO Uneqiup Inventory
-		NextItem();
-	}
-}
 
 AAdvKitInventoryItem* AAdvKitInventoryManager::GetInventoryByClass(TSubclassOf<class AAdvKitInventoryItem> InventoryClass)
 {

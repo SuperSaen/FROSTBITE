@@ -58,22 +58,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Inventory")
 	AAdvKitInventoryItem* GetCurrentInventory() const;
 
-	/**
-	 * Add a new item to the inventory e.g. when the character picks up a weapon.
-	 * @param	NewInventory 	New item to add
-	 * @param	bEquip 			Whether or not to equip the new item
-	 */
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Inventory")
-	void AddInventory(AAdvKitInventoryItem* NewInventory, bool bEquip = false);
-	virtual void AddInventory_Implementation(AAdvKitInventoryItem* NewInventory, bool bEquip = false);
-
-	/**
-	 * Remove an item from the inventory e.g. when the character drops a weapon.
-	 * @param	RemovedInventory 	Item to remove
-	 */
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Inventory")
-	void RemoveInventory(AAdvKitInventoryItem* RemovedInventory);
-	virtual void RemoveInventory_Implementation(AAdvKitInventoryItem* RemovedInventory);
 
 	/**
 	 * Get the first inventory item that is of the given class.
