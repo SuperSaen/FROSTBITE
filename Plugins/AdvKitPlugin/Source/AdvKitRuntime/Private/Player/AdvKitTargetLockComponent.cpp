@@ -17,9 +17,9 @@ UAdvKitTargetLockComponent::UAdvKitTargetLockComponent(const FObjectInitializer&
 	bAutoActivate = true;
 
 	//Use all world coordinates
-	bAbsoluteLocation = true;
-	bAbsoluteRotation = true;
-	bAbsoluteScale = true;
+	//bAbsoluteLocation = true;
+	//bAbsoluteRotation = true;
+	//bAbsoluteScale = true;
 
 	//Default values
 	DistanceFromCenter = 0;

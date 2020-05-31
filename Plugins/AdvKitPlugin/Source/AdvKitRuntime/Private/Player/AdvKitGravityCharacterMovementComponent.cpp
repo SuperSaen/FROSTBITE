@@ -201,7 +201,7 @@ void UAdvKitGravityCharacterMovementComponent::BeginPlay()
 
 void UAdvKitGravityCharacterMovementComponent::TickComponent(float DeltaSeconds, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction)
 {
-	if (CharacterOwner && CharacterOwner->Role > ROLE_SimulatedProxy)
+	if (CharacterOwner && CharacterOwner->GetLocalRole() > ROLE_SimulatedProxy)
 	{
 		//TODO authority check and replication
 		if (CharacterOwner->IsLocallyControlled())
@@ -1051,13 +1051,13 @@ void UAdvKitGravityCharacterMovementComponent::SimulateMovement(float DeltaSecon
 		return;
 	}
 
-	const bool bIsSimulatedProxy = (CharacterOwner->Role == ROLE_SimulatedProxy);
-
+	const bool bIsSimulatedProxy = (CharacterOwner->GetLocalRole() == ROLE_SimulatedProxy);
+	CharacterOwner->GatherCurrentMovement();
 	// Workaround for replication not being updated initially
 	if (bIsSimulatedProxy &&
-		CharacterOwner->ReplicatedMovement.Location.IsZero() &&
-		CharacterOwner->ReplicatedMovement.Rotation.IsZero() &&
-		CharacterOwner->ReplicatedMovement.LinearVelocity.IsZero())
+		CharacterOwner->GetReplicatedMovement().Location.IsZero() &&
+		CharacterOwner->GetReplicatedMovement().Rotation.IsZero() &&
+		CharacterOwner->GetReplicatedMovement().LinearVelocity.IsZero())
 	{
 		return;
 	}

@@ -16,10 +16,7 @@ UAdvKitOrientationComponent::UAdvKitOrientationComponent(const FObjectInitialize
 
 	LocationLerpSpeed = 10;
 	RotationLerpSpeed = 10;
-
-	bAbsoluteLocation = true;
-	bAbsoluteRotation = true;
-	bAbsoluteScale = true;
+	SetAbsolute(true, true, true);
 
 	TargetTransform = FTransform();
 }

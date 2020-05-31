@@ -9,6 +9,6 @@ public class FROSTBITETarget : TargetRules
 	{
 		Type = TargetType.Game;
 
-		ExtraModuleNames.AddRange( new string[] { "FROSTBITE", "VTMP", "VTMPEditor", "FlockingBehaviourSystem" } );
+		ExtraModuleNames.AddRange( new string[] { "FROSTBITE", "FlockingBehaviourSystem" } );
 	}
 }

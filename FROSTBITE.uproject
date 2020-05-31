@@ -16,16 +16,6 @@
 			]
 		},
 		{
-			"Name": "VTMP",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "VTMPEditor",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
 			"Name": "FlockingBehaviourSystem",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
@@ -80,14 +70,6 @@
 		},
 		{
 			"Name": "EditorScriptingUtilities",
-			"Enabled": true
-		},
-		{
-			"Name": "FMODStudio",
-			"Enabled": true
-		},
-		{
-			"Name": "VTMP",
 			"Enabled": true
 		}
 	]

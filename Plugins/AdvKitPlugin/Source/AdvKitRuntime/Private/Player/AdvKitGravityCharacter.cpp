@@ -56,13 +56,13 @@ void AAdvKitGravityCharacter::SetNewOrientation(FVector GravityUpVector, FVector
 		return;
 	}
 
-	if (Role < ROLE_AutonomousProxy)
+	if (GetLocalRole() < ROLE_AutonomousProxy)
 	{
 		return;
 	}
 
 	//Call server if client
-	if (Role == ROLE_AutonomousProxy)
+	if (GetLocalRole() == ROLE_AutonomousProxy)
 	{
 		SetNewOrientationServer(GravityUpVector, Origin, bForce);
 	}

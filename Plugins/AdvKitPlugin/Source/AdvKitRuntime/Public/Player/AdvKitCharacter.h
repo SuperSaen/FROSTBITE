@@ -1,4 +1,4 @@
-// Copyright 2015 Pascal Krabbe
+// Copyright 2020 Sean Neville
 
 #pragma once
 
@@ -13,23 +13,6 @@ class AAdvKitTargetPoint;
 class AAdvKitCharacter; 
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FAdvKitCharacterDied, AAdvKitCharacter*, Character);
-
-/**
- * @brief Utility struct to allow configuring an inventory item on the character.
- */
-USTRUCT(BlueprintType)
-struct FAdvKitInventoryConfig
-{
-	GENERATED_USTRUCT_BODY();
-
-	/** Class of the item to create */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = AdvKit)
-	TSubclassOf<class AAdvKitInventoryItem> InventoryClass;
-
-	/** Whether or not this item will be equipped on start */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = AdvKit)
-	bool bEquip;
-};
 
 /** @brief Helper struct to replicated @see UAnimMontage on the character */
 USTRUCT()
@@ -148,10 +131,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AdvKit")
 	float PointAndClickTraceDistance;
 
-	/** Configuration of items to create for the character by default */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory")
-	TArray< FAdvKitInventoryConfig > DefaultInventory;
-
 	/** Class of the inventory manager for this character */
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Inventory")
 	TSubclassOf<class AAdvKitInventoryManager> InventoryManagerClass;
@@ -160,45 +139,11 @@ public:
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = "Inventory", Replicated)
 	class AAdvKitInventoryManager* InventoryManager;
 
-	/**
-	 * Equip the next item in the character's inventory
-	 */
-	UFUNCTION(BlueprintCallable, Category = "Inventory")
-	virtual void NextItem();
-
-	/**
-	 * Equip the previous item in the character's inventory
-	 */
-	UFUNCTION(BlueprintCallable, Category = "Inventory")
-	virtual void PreviousItem();
-
-	/**
-	 * Get Aim direction offset from character rotation
-	 * @return	Aim offset rotation
-	 */
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "AdvKit")
-	FRotator GetAimOffsets() const;
-	virtual FRotator GetAimOffsets_Implementation() const;
 
 
-	/**
-	 * Get the rotation for a weapon to fire at. X-Axis of the rotator is forward for the shot
-	 * @param	Weapon 	Weapon that wants to fire
-	 * @param	FireLocation 	Location from which the weapon wants to fire
-	 * @return Rotation of the aim
-	 */
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "AdvKit")
-	FRotator GetAdjustedAimFor(class AAdvKitWeapon* Weapon, FVector FireLocation);
-	virtual FRotator GetAdjustedAimFor_Implementation(class AAdvKitWeapon* Weapon, FVector FireLocation);
+
+
 	
-	/**
-	 * Get the starting location for tracing the target, e.g. the player's eyes
-	 * @param	Weapon 	Weapon that wants to trace
-	 * @return	Starting location for the trace
-	 */
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "AdvKit")
-	FVector GetWeaponStartTraceLocation(class AAdvKitWeapon* Weapon = NULL);
-	virtual FVector GetWeaponStartTraceLocation_Implementation(class AAdvKitWeapon* Weapon = NULL);
 
 
 //Targeting
@@ -274,42 +219,9 @@ public:
 	virtual void AddConditionalMovementInput(FVector WorldDirection, FVector LocalDirection, float ScaleValue = 1.0f, bool bForce = false);
 
 
-	/**
-	 * Use a usable with a given item (e.g. a lock with a key)
-	 * @param	Usable 	Usable to use with optional item
-	 * @param	WithItem 	Optional item to use usable with
-	 */
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category="AdvKit")
-	bool Use(class AAdvKitUsable* Usable = nullptr, class AAdvKitInventoryItem* WithItem = nullptr);
-	virtual bool Use_Implementation(class AAdvKitUsable* Usable = nullptr, class AAdvKitInventoryItem* WithItem = nullptr);
 
-	/**
-	 * Server callback to use a usable with a given item (e.g. a lock with a key)
-	 * @param	Useable 	Usable to use with optional item
-	 * @param	WithItem 	Optional item to use usable with
-	 */
-	UFUNCTION(Server, Reliable, WithValidation)
-	void ServerUse(class AAdvKitUsable* Useable = nullptr, class AAdvKitInventoryItem* WithItem = nullptr);
-	virtual void ServerUse_Implementation(class AAdvKitUsable* Useable = nullptr, class AAdvKitInventoryItem* WithItem = nullptr);
 	
-	/**
-	 * Reloads the character's current weapon
-	 */
-	UFUNCTION(BlueprintCallable, Category = AdvKit)
-	virtual void Reload();
-	
-	/**
-	 * Starts firing with the currently equipped weapon
-	 * @param	FireMode	Index of fire mode to start firing 
-	 */
-	UFUNCTION(BlueprintCallable, Category = AdvKit)
-	virtual void StartFire(uint8 FireMode = 0);
 
-	/**
-	 * Stops firing the currently equipped weapon
-	 */
-	UFUNCTION(BlueprintCallable, Category = AdvKit)
-	virtual void StopFire();
 
 public:
 
@@ -499,11 +411,6 @@ public:
 	void TransitionToServer(AAdvKitZone* NewZone, UAdvKitTransitionComponent* NewTransition = nullptr, bool bForce = false);
 	virtual void TransitionToServer_Implementation(AAdvKitZone* NewZone, UAdvKitTransitionComponent* NewTransition = nullptr, bool bForce = false);
 
-	/**
-	 * Use the usable closest to the character
-	 */
-	UFUNCTION(BlueprintCallable, Category = "AdvKit")
-	virtual bool UseClosestUseable();
 
 	/**
 	 * Enable the mouse cursor for point and click
@@ -512,59 +419,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "AdvKit")
 	void SetMouseCursorEnabled(bool bEnabled = true) const;
 
-	/**
-	 * Hook method to block incoming damage.
-	 * @param	Damage	How much damage to apply
-	 * @param	DamageEvent		Data package that fully describes the damage received
-	 * @param	EventInstigator	The Controller responsible for the damage
-	 * @param	DamageCauser	The Actor that directly caused the damage(e.g.the projectile that exploded, the rock that landed on you)
-	 * @return	The amount of damage remaining after it was blocked
-	 */
-	UFUNCTION(Category = "AdvKit")
-	float BlockDamage(float Damage, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, class AActor* DamageCauser);
-	
-	/**
-	 * Hook method to block any incoming damage.
-	 * @param	DamageReceived	How much damage to apply
-	 * @param	DamageType		Type of damage
-	 * @param	InstigatedBy	The Controller responsible for the damage
-	 * @param	DamageCauser	The Actor that directly caused the damage(e.g.the projectile that exploded, the rock that landed on you)
-	 * @return	The amount of damage remaining after it was blocked
-	 */
-	UFUNCTION(BlueprintNativeEvent, BlueprintAuthorityOnly, Category = "AdvKit")
-	float BlockAnyDamage(float DamageReceived, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
-	virtual float BlockAnyDamage_Implementation(float DamageReceived, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
-	
-	/**
-	 * Hook method to block any incoming radial damage.
-	 * @param	DamageReceived	How much damage to apply
-	 * @param	DamageType		Type of damage
-	 * @param	Origin			Origin of the radial damage
-	 * @param	HitInfo			Where the damage actually hit the character
-	 * @param	InstigatedBy	The Controller responsible for the damage
-	 * @param	DamageCauser	The Actor that directly caused the damage(e.g.the projectile that exploded, the rock that landed on you)
-	 * @return	The amount of damage remaining after it was blocked
-	 */
-	UFUNCTION(BlueprintNativeEvent, BlueprintAuthorityOnly, Category = "AdvKit")
-	float BlockRadialDamage(float DamageReceived, const class UDamageType* DamageType, FVector Origin, const struct FHitResult& HitInfo, class AController* InstigatedBy, AActor* DamageCauser);
-	virtual float BlockRadialDamage_Implementation(float DamageReceived, const class UDamageType* DamageType, FVector Origin, const struct FHitResult& HitInfo, class AController* InstigatedBy, AActor* DamageCauser);
-
-	/**
-	 * Hook method to block any incoming point damage.
-	 * @param	DamageReceived	How much damage to apply
-	 * @param	DamageType		Type of damage
-	 * @param	HitLocation		Where the damage hit the character
-	 * @param	HitNormal		Normal of the hit on the character 
-	 * @param	HitComponent	Which component was hit
-	 * @param	BoneName		Which bone in the component was hit
-	 * @param	ShotFromDirection	Where the damage came from
-	 * @param	InstigatedBy	The Controller responsible for the damage
-	 * @param	DamageCauser	The Actor that directly caused the damage(e.g.the projectile that exploded, the rock that landed on you)
-	 * @return	The amount of damage remaining after it was blocked
-	 */
-	UFUNCTION(BlueprintNativeEvent, BlueprintAuthorityOnly, Category = "AdvKit")
-	float BlockPointDamage(float DamageReceived, const class UDamageType* DamageType, FVector HitLocation, FVector HitNormal, class UPrimitiveComponent* HitComponent, FName BoneName, FVector ShotFromDirection, class AController* InstigatedBy, AActor* DamageCauser);
-	virtual float BlockPointDamage_Implementation(float DamageReceived, const class UDamageType* DamageType, FVector HitLocation, FVector HitNormal, class UPrimitiveComponent* HitComponent, FName BoneName, FVector ShotFromDirection, class AController* InstigatedBy, AActor* DamageCauser);
 
 	/**
 	 * Check if the character is still alive

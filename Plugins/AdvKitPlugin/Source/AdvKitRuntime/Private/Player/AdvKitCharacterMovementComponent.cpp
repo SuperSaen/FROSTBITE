@@ -567,7 +567,7 @@ bool UAdvKitCharacterMovementComponent::MoveLocationInZone(FVector GlobalAcceler
 
 bool UAdvKitCharacterMovementComponent::PhysMoveInZone(FVector GlobalAcceleration, FVector WorldOffset, float DeltaSeconds, const FVector& Extent, bool AutoTransition, bool ConstrainAcceleration)
 {
-	if (!CharacterOwner || (!CharacterOwner->Controller && !bRunPhysicsWithNoController && !HasAnimRootMotion() && !CurrentRootMotion.HasOverrideVelocity() && (CharacterOwner->Role != ROLE_SimulatedProxy)))
+	if (!CharacterOwner || (!CharacterOwner->Controller && !bRunPhysicsWithNoController && !HasAnimRootMotion() && !CurrentRootMotion.HasOverrideVelocity() && (CharacterOwner->GetLocalRole() != ROLE_SimulatedProxy)))
 	{
 		ZeroMovementVariables();
 		return false;
@@ -722,7 +722,7 @@ void UAdvKitCharacterMovementComponent::AccumulateRootMotion(FVector MovementDel
 		*
 		NewRotation.Quaternion()
 		*
-		CharacterOwner->GetMesh()->RelativeRotation.Quaternion()
+		CharacterOwner->GetMesh()->GetRelativeRotation().Quaternion()
 		);
 
 	FVector LocalDelta = CharacterOwner->GetMesh()->GetComponentTransform().InverseTransformVector(MovementDelta);
@@ -742,7 +742,7 @@ void UAdvKitCharacterMovementComponent::AccumulateRootMotionRotation(FRotator Ne
 		*
 		NewRotation.Quaternion()
 		*
-		CharacterOwner->GetMesh()->RelativeRotation.Quaternion()
+		CharacterOwner->GetMesh()->GetRelativeRotation().Quaternion()
 	);
 
 	RootMotionParams.Accumulate(RootMotionTransform);
@@ -769,7 +769,7 @@ void UAdvKitCharacterMovementComponent::AddRootMotionRotation(FRotator Additiona
 	RootMotionTransform.SetRotation(
 		AdditionalRotation.Quaternion()
 		*
-		CharacterOwner->GetMesh()->RelativeRotation.Quaternion()
+		CharacterOwner->GetMesh()->GetRelativeRotation().Quaternion()
 		);
 
 	RootMotionParams.Accumulate(RootMotionTransform);

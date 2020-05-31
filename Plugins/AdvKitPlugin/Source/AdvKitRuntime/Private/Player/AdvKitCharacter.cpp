@@ -13,10 +13,6 @@
 
 #include "Actions/AnimNotifyState_AdvKitDodge.h"
 
-#include "Items/AdvKitUsable.h"
-#include "Items/AdvKitInventoryItem.h"
-#include "Items/AdvKitWeapon.h"
-
 #include "AdvKitLogCategories.h"
 
 #include "Net/UnrealNetwork.h"
@@ -123,63 +119,6 @@ FRotator AAdvKitCharacter::GetBaseAimRotation() const
 	return Super::GetBaseAimRotation();
 }
 
-void AAdvKitCharacter::NextItem()
-{
-	if (!IsValid(InventoryManager))
-	{
-		return;
-	}
-
-	InventoryManager->NextItem();
-}
-
-void AAdvKitCharacter::PreviousItem()
-{
-	if (!IsValid(InventoryManager))
-	{
-		return;
-	}
-
-	InventoryManager->PreviousItem();
-}
-
-FRotator AAdvKitCharacter::GetAdjustedAimFor_Implementation(AAdvKitWeapon* Weapon, FVector FireLocation)
-{
-	//Without a controller only the character can be used
-	if (Controller == nullptr || Role < ROLE_Authority)
-	{
-		return GetBaseAimRotation();
-	}
-
-	//Always look at locked target
-	if (bLockTarget && CurrentTarget)
-	{
-		return (CurrentTarget->GetActorLocation() - GetWeaponStartTraceLocation(Weapon)).Rotation();
-	}
-
-	return GetBaseAimRotation();
-}
-
-FVector AAdvKitCharacter::GetWeaponStartTraceLocation_Implementation(AAdvKitWeapon* Weapon)
-{
-	//If a controller is present use it for view location
-	if (Controller)
-	{
-		FVector Location;
-		FRotator Rotation;
-		Controller->GetPlayerViewPoint(Location, Rotation);
-		return Location;
-	}
-
-	//Locking on target means the character is the start for a weapon trace
-	if (HeadSocket != NAME_None)
-	{
-		return GetMesh()->GetSocketLocation(HeadSocket);
-	}
-
-	return GetPawnViewLocation();
-}
-
 
 float AAdvKitCharacter::GetMaximumTargetDistance()
 {
@@ -276,146 +215,11 @@ void AAdvKitCharacter::SetTarget(AAdvKitTargetPoint* NewTarget, bool bLock)
 	{
 		return;
 	}
-
-	bLockTarget = bLock;
-}
-
-void AAdvKitCharacter::StartFire(uint8 FireMode)
-{
-	//Point and click
-	APlayerController* PlayerController = Cast<APlayerController>(this->Controller);
-	if (IsValid(PlayerController) && PlayerController->bShowMouseCursor)
+	else
 	{
-		FVector Start;
-		FVector Direction;
-		PlayerController->DeprojectMousePositionToWorld(Start, Direction);
-
-		FVector End = Start + Direction * PointAndClickTraceDistance;
-
-		FHitResult hitresult;
-		FCollisionQueryParams Params;
-		Params.AddIgnoredActor(this);
-		FCollisionObjectQueryParams ObjectQueryParams;
-		
-		//Try to hit an actor
-		if (!GetWorld()->LineTraceSingleByObjectType(hitresult, Start, End, ObjectQueryParams, Params))
-		{
-			return;
-		}
-
-		//Check if actor is usable
-		AAdvKitUsable* Useable = Cast<AAdvKitUsable>(hitresult.GetActor());
-		if (!IsValid(Useable))
-		{
-			return;
-		}
-
-		//Check if usable can be used
-		if (!Useable->CanBeUsedBy(this, InventoryManager->GetCurrentInventory()))
-		{
-			return;
-		}
-
-		//Use it
-		Use(Useable, InventoryManager->GetCurrentInventory());
-		return;
+		bLockTarget = bLock;
 	}
 
-	//Try to start firing
-
-	//Need inventory to have weapon
-	if (!InventoryManager)
-	{
-		return;
-	}
-
-	//Get active weapon and fire
-	AAdvKitWeapon* CurrentWeapon = Cast<AAdvKitWeapon>(InventoryManager->GetCurrentInventory());
-	if (CurrentWeapon)
-	{
-		CurrentWeapon->StartFire(FireMode);
-	}
-}
-
-void AAdvKitCharacter::StopFire()
-{
-	//If in point and click mode weapons are not used
-	APlayerController* PlayerController = Cast<APlayerController>(this->Controller);
-	if (IsValid(PlayerController) && PlayerController->bShowMouseCursor)
-	{
-		return;
-	}
-
-	//Need inventory to have weapon
-	if (!InventoryManager)
-	{
-		return;
-	}
-
-	//Get active weapon and stop
-	AAdvKitWeapon* CurrentWeapon = Cast<AAdvKitWeapon>(InventoryManager->GetCurrentInventory());
-	if (CurrentWeapon)
-	{
-		CurrentWeapon->StopFire();
-	}
-}
-
-
-void AAdvKitCharacter::Reload()
-{
-	//Need inventory to have weapon
-	if (!InventoryManager)
-	{
-		return;
-	}
-
-	//Get active weapon and reload
-	AAdvKitWeapon* CurrentWeapon = Cast<AAdvKitWeapon>(InventoryManager->GetCurrentInventory());
-	if (CurrentWeapon)
-	{
-		CurrentWeapon->StartReload();
-	}
-}
-
-bool AAdvKitCharacter::Use_Implementation(class AAdvKitUsable* Usable /*= NULL*/, class AAdvKitInventoryItem* WithItem /*= NULL*/)
-{
-	//Cannot use nothing
-	if (!Usable)
-	{
-		return false;
-	}
-
-	//Notify server of use
-	if (Role == ROLE_AutonomousProxy)
-	{
-		ServerUse(Usable, WithItem);
-	}
-
-	if (Role < ROLE_Authority)
-	{
-		return false;
-	}
-
-	//Check if object can be used
-	if (!Usable->CanBeUsedBy(this, WithItem))
-	{
-		return false;
-	}
-
-	//Use object
-	Usable->UsedBy(this, WithItem);
-	return true;
-}
-
-
-bool  AAdvKitCharacter::ServerUse_Validate(class AAdvKitUsable* Useable, class AAdvKitInventoryItem* WithItem)
-{
-	return true;
-}
-
-void AAdvKitCharacter::ServerUse_Implementation(class AAdvKitUsable* Useable, class AAdvKitInventoryItem* WithItem)
-{
-	Use(Useable, WithItem);
 }
 
 bool AAdvKitCharacter::LetGoOfZone_Implementation()
@@ -788,12 +592,13 @@ FVector AAdvKitCharacter::GetHalfExtentForZone_Implementation(AAdvKitZone* Zone)
 
 void AAdvKitCharacter::SetZone_Implementation(AAdvKitZone* NewZone, bool bSnap, bool bClearPendingTransition)
 {
-	if (Role < ROLE_AutonomousProxy)
+	
+	if (GetLocalRole() < ROLE_AutonomousProxy)
 	{
 		return;
 	}
 
-	if (Role == ROLE_AutonomousProxy)
+	if (GetLocalRole() == ROLE_AutonomousProxy)
 	{
 		SetZoneServer(NewZone,bSnap,bClearPendingTransition);
 	}
@@ -917,14 +722,6 @@ bool AAdvKitCharacter::CanTransitionTo_Implementation(AAdvKitZone* NewZone, UAdv
 		return false;
 	}
 
-	//Cannot enter zones with item
-	if (!bIgnoreItemWhenEnteringZonesAutomatically 
-		&& InventoryManager 
-		&& (InventoryManager->GetCurrentInventory() || InventoryManager->GetPendingInventory()))
-	{
-		return false;
-	}
-
 	auto Zone = NewTransition ? NewTransition->TargetZone.Get() : NewZone;
 
 	//Already in a zone
@@ -1026,12 +823,12 @@ bool AAdvKitCharacter::CanTransitionTo_Implementation(AAdvKitZone* NewZone, UAdv
 
 bool AAdvKitCharacter::TransitionTo_Implementation(AAdvKitZone* NewZone, UAdvKitTransitionComponent* NewTransition, bool bForce)
 {
-	if (Role < ROLE_AutonomousProxy)
+	if (GetLocalRole() < ROLE_AutonomousProxy)
 	{
 		return false;
 	}
 
-	if (Role == ROLE_AutonomousProxy)
+	if (GetLocalRole() == ROLE_AutonomousProxy)
 	{
 		TransitionToServer(NewZone, NewTransition);
 	}
@@ -1065,72 +862,6 @@ void AAdvKitCharacter::TransitionToServer_Implementation(AAdvKitZone* NewZone, U
 	TransitionTo(NewZone, NewTransition, bForce);
 }
 
-
-bool AAdvKitCharacter::UseClosestUseable()
-{
-	AAdvKitUsable* ClosestUseable = nullptr;
-	float LastDistance = 0;
-
-	AAdvKitInventoryItem* CurrentInventory = nullptr;
-	if (InventoryManager)
-	{
-		CurrentInventory = InventoryManager->GetCurrentInventory();
-	}
-
-	//Get all overlapping usables
-	TSet<AActor*> OverlappingUsables;
-	GetOverlappingActors(OverlappingUsables, AAdvKitUsable::StaticClass());
-
-	if (OverlappingUsables.Num() == 0)
-	{
-		//Nothing overlapped
-		return false;
-	}
-
-	//Filter results to get the closest one
-	for (auto Usable : OverlappingUsables)
-	{
-		AAdvKitUsable* TempUsable = Cast<AAdvKitUsable>(Usable);
-		if (!TempUsable)
-		{
-			//No usable
-			continue;
-		}
-
-		//Cannot be used
-		if (!TempUsable->CanBeUsedBy(this, CurrentInventory))
-		{
-			continue;
-		}
-
-		//Set first result
-		if (!ClosestUseable)
-		{
-			ClosestUseable = TempUsable;
-			LastDistance = FVector::Dist(ClosestUseable->GetActorLocation(), GetActorLocation());
-			continue;
-		}
-
-		//Check if current candidate is closer
-		float NewDistance = FVector::Dist(TempUsable->GetActorLocation(), GetActorLocation());
-		if (NewDistance < LastDistance)
-		{
-			ClosestUseable = TempUsable;
-			LastDistance = NewDistance;
-		}
-	}
-
-	if (!ClosestUseable)
-	{
-		//Nothing was found
-		return false;
-	}
-
-	//Use found usable
-	Use(ClosestUseable, CurrentInventory);
-	return true;
-}
-
 void AAdvKitCharacter::SetMouseCursorEnabled(bool bEnabled) const
 {
 	APlayerController* PlayerController = Cast<APlayerController>(this->Controller);
@@ -1160,16 +891,6 @@ void AAdvKitCharacter::SetMouseCursorEnabled(bool bEnabled) const
 	InputMode.SetLockMouseToViewportBehavior(EMouseLockMode::LockAlways);
 	InputMode.SetHideCursorDuringCapture(false);
 	PlayerController->SetInputMode(InputMode);
-}
-
-
-FRotator AAdvKitCharacter::GetAimOffsets_Implementation() const
-{
-	const FVector AimDirWS = GetBaseAimRotation().Vector();
-	const FVector AimDirLS = ActorToWorld().InverseTransformVectorNoScale(AimDirWS);
-	const FRotator AimRotLS = AimDirLS.Rotation();
-
-	return AimRotLS;
 }
 
 
@@ -1238,7 +959,7 @@ void AAdvKitCharacter::PostInitializeComponents()
 
 	CameraController = Cast<UAdvKitCameraController>(GetComponentByClass(UAdvKitCameraController::StaticClass()));
 
-	if (Role != ROLE_Authority)
+	if (GetLocalRole() != ROLE_Authority)
 	{
 		return;
 	}
@@ -1308,7 +1029,7 @@ void AAdvKitCharacter::NotifyActorBeginOverlap(class AActor* OtherActor)
 {
 	Super::NotifyActorBeginOverlap(OtherActor);
 	
-	if (Role < ROLE_AutonomousProxy)
+	if (GetLocalRole() < ROLE_AutonomousProxy)
 	{
 		return;
 	}
@@ -1331,7 +1052,7 @@ void AAdvKitCharacter::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Othe
 {
 	Super::NotifyHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
 
-	if (Role < ROLE_AutonomousProxy)
+	if (GetLocalRole() < ROLE_AutonomousProxy)
 	{
 		return;
 	}
@@ -1372,7 +1093,7 @@ float AAdvKitCharacter::TakeDamage(float Damage, struct FDamageEvent const& Dama
 		return 0.f;
 	}
 
-	float ActualDamage = BlockDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+	float ActualDamage = Damage;
 
 	ActualDamage = Super::TakeDamage(ActualDamage, DamageEvent, EventInstigator, DamageCauser);
 
@@ -1389,62 +1110,7 @@ float AAdvKitCharacter::TakeDamage(float Damage, struct FDamageEvent const& Dama
 	return ActualDamage;
 }
 
-float AAdvKitCharacter::BlockDamage(float Damage, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, class AActor* DamageCauser)
-{
-	float ActualDamage = Damage;
 
-	//Call block method depending on damage event class
-	UDamageType const* const DamageTypeCDO = DamageEvent.DamageTypeClass ? DamageEvent.DamageTypeClass->GetDefaultObject<UDamageType>() : GetDefault<UDamageType>();
-	if (DamageEvent.IsOfType(FPointDamageEvent::ClassID))
-	{
-		FPointDamageEvent* const PointDamageEvent = (FPointDamageEvent*)&DamageEvent;
-		ActualDamage = BlockPointDamage(ActualDamage, DamageTypeCDO, PointDamageEvent->HitInfo.ImpactPoint, PointDamageEvent->HitInfo.ImpactNormal, PointDamageEvent->HitInfo.Component.Get(), PointDamageEvent->HitInfo.BoneName, PointDamageEvent->ShotDirection, EventInstigator, DamageCauser);
-	}
-	else if (DamageEvent.IsOfType(FRadialDamageEvent::ClassID))
-	{
-		FRadialDamageEvent* const RadialDamageEvent = (FRadialDamageEvent*)&DamageEvent;
-		FHitResult const& Hit = (RadialDamageEvent->ComponentHits.Num() > 0) ? RadialDamageEvent->ComponentHits[0] : FHitResult();
-		ActualDamage = BlockRadialDamage(ActualDamage, DamageTypeCDO, RadialDamageEvent->Origin, Hit, EventInstigator, DamageCauser);
-	}
-
-	//Block any remaining damage
-	if (ActualDamage != 0.f)
-	{
-		ActualDamage = BlockAnyDamage(ActualDamage, DamageTypeCDO, EventInstigator, DamageCauser);
-	}
-
-	//In case the character holds a weapon have it be possible for the weapon to block damage
-	if (!InventoryManager)
-	{
-		return ActualDamage;
-	}
-
-	AAdvKitWeapon* Weapon = Cast<AAdvKitWeapon>(InventoryManager->GetCurrentInventory());
-	if (!Weapon)
-	{
-		return ActualDamage;
-	}
-
-	return Weapon->BlockDamage(ActualDamage, DamageEvent, EventInstigator, DamageCauser);
-}
-
-float AAdvKitCharacter::BlockAnyDamage_Implementation(float DamageReceived, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser)
-{
-	//Dummy Implementation, does nothing
-	return DamageReceived;
-}
-
-float AAdvKitCharacter::BlockRadialDamage_Implementation(float DamageReceived, const class UDamageType* DamageType, FVector Origin, const struct FHitResult& HitInfo, class AController* InstigatedBy, AActor* DamageCauser)
-{
-	//Dummy Implementation, does nothing
-	return DamageReceived;
-}
-
-float AAdvKitCharacter::BlockPointDamage_Implementation(float DamageReceived, const class UDamageType* DamageType, FVector HitLocation, FVector HitNormal, class UPrimitiveComponent* HitComponent, FName BoneName, FVector ShotFromDirection, class AController* InstigatedBy, AActor* DamageCauser)
-{
-	//Dummy Implementation, does nothing
-	return DamageReceived;
-}
 
 void AAdvKitCharacter::Jump()
 {
@@ -1532,7 +1198,7 @@ void AAdvKitCharacter::SetBase(UPrimitiveComponent* NewBase, const FName BoneNam
 		else
 		{
 			//If the character walked over a zone (e.g. a ledge) and is not already doing a transition try to transition to the ledge
-			if (Role == ROLE_Authority && !PendingTransition.IsValid())
+			if (GetLocalRole() == ROLE_Authority && !PendingTransition.IsValid())
 			{
 				auto Zone = Cast<AAdvKitZone>(NewBase->GetOwner());
 				if (CanTransitionTo(Zone))
@@ -1580,13 +1246,13 @@ float AAdvKitCharacter::PlayAnimMontage(class UAnimMontage* AnimMontage, float I
 	AnimMontage = GetMappedAnimMontage(AnimMontage);
 
 	//Replicate to server
-	if (Role == ROLE_AutonomousProxy)
+	if (GetLocalRole() == ROLE_AutonomousProxy)
 	{
 		PlayAnimMontageServer(AnimMontage, InPlayRate, StartSectionName);
 	}
 
 	//Set parameters
-	if (Role == ROLE_Authority || Role == ROLE_AutonomousProxy)
+	if (GetLocalRole() == ROLE_Authority || GetLocalRole() == ROLE_AutonomousProxy)
 	{
 		RepAnimMontage.SetNewMontage(AnimMontage, InPlayRate, StartSectionName);
 	}
@@ -1600,13 +1266,13 @@ void AAdvKitCharacter::StopAnimMontage(class UAnimMontage* AnimMontage)
 	AnimMontage = GetMappedAnimMontage(AnimMontage);
 
 	//Replicate to server
-	if (Role == ROLE_AutonomousProxy)
+	if (GetLocalRole() == ROLE_AutonomousProxy)
 	{
 		StopAnimMontageServer(AnimMontage);
 	}
 
 	//Set parameters
-	if (Role == ROLE_Authority || Role == ROLE_AutonomousProxy)
+	if (GetLocalRole() == ROLE_Authority || GetLocalRole() == ROLE_AutonomousProxy)
 	{
 		RepAnimMontage.SetNewMontage(AnimMontage, 1.0f, NAME_None, false);
 	}
@@ -1638,7 +1304,7 @@ void AAdvKitCharacter::OnRep_RepAnimMontage(FRepAdvKitAnimMontage OldRepAnimMont
 		return;
 	}
 
-	if (Role == ROLE_AutonomousProxy)
+	if (GetLocalRole() == ROLE_AutonomousProxy)
 	{
 		return; //TODO Hotfix because authority repnotify causes action montages to play twice. When the first locally started montage is aborted it ends the action
 	}

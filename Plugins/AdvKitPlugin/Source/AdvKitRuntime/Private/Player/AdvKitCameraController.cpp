@@ -10,7 +10,6 @@
 UAdvKitCameraController::UAdvKitCameraController(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
-	bReplicates = true;
 
 	CameraLerpAlpha = 1.0f;
 	CameraLerpSpeed = 1.0f;

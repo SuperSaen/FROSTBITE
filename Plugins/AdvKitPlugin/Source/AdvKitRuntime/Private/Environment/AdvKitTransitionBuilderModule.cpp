@@ -271,8 +271,13 @@ bool UAdvKitTransitionBuilderModule::OverlapForCloseZones(AAdvKitZone* ToZone, F
 
 TArray<UAdvKitTransitionComponent*> UAdvKitTransitionBuilderModule::GetPreExistingTransitions(FString Id, AAdvKitZone* FromZone, AAdvKitZone* ToZone, TSubclassOf<AAdvKitCharacter> ForCharacterClass) const
 {
+	TArray<UAdvKitTransitionComponent*> Transitions;
+	auto Components = FromZone->GetComponents();
+	for (auto Component : Components)
+	{
+		Transitions.Add(Cast<UAdvKitTransitionComponent>(Component));
+	}
 	TArray<UAdvKitTransitionComponent*> OutArray;
-	auto Transitions = FromZone->GetComponentsByClass(UAdvKitTransitionComponent::StaticClass());
 
 	//Go through all transitions
 	for (auto Component : Transitions)
@@ -301,9 +306,13 @@ TArray<UAdvKitTransitionComponent*> UAdvKitTransitionBuilderModule::GetPreExisti
 
 TArray<UAdvKitTransitionComponent*> UAdvKitTransitionBuilderModule::GetPreExistingTransitions(class AAdvKitZone* FromZone, class AAdvKitZone* ToZone) const
 {
+	TArray<UAdvKitTransitionComponent*> Transitions;
+	auto Components = FromZone->GetComponents();
+	for (auto Component : Components)
+	{
+		Transitions.Add(Cast<UAdvKitTransitionComponent>(Component));
+	}
 	TArray<UAdvKitTransitionComponent*> OutArray;
-
-	auto Transitions = FromZone->GetComponentsByClass(UAdvKitTransitionComponent::StaticClass());
 
 	//Go through all transitions
 	for (auto Component : Transitions)
@@ -330,9 +339,13 @@ TArray<UAdvKitTransitionComponent*> UAdvKitTransitionBuilderModule::GetPreExisti
 
 TArray<UAdvKitTransitionComponent*> UAdvKitTransitionBuilderModule::GetPreExistingTransitions(class AAdvKitZone* FromZone) const
 {
+	TArray<UAdvKitTransitionComponent*> Transitions;
+	auto Components = FromZone->GetComponents();
+	for (auto Component : Components)
+	{
+		Transitions.Add(Cast<UAdvKitTransitionComponent>(Component));
+	}
 	TArray<UAdvKitTransitionComponent*> OutArray;
-
-	auto Transitions = FromZone->GetComponentsByClass(UAdvKitTransitionComponent::StaticClass());
 
 	//Go through all transitions
 	for (auto Component : Transitions)
