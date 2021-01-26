@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EventFolder" id="{67f5514f-668b-40a3-8150-832cf738046c}">
+		<property name="name">
+			<value>perilous-journey</value>
+		</property>
+		<relationship name="folder">
+			<destination>{909513f3-9a71-4524-9d0d-b24374090dc2}</destination>
+		</relationship>
+	</object>
+</objects>

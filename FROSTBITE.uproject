@@ -11,8 +11,7 @@
 			"AdditionalDependencies": [
 				"Engine",
 				"AIModule",
-				"FlockingBehaviourSystem",
-				"AdvKitRuntime"
+				"FlockingBehaviourSystem"
 			]
 		},
 		{
@@ -22,11 +21,6 @@
 		}
 	],
 	"Plugins": [
-		{
-			"Name": "AdvKitPlugin",
-			"Enabled": true,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/51db442381cc45369a7cbf5144f9c44c"
-		},
 		{
 			"Name": "FlockingBehaviourSystem",
 			"Enabled": true
@@ -74,7 +68,12 @@
 		},
 		{
 			"Name": "FMODStudio",
-			"Enabled": false
+			"Enabled": true
+		},
+		{
+			"Name": "AdvKitPlugin",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/51db442381cc45369a7cbf5144f9c44c"
 		},
 		{
 			"Name": "Volumetrics",
