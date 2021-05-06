@@ -1,4 +1,4 @@
-# my formal appology
+# my formal apology
 
 Developed with Unreal Engine 4
 
