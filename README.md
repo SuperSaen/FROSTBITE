@@ -1,5 +1,5 @@
-# recinded apology, steal from me and die
+# anyone got a job for me forky grey and 
 
-credit to forky forklift and noe.vah, fuck bungie i hate you cunts at this point, sorry that i was never sorry.
+forgive me and ill forgive you. hyper lethal in my mind.
 
 ownership of this code belongs strictly to the public.
