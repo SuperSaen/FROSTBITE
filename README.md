@@ -1,7 +1,5 @@
-# my formal apology
+# dear humanity
 
-Developed with Unreal Engine 4
-
-cant sue a dead man.
+i lived bitch.
 
 ownership of this code belongs strictly to the public.
